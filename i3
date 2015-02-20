@@ -1,1 +1,0 @@
-/home/cjbarrac/.i3/config
