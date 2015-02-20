@@ -1,6 +1,6 @@
 alias l='ls --human-readable --group-directories-first --size --color'
 alias ll='ls -l --human-readable --group-directories-first --size --color'
-alias nyaah='nyaa --sort=seed --output-path=/home/cjbarrac/Downloads/nyaa'
+alias nyaah='nyaa --sort=seed --output-path=/home/cjbarrac/Downloads/nyaa HorribleSubs 720'
 alias cpu_usage="top -d 0.5 -b -n 2 | grep Cpu | tail -n 1 | cut -c 1-24 | awk '{print \$3}'"
 alias fdu="du -ahd 1 | sort -hr"
 alias alsamixer="alsamixer -g"
