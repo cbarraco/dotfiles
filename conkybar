@@ -1,0 +1,22 @@
+double_buffer yes
+own_window yes
+own_window_transparent no
+own_window_type dock
+own_window_hints sticky,skip_taskbar,skip_pager 
+draw_borders no
+draw_graph_borders no
+draw_shades no
+alignment top_middle
+update_interval 1
+default_color  ffffff
+own_window_colour 151515
+use_xft yes
+xftfont Hermit:size=5
+override_utf8_locale yes
+minimum_size 1366 0
+maximum_width 1366
+use_spacer none
+TEXT
+${execpi 900 getweather -d -s ' ' -t}\
+${alignc -28}${time %a %b %d %H:%M:%S}\
+${alignr}${battery_short BAT} ${battery_bar 5,16 BAT}
