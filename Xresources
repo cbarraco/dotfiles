@@ -1,0 +1,52 @@
+*.foreground:			#ffffff
+*.background:			#151515
+
+!black
+URxvt*color0:			#101010
+URxvt*color8:			#404040
+!red
+URxvt*color1:			#CC342B
+URxvt*color9:			#D23D3D
+!green
+URxvt*color2:			#B8D68C
+URxvt*color10:			#A0CF5D
+!yellow
+URxvt*color3:			#E1AA5D
+URxvt*color11:			#F39D21
+!blue
+URxvt*color4:			#7DC1CF
+URxvt*color12:			#4E9FB1
+!magenta
+URxvt*color5:			#9B64FB
+URxvt*color13:			#8542FF
+!cyan
+URxvt*color6:			#6D878D
+URxvt*color14:			#42717B
+!white
+URxvt*color7:			#dddddd
+URxvt*color15:			#ffffff
+
+URxvt*borderColor:		#151515
+URxvt*colorBD:			#ffffff
+URxvt*cursorColor:		#ffffff
+URxvt*cursorColor2:		#000000
+
+Xft.dpi:			136
+Xft.antialias:			true
+Xft.rgba:			rgb
+Xft.autohint:			false
+Xft.hinting:			true
+Xft.hintstyle:			hintfull
+
+URxvt*font:			xft:Source Code Pro:regular:size=6
+URxvt*imFont:			xft:Source Code Pro:regular:size=6
+URxvt*boldFont:			xft:Source Code Pro:bold:size=6
+URxvt*italicFont:		xft:Source Code Pro:italic:size=6
+URxvt*boldItalicFont:		xft:Source Code Pro:bold:italic:size=6
+
+URxvt.letterSpace:		1
+
+URxvt.scrollBar:		false
+URxvt.transparent:		false
+URxvt.url-select.launcher:	chromium
+URxvt.url-select.underline:	true
