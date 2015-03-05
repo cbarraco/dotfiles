@@ -1,0 +1,2 @@
+#!/bin/sh
+livestreamer http://www.twitch.tv/saltybet source --player mpv

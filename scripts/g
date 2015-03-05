@@ -1,0 +1,2 @@
+#!/bin/bash
+firefox "http://google.ca/search?q=$1"

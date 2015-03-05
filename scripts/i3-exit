@@ -1,0 +1,13 @@
+#!/bin/bash
+
+res=$(dmenu -sb "#af652f" -x 600 -y 320 -w 150 -h 30 -l 3 -p ">" < ~/.dmenu-i3exit)
+
+if [ $res = "logout" ]; then
+	i3-msg exit
+fi
+if [ $res = "restart" ]; then
+	reboot
+fi
+if [ $res = "shutdown" ]; then
+	poweroff
+fi
