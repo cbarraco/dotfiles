@@ -1,0 +1,152 @@
+<h1>~</h1>
+<p><input type="text" id="quicksearch" placeholder="Search" /></p>
+<div id="maincontainer"></div>
+<style>
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Source Code Pro";
+}
+
+body {
+	background: #1a1a1a;
+	color: #857d59;
+}
+
+a {
+	color: #857d59;
+	text-decoration: none;
+}
+
+h1 {
+	background: #1a1a1a;
+	color: #857d59;
+	text-align: center;
+}
+
+input[type="text"] {
+	background: #222;
+	border: 1px solid #857d58;
+	color: #857d58;
+	display: block;
+	font-size: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 250px;
+}
+
+.site-div {
+	display:block;
+	border: solid 1px #857d59;
+	float: left;
+	height: 30px;
+	margin: 5px;
+	padding: 6px;
+	position: relative;
+	text-align: left;
+	width: auto;
+}
+
+.site-div:hover {
+	background: #857d59;
+	color: #1a1a1a;
+	cursor: pointer;
+}
+
+.site-div .name {
+	float:right;
+	font-size: 10px;
+	vertical-align: middle;
+	height: 10px;
+	margin: 2px 0 0 5px;
+}
+
+.site-div .symbol {
+	float: left;
+}
+
+</style>
+<script>
+var mc = document.getElementById("maincontainer");
+var qs = document.getElementById("quicksearch");
+
+sites = [
+	"docs.google.com",
+	"reddit.com",
+	"youtube.com",
+	"google.com/calendar",
+	"play.google.com",
+	"stackoverflow.com",
+	"facebook.com",
+	"kickass.to",
+	"learn.uwaterloo.ca",
+	"box.com",
+	"nyaa.se",
+	"4chan.org",
+	"github.com",
+	"wiki.archlinux.org",
+	"localhost:8888/gui",
+	"gist.github.com",
+	"keep.google.com",
+	"walmart.ca",
+	"mail.google.com",
+	"myanimelist.net",
+];
+sites.sort();
+
+var create = function(tag,className,id) {
+	var element = document.createElement(tag);
+	element.id = id;
+	element.className = className;
+	return element;
+}
+
+for (var i=0;i<sites.length;i++) {
+	var siteDiv = create("a", "site-div", "siteDiv"+i);
+	siteDiv.href = "http://"+sites[i];
+
+	var img = create("img","symbol","img"+i);
+	img.src = "http://www.google.com/s2/favicons?domain_url=http://"+sites[i];
+	siteDiv.appendChild(img);
+
+	var p = create("p","name","p"+i);
+	p.innerHTML = sites[i];
+	siteDiv.appendChild(p);
+
+	mc.appendChild(siteDiv);
+}
+
+qs.onkeyup = function(){
+	var siteDivs = document.getElementsByClassName("site-div");
+	for (var i=0;i<siteDivs.length;i++) {
+		var e = document.getElementById("siteDiv"+i);
+		if (qs.value.length == 0) {
+			e.style.display = "block";
+			continue;
+		}
+		var p = document.getElementById("p"+i).innerHTML;
+		if (p.indexOf(qs.value) < 0) {
+			e.style.display = "none";
+		} else {
+			e.style.display = "block";
+			if (p.indexOf(qs.value) == 0) {
+				mc.insertBefore(e, mc.childNodes[0]);
+			}
+		}
+	}
+}
+
+qs.onkeydown = function(e){
+	if (e.which == 13) {
+		if (qs.value.indexOf(".") > -1) {
+			window.location = "http://"+qs.value;
+		} else {
+			window.location = "http://google.ca/search?q="+qs.value;
+		}
+	}
+}
+
+setTimeout(function(){qs.focus()}, 10);
+</script>
