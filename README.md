@@ -5,8 +5,8 @@ Screenshots
 ===========
 Clean
 -----
-![clean](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/toadv1/scrots/clean.png)
+![clean](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/clean.png)
 
-/r/unixporn
+Music
 -----------
-![unixporn](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/toadv1/scrots/unixporn.png)
+![music](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/music.png)
