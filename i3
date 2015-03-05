@@ -6,6 +6,8 @@ set $ns
 set $rp				5
 set $gsi			8
 set $gso			47
+set $fgcolor			#746c48
+set $bgcolor			#1a1a1a
 floating_modifier 		$mod
 focus_follows_mouse 		yes
 
@@ -13,16 +15,16 @@ focus_follows_mouse 		yes
 # Appearence #
 ##############
 # Set window appearence
-client.focused          	#aaabad #aaabad #000000 #aaabad
-client.focused_inactive 	#252525 #252525 #cc342b
-client.unfocused        	#252525 #252525 #888888
+client.focused          	$fgcolor $fgcolor $bgcolor $fgcolor 
+client.focused_inactive 	$bgcolor $bgcolor $fgcolor $bgcolor
+client.unfocused        	$bgcolor $bgcolor $fgcolor $bgcolor
 # Set font
-font 				pango:DejaVu Sans Mono 8
+font 				pango:Source Code Pro 7
 # Configure window borders
 gaps inner			$gsi
 gaps outer			$gso
-new_float pixel			2
-new_window pixel 		2
+new_float			pixel 1
+new_window			pixel 1
 
 ###############
 # Keybindings #
@@ -30,7 +32,7 @@ new_window pixel 		2
 
 ### System Keybindings
 bindsym $mod + Return 		exec urxvt
-bindsym $mod+d 			exec dmenu_run -sb "#CC342B" -x 600 -y 320 -w 150 -h 30 -l 3 -p ">" -hist ~/.config/dmenu2/history
+bindsym $mod+d 			exec dmenu_run -sb "#af652f" -x 550 -y 300 -w 250 -h 30 -l 3 -p ">" -hist ~/.config/dmenu2/history
 bindsym $mod+g 			exec "googleapps"
 bindsym $mod+Shift+c 		reload
 bindsym $mod+Shift+r 		restart
@@ -161,4 +163,4 @@ exec nitrogen --restore
 exec sudo wicd
 exec xfce4-power-manager
 exec redshift
-exec conky --config=/home/cjbarrac/.conkybar
+exec conky --config="/home/cjbarrac/.conkybar"

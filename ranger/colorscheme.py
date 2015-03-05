@@ -9,13 +9,60 @@ class Default(ColorScheme):
 			return default_colors
 
 		elif context.in_browser:
-			attr = normal
+			if context.empty or context.error:
+				fg = black
+			if context.border:
+				attr = normal
+				fg = default
+			if context.media:
+				if context.image:
+					fg = red
+				else:
+					fg = yellow
+			if context.container:
+				attr |= normal
+				fg = green
 			if context.directory:
+				attr |= normal
+				fg = magenta
+			elif context.executable and not \
+					any((context.media, context.container,
+						context.fifo, context.socket)):
+				attr |= bold
 				fg = red
+			if context.socket:
+				fg = black
+			if context.fifo or context.device:
+				fg = blue
+				if context.device:
+					attr |= bold
+			if context.link:
+				fg = context.good and white or red
+			if context.tag_marker and not context.selected:
+				attr |= bold
+				if fg in (red, white):
+					fg = black
+				else:
+					fg = green
+			if not context.selected and (context.cut or context.copied):
+				fg = black
+				attr |= bold
+			if context.main_column:
+				if context.selected:
+					attr |= normal
+				if context.marked:
+					attr |= underline
+					fg = white
+			if context.badinfo:
+				if attr & reverse:
+					bg = red
+				else:
+					fg = red
 			if context.selected:
 				fg = white
-				bg = red
 				attr = bold
+			else:
+				attr = normal
 		elif context.in_titlebar:
 			attr |= normal
 			if context.hostname:
@@ -25,14 +72,14 @@ class Default(ColorScheme):
 				fg = red
 			elif context.tab:
 				if context.good:
-					bg = green
+					bg = white
 			elif context.link:
-				fg = magenta
+				fg = green
 
 		elif context.in_statusbar:
 			if context.permissions:
 				if context.good:
-					fg = black
+					fg = white
 				elif context.bad:
 					fg = red
 			if context.marked:
@@ -55,4 +102,3 @@ class Default(ColorScheme):
 				attr |= normal
 
 		return fg, bg, attr
-

@@ -1,52 +1,54 @@
-*.foreground:			#ffffff
-*.background:			#151515
+!!! COLORS !!!
+*.foreground:			#857d59
+urxvt*colorBD:			#746c48
+*.background:   		#1a1a1a
+urxvt*borderColor:		#1a1a1a
+*.cursorColor:  		#746c48
+*.cursorColor2:  		#1a1a1a
 
-!black
-URxvt*color0:			#101010
-URxvt*color8:			#404040
-!red
-URxvt*color1:			#CC342B
-URxvt*color9:			#D23D3D
-!green
-URxvt*color2:			#B8D68C
-URxvt*color10:			#A0CF5D
-!yellow
-URxvt*color3:			#E1AA5D
-URxvt*color11:			#F39D21
-!blue
-URxvt*color4:			#7DC1CF
-URxvt*color12:			#4E9FB1
-!magenta
-URxvt*color5:			#9B64FB
-URxvt*color13:			#8542FF
-!cyan
-URxvt*color6:			#6D878D
-URxvt*color14:			#42717B
-!white
-URxvt*color7:			#dddddd
-URxvt*color15:			#ffffff
+! black
+*.color0:       		#392925
+*.color8:       		#544b2e
+! red
+*.color1:       		#98724c
+*.color9:       		#af652f
+! green
+*.color2:       		#908f32
+*.color10:      		#c3c13d
+! yellow
+*.color3:       		#aa964c
+*.color11:      		#c8b55b
+! blue
+*.color4:       		#7b854e
+*.color12:      		#99ac43
+! magenta
+*.color5:       		#6b5644
+*.color13:      		#98724c
+! cyan
+*.color6:       		#5c5142
+*.color14:      		#778725
+! white
+*.color7:       		#c8b55b
+*.color15:      		#e4dc8c
 
-URxvt*borderColor:		#151515
-URxvt*colorBD:			#ffffff
-URxvt*cursorColor:		#ffffff
-URxvt*cursorColor2:		#000000
-
+!!! FONTS !!!
 Xft.dpi:			136
 Xft.antialias:			true
 Xft.rgba:			rgb
 Xft.autohint:			false
 Xft.hinting:			true
 Xft.hintstyle:			hintfull
+urxvt*font:                 	xft:Source Code Pro:regular:size=5.5
+urxvt*imFont:               	xft:Source Code Pro:regular:size=5.5
+urxvt*boldFont:             	xft:Source Code Pro:semibold:size=5.5
+urxvt*italicFont:           	xft:Source Code Pro:italic:size=5.5
+urxvt*boldItalicFont:       	xft:Source Code Pro:semibold:italic:size=5.5
+urxvt*letterSpace:		0
 
-URxvt*font:			xft:Source Code Pro:regular:size=6
-URxvt*imFont:			xft:Source Code Pro:regular:size=6
-URxvt*boldFont:			xft:Source Code Pro:bold:size=6
-URxvt*italicFont:		xft:Source Code Pro:italic:size=6
-URxvt*boldItalicFont:		xft:Source Code Pro:bold:italic:size=6
-
-URxvt.letterSpace:		1
-
-URxvt.scrollBar:		false
-URxvt.transparent:		false
-URxvt.url-select.launcher:	chromium
-URxvt.url-select.underline:	true
+!!! OPTIONS !!!
+Xcursor.size:			6
+urxvt*scrollBar:		false
+urxvt*transparent:		false
+urxvt*url-select.launcher:	chromium
+urxvt*url-select.underline:	true
+urxvt*cursorBlink:		false
