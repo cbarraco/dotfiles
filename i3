@@ -4,8 +4,8 @@
 set $mod 			Mod4
 set $ns				
 set $rp				5
-set $gsi			8
-set $gso			47
+set $gsi			9
+set $gso			78
 set $fgcolor			#746c48
 set $bgcolor			#1a1a1a
 floating_modifier 		$mod
@@ -160,7 +160,8 @@ bindsym $mod+i 			mode "info"
 exec btsync
 exec compton --config ~/.config/compton/compton.conf -b
 exec nitrogen --restore
-exec sudo wicd
+exec sudo NetworkManager
 exec xfce4-power-manager
 exec redshift
 exec conky --config="/home/cjbarrac/.conkybar"
+exec google-musicmanager

@@ -12,10 +12,10 @@ use_xft			yes
 xftfont			Source Code Pro:size=5
 override_utf8_locale	yes
 minimum_size		1366 0
-maximum_width		1240
+maximum_width		1178
 use_spacer		none
-gap_x			60
-gap_y			28
+gap_x			91
+gap_y			58
 
 TEXT
 ${execpi 180 getweather -d -s ' ' -t}\

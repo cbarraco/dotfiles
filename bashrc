@@ -7,7 +7,7 @@ fi
 [[ $- != *i* ]] && return
 
 # Bash prompt stuff
-TERM=xterm
+TERM=xterm-256color
 echo "Welcome /home/"
 
 # Path

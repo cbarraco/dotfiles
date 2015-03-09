@@ -48,7 +48,7 @@ case "$extension" in
     # Archive extensions:
     7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
     rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
-        try als "$path" && { dump | trim; exit 0; }
+        try dtrx -l "$path" && { dump | trim; exit 0; }
         try acat "$path" && { dump | trim; exit 3; }
         try bsdtar -lf "$path" && { dump | trim; exit 0; }
         exit 1;;
@@ -73,9 +73,6 @@ case "$mimetype" in
     # Syntax highlight for text files:
     text/* | */xml)
         try highlight --out-format=ansi "$path" && { dump | trim; exit 5; } || exit 2;;
-    # Ascii-previews of images:
-    image/*)
-         img2txt "$path" && exit 4 || exit 1;;
     # Display information about media files:
     video/* | audio/*)
         exiftool "$path" && exit 5

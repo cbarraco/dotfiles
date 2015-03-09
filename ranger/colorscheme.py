@@ -13,27 +13,27 @@ class Default(ColorScheme):
 				fg = black
 			if context.border:
 				attr = normal
-				fg = default
+				fg = white
 			if context.media:
 				if context.image:
-					fg = red
+					fg = black
 				else:
-					fg = yellow
+					fg = white
 			if context.container:
 				attr |= normal
 				fg = green
 			if context.directory:
 				attr |= normal
-				fg = magenta
+				fg = red
 			elif context.executable and not \
 					any((context.media, context.container,
 						context.fifo, context.socket)):
-				attr |= bold
+				attr |= normal
 				fg = red
 			if context.socket:
-				fg = black
+				fg = red
 			if context.fifo or context.device:
-				fg = blue
+				fg = yellow
 				if context.device:
 					attr |= bold
 			if context.link:
@@ -45,7 +45,7 @@ class Default(ColorScheme):
 				else:
 					fg = green
 			if not context.selected and (context.cut or context.copied):
-				fg = black
+				fg = white
 				attr |= bold
 			if context.main_column:
 				if context.selected:
@@ -72,14 +72,14 @@ class Default(ColorScheme):
 				fg = red
 			elif context.tab:
 				if context.good:
-					bg = white
+					bg = green
 			elif context.link:
-				fg = green
+				fg = magenta
 
 		elif context.in_statusbar:
 			if context.permissions:
 				if context.good:
-					fg = white
+					fg = black
 				elif context.bad:
 					fg = red
 			if context.marked:
