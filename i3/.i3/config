@@ -2,8 +2,7 @@
 # Configuration Variables #
 ###########################
 set $mod 			Mod4
-set $ns				
-set $rp				5
+set $resize			5
 set $gsi			9
 set $gso			78
 set $fgcolor			#746c48
@@ -29,11 +28,11 @@ new_window			pixel 1
 ###############
 # Keybindings #
 ###############
-
 ### System Keybindings
-bindsym $mod + Return 		exec urxvt
-bindsym $mod+d 			exec dmenu_run -sb "#af652f" -x 550 -y 300 -w 250 -h 30 -l 3 -p ">" -hist ~/.config/dmenu2/history
-bindsym $mod+g 			exec "googleapps"
+bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
+bindsym $mod+Return 		exec urxvt
+bindsym $mod+d 			exec rofi -show run
+bindsym $mod+g 			exec rofi -show window
 bindsym $mod+Shift+c 		reload
 bindsym $mod+Shift+r 		restart
 bindsym $mod+Shift+e 		exec "i3-exit"
@@ -66,7 +65,6 @@ bindsym $mod+Right		focus right
 
 ### Workspace Keybindings ###
 # Show workspace
-bindsym $mod+z			workspace back_and_forth
 bindsym $mod+Tab		workspace next
 bindsym $mod+1 			workspace 1
 bindsym $mod+2 			workspace 2
@@ -125,34 +123,19 @@ bindsym $mod+minus 		scratchpad show
 #########
 mode "resize" {
 	# Homerow
-        bindsym j 		resize shrink width $rp px or $rp ppt
-        bindsym k 		resize grow height $rp px or $rp ppt
-        bindsym l 		resize shrink height $rp px or $rp ppt
-        bindsym semicolon 	resize grow width $rp px or $rp ppt
+        bindsym j 		resize shrink width $resize px or $resize ppt
+        bindsym k 		resize grow height $resize px or $resize ppt
+        bindsym l 		resize shrink height $resize px or $resize ppt
+        bindsym semicolon 	resize grow width $resize px or $resize ppt
 	# Arrows
-        bindsym Left 		resize shrink width $rp px or $rp ppt
-        bindsym Down 		resize grow height $rp px or $rp ppt
-        bindsym Up 		resize shrink height $rp px or $rp ppt
-        bindsym Right 		resize grow width $rp px or $rp ppt
+        bindsym Left 		resize shrink width $resize px or $resize ppt
+        bindsym Down 		resize grow height $resize px or $resize ppt
+        bindsym Up 		resize shrink height $resize px or $resize ppt
+        bindsym Right 		resize grow width $resize px or $resize ppt
 	# Exit
         bindsym Escape 		mode "default"
 }
 bindsym $mod+r 			mode "resize"
-
-mode "info" {
-
-	bindsym $mod+b 		exec notify-send -u low "Battery Info" "`acpi -b`";mode "default"
-	bindsym $mod+t		exec notify-send -u low "Time" "`date +\"%a %b %-e %-I:%M:%S %p\"`";mode "default"
-	bindsym $mod+w 		exec notify-send -u low "Weather" "`getweather -d -t -i -s \" \"`";mode "default"
-	bindsym $mod+i 		exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
-	bindsym $mod+d 		exec notify-send -u low "Download Speed" "`speedtest --simple`";mode "default"
-	bindsym $mod+c 		exec notify-send -u low "CPU" "CPU Usage:$(cpu_usage)%\nTemp:`cut -c 1-2 /sys/bus/platform/devices/coretemp.0/hwmon/hwmon0/temp1_input`C";mode "default"
-	bindsym $mod+p 		exec notify-send -u low "Podcasts" "`gpo update | tail -n 1`";mode "default"
-	bindsym $mod+e 		exec notify-send -u low "Email" "`checkemail`";mode "default"
-        bindsym Escape 		mode "default"
-}
-bindsym $mod+i 			mode "info"
-
 
 ####################
 # Startup Programs #
@@ -160,8 +143,8 @@ bindsym $mod+i 			mode "info"
 exec btsync
 exec compton --config ~/.config/compton/compton.conf -b
 exec nitrogen --restore
-exec sudo NetworkManager
 exec xfce4-power-manager
 exec redshift
-exec conky --config="/home/cjbarrac/.conkybar"
+exec conky
 exec google-musicmanager
+exec sudo wicd

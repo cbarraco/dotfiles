@@ -8,8 +8,8 @@ fi
 
 # Bash prompt stuff
 TERM=xterm-256color
+export PS1="> "
 echo "Welcome /home/"
 
 # Path
-export PS1="> "
 export PATH=$PATH://home/cjbarrac/.gem/ruby/2.2.0/bin
