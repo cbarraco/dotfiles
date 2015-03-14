@@ -12,6 +12,7 @@ set $bgcolor			#1a1a1a
 # CONFIGURATION #
 #################
 focus_follows_mouse 		yes
+popup_during_fullscreen		smart
 workspace_layout		default
 
 ##############
