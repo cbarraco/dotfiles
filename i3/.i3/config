@@ -1,17 +1,21 @@
-###########################
-# Configuration Variables #
-###########################
+#############
+# VARIABLES #
+#############
 set $mod 			Mod4
 set $resize			5
 set $gsi			9
 set $gso			78
 set $fgcolor			#746c48
 set $bgcolor			#1a1a1a
-floating_modifier 		$mod
+
+#################
+# CONFIGURATION #
+#################
 focus_follows_mouse 		yes
+workspace_layout		default
 
 ##############
-# Appearence #
+# APPEARANCE #
 ##############
 # Set window appearence
 client.focused          	$fgcolor $fgcolor $bgcolor $fgcolor 
@@ -20,15 +24,16 @@ client.unfocused        	$bgcolor $bgcolor $fgcolor $bgcolor
 # Set font
 font 				pango:Source Code Pro 7
 # Configure window borders
+hide_edge_borders		none
 gaps inner			$gsi
 gaps outer			$gso
 new_float			pixel 1
 new_window			pixel 1
 
 ###############
-# Keybindings #
+# KEYBINDINGS #
 ###############
-### System Keybindings
+### System Keybindings ###
 bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
 bindsym $mod+Return 		exec urxvt
 bindsym $mod+d 			exec rofi -show run
@@ -113,13 +118,14 @@ bindsym $mod+v 			split v
 # Floating mode
 bindsym $mod+Shift+space 	floating toggle
 bindsym $mod+space 		focus mode_toggle
+floating_modifier 		$mod
 
 ### Scratchpad Keybindings ###
 bindsym $mod+Shift+minus 	move scratchpad
 bindsym $mod+minus 		scratchpad show
 
 #########
-# Modes #
+# MODES #
 #########
 mode "resize" {
 	# Homerow
@@ -138,7 +144,7 @@ mode "resize" {
 bindsym $mod+r 			mode "resize"
 
 ####################
-# Startup Programs #
+# STARTUP PROGRAMS #
 ####################
 exec btsync
 exec compton --config ~/.config/compton/compton.conf -b

@@ -2,5 +2,5 @@
 folders=("bash" "conky" "firefox" "i3" "ranger" "vim" "x")
 for f in "${folders[@]}"
 do
-	stow --verbose=2 -t ~ $f
+	stow --verbose=2 -t /home/cjbarrac/ $f
 done

@@ -18,6 +18,6 @@ gap_x			91
 gap_y			58
 
 TEXT
-${execpi 180 getweather -f "%D %tC"}\
+${execpi 600 getweather -f "%d %t.0C"}\
 ${alignc -25}${time %a %b %d %I:%M:%S %p}\
 ${alignr}${battery_percent BAT}% ${battery_bar 5,16 BAT} 
