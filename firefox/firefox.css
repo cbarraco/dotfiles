@@ -142,8 +142,6 @@
         /*border-top: var(--tab-height) solid var(--bg-dark) !important;
         border-left: calc(var(--tab-height)/2) solid var(--bg-light) !important;/**/
     }
-    
-
         
     #TabsToolbar, #tabbrowser-tabs {
         -moz-appearance: none !important;

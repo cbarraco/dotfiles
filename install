@@ -1,5 +1,5 @@
 #!/bin/bash
-folders=("bash" "conky" "firefox" "i3" "ranger" "vim" "x")
+folders=("bash" "conky" "firefox" "i3" "ranger" "vim" "x" "mpv")
 for f in "${folders[@]}"
 do
 	stow --verbose=2 -t /home/cjbarrac/ $f

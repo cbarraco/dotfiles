@@ -54,11 +54,9 @@ urxvt*url-select.underline:	true
 urxvt*cursorBlink:		false
 
 !!! ROFI !!!
-rofi.background: #1a1a1a
-rofi.foreground: #857d59
 rofi.highlightbg: #857d59
 rofi.highlightfg: #1a1a1a
 rofi.bordercolor: #1a1a1a
-rofi.font: Source Code Pro 8
+rofi.font: Source Code Pro 7
 rofi.padding: 3
 rofi.borderwidth: 0

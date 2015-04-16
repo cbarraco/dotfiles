@@ -1,6 +1,6 @@
 #!/bin/bash
 
-res=$(rofi -dmenu < ~/.dmenu-i3exit)
+res=$(rofi -dmenu -bg "#1a1a1a" -fg "#867d59" < ~/.dmenu-i3exit)
 
 if [ $res = "logout" ]; then
 	i3-msg exit

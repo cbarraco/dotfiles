@@ -1,0 +1,18 @@
+double_buffer		yes
+own_window		yes
+own_window_transparent	no
+own_window_type		override
+own_window_hints	sticky
+draw_borders		no
+alignment		top_middle
+update_interval		1
+default_color		857d59
+own_window_colour	1a1a1a
+use_xft			yes
+xftfont			Source Code Pro:size=5
+override_utf8_locale	yes
+use_spacer		none
+gap_y			58
+
+TEXT
+${alignc}${time %a %b %d %I:%M:%S %p}

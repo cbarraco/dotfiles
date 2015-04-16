@@ -1,0 +1,29 @@
+# vim: syntax=config
+use-filedir-conf=yes
+screenshot-template=~/Downloads/mpv-screenshot%n
+
+### VIDEO ###
+cache=8192
+cache-default=16384
+display-fps=60
+hwdec=vdpau
+vo=opengl-hq:glfinish:fancy-downscaling=no:icc-profile-auto:icc-cache=~/.mpv/icc-cache:smoothmotion
+
+### AUDIO ###
+alang=jp,jpn,en,eng,it,ita
+ao=alsa
+softvol=no
+
+### SUBTITLES ###
+ass-force-style=Kerning=yes
+slang=eng,en,it
+sub-text-font="Source Sans Pro"
+sub-text-font-size=48
+
+### ON SCREEN DISPLAY ###
+osd-bar-align-y=0
+osd-bar-h=7
+osd-border-color='#99000000'
+osd-border-size=1
+osd-color='#AAFFFFFF'
+osd-font="Source Sans Pro"

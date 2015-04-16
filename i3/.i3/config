@@ -37,8 +37,8 @@ new_window			pixel 1
 ### System Keybindings ###
 bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
 bindsym $mod+Return 		exec urxvt
-bindsym $mod+d 			exec rofi -show run
-bindsym $mod+g 			exec rofi -show window
+bindsym $mod+d 			exec rofi -bg "#1a1a1a" -fg "#867d59" -show run
+bindsym $mod+g 			exec rofi -bg "#1a1a1a" -fg "#867d59" -show window
 bindsym $mod+Shift+c 		reload
 bindsym $mod+Shift+r 		restart
 bindsym $mod+Shift+e 		exec "i3-exit"
@@ -152,6 +152,9 @@ exec compton --config ~/.config/compton/compton.conf -b
 exec nitrogen --restore
 exec xfce4-power-manager
 exec redshift
-exec conky
+exec conky --config=/home/cjbarrac/.conkyrcs/.conkyweatherrc
+exec conky --config=/home/cjbarrac/.conkyrcs/.conkytimerc
+exec conky --config=/home/cjbarrac/.conkyrcs/.conkybatteryrc
 exec google-musicmanager
-exec sudo wicd
+exec stalonetray
+exec nm-applet
