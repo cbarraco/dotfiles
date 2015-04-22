@@ -9,13 +9,13 @@ class Default(ColorScheme):
             return default_colors
         elif context.in_browser:
             if context.empty or context.error:
-                fg = black
+                fg = magenta
             if context.border:
                 attr = normal
                 fg = white
             if context.media:
                 if context.image:
-                    fg = black
+                    fg = blue
                 else:
                     fg = white
             if context.container:
@@ -56,6 +56,7 @@ class Default(ColorScheme):
                 else:
                     fg = red
             if context.selected:
+                bg = red
                 fg = white
                 attr = bold
             else:

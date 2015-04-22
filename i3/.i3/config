@@ -3,10 +3,10 @@
 #############
 set $mod 			Mod4
 set $resize			5
-set $gsi			9
-set $gso			78
-set $fgcolor			#746c48
-set $bgcolor			#1a1a1a
+set $gsi			20
+set $gso			40
+set $fgcolor			#c0b18b
+set $bgcolor			#1f1f1f
 
 #################
 # CONFIGURATION #
@@ -37,8 +37,8 @@ new_window			pixel 1
 ### System Keybindings ###
 bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
 bindsym $mod+Return 		exec urxvt
-bindsym $mod+d 			exec rofi -bg "#1a1a1a" -fg "#867d59" -show run
-bindsym $mod+g 			exec rofi -bg "#1a1a1a" -fg "#867d59" -show window
+bindsym $mod+d 			exec rofi -bg "#1f1f1f" -fg "#c0b18b" -show run
+bindsym $mod+g 			exec rofi -bg "#1f1f1f" -fg "#c0b18b" -show window
 bindsym $mod+Shift+c 		reload
 bindsym $mod+Shift+r 		restart
 bindsym $mod+Shift+e 		exec "i3-exit"
@@ -148,7 +148,7 @@ bindsym $mod+r 			mode "resize"
 # STARTUP PROGRAMS #
 ####################
 exec btsync
-exec compton --config ~/.config/compton/compton.conf -b
+exec compton --config ~/.config/compton/compton2.conf -b
 exec nitrogen --restore
 exec xfce4-power-manager
 exec redshift
@@ -156,5 +156,6 @@ exec conky --config=/home/cjbarrac/.conkyrcs/.conkyweatherrc
 exec conky --config=/home/cjbarrac/.conkyrcs/.conkytimerc
 exec conky --config=/home/cjbarrac/.conkyrcs/.conkybatteryrc
 exec google-musicmanager
-exec stalonetray
 exec nm-applet
+exec rssdler -rd
+exec gksudo modprobe snd_aloop

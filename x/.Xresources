@@ -1,35 +1,45 @@
 !!! COLORS !!!
-*.foreground:			#857d59
-urxvt*colorBD:			#746c48
-*.background:   		#1a1a1a
-urxvt*borderColor:		#1a1a1a
-*.cursorColor:  		#746c48
-*.cursorColor2:  		#1a1a1a
+urxvt*depth:			32
+urxvt*colorBD:			#708175
+urxvt*borderColor:		#1f1f1f
+
+! special
+*.foreground:			#c0b18b
+*.background:			#1f1f1f
+*.cursorColor:			#c0b18b
 
 ! black
-*.color0:       		#392925
-*.color8:       		#544b2e
+*.color0:       #392925
+*.color8:       #544b2e
+
 ! red
-*.color1:       		#98724c
-*.color9:       		#af652f
+*.color1:       #af602f
+*.color9:       #af602f
+
 ! green
-*.color2:       		#908f32
-*.color10:      		#c3c13d
+*.color2:       #908f32
+*.color10:      #908f32
+
 ! yellow
-*.color3:       		#aa964c
-*.color11:      		#c8b55b
+*.color3:	#c8b55b
+*.color11:      #c8b55b
+
 ! blue
-*.color4:       		#7b854e
-*.color12:      		#99ac43
+*.color4:       #708175
+*.color12:      #708175
+
 ! magenta
-*.color5:       		#6b5644
-*.color13:      		#98724c
+*.color5:	#847080
+*.color13:      #847080
+
 ! cyan
-*.color6:       		#5c5142
-*.color14:      		#778725
+*.color6:       #70986a
+*.color14:      #70986a
+
 ! white
-*.color7:       		#c8b55b
-*.color15:      		#e4dc8c
+*.color7:       #c0b18b
+*.color15:      #c0b18b
+
 
 !!! FONTS !!!
 Xft.dpi:			136
@@ -54,9 +64,9 @@ urxvt*url-select.underline:	true
 urxvt*cursorBlink:		false
 
 !!! ROFI !!!
-rofi.highlightbg: #857d59
-rofi.highlightfg: #1a1a1a
-rofi.bordercolor: #1a1a1a
+rofi.highlightbg: #c0b18b
+rofi.highlightfg: #1f1f1f
+rofi.bordercolor: #1f1f1f
 rofi.font: Source Code Pro 7
 rofi.padding: 3
 rofi.borderwidth: 0

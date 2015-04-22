@@ -7,11 +7,12 @@ alias alsamixer="alsamixer -g"
 alias pacaur='pacaur --color always'
 alias saltybet='livestreamer http://www.twitch.tv/saltybet source --player mpv'
 alias marvin='sshfs -o IdentityFile=/home/cjbarrac/.ssh/id_rsa -p 4242 download@192.168.0.11:/home/ /home/cjbarrac/Marvin'
-alias dmenu_run='dmenu_run -sb "#CC342B" -x 600 -y 320 -w 150 -h 30 -l 3 -p ">" -hist ~/.config/dmenu2/history'
 alias school='gcalcli --calendar="School" quick'
+alias xres='vim ~/.Xresources && xrdb -merge ~/.Xresources'
+alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
 
 # My functions
-cleanorphans() {
+killorphans() {
 	if [[ ! -n $(pacaur -Qdt) ]]; then
 		echo "No orphans to remove."
 	else
@@ -26,4 +27,7 @@ pdf2up() {
 } 
 dlwebsite() {
 	wget --random-wait -r -p -e robots=off -U mozilla $1
+}
+gacpm() {
+	git add . && git commit -m "$1" && git push origin master
 }
