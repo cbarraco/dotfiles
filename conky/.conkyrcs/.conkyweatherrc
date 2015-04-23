@@ -2,7 +2,7 @@ double_buffer		yes
 own_window		yes
 own_window_transparent	no
 own_window_type		override
-own_window_hints	sticky
+own_window_hints	undecorate,sticky
 own_window_class	conky
 own_window_colour	1f1f1f
 draw_borders		no

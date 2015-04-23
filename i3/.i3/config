@@ -158,4 +158,4 @@ exec conky --config=/home/cjbarrac/.conkyrcs/.conkybatteryrc
 exec google-musicmanager
 exec nm-applet
 exec rssdler -rd
-exec gksudo modprobe snd_aloop
+exec modprobe snd_aloop

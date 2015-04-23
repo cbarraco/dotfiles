@@ -1,6 +1,6 @@
 !!! COLORS !!!
 urxvt*depth:			32
-urxvt*colorBD:			#708175
+urxvt*colorBD:			#708185
 urxvt*borderColor:		#1f1f1f
 
 ! special
@@ -25,8 +25,8 @@ urxvt*borderColor:		#1f1f1f
 *.color11:      #c8b55b
 
 ! blue
-*.color4:       #708175
-*.color12:      #708175
+*.color4:       #708185
+*.color12:      #708185
 
 ! magenta
 *.color5:	#847080
