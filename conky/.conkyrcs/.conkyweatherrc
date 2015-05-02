@@ -14,7 +14,7 @@ use_xft			yes
 xftfont			Source Code Pro:size=5
 override_utf8_locale	yes
 use_spacer		none
-gap_x			64
+gap_x			65
 gap_y			23
 
 TEXT

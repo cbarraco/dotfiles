@@ -7,7 +7,7 @@ cache=8192
 cache-default=16384
 display-fps=60
 hwdec=auto
-vo=opengl-hq:glfinish:fancy-downscaling=no:icc-profile-auto:icc-cache=~/.mpv/icc-cache:smoothmotion
+vo=opengl-hq:glfinish:fancy-downscaling=no:icc-cache=~/.mpv/icc-cache:interpolation
 
 ### AUDIO ###
 alang=jp,jpn,en,eng,it,ita

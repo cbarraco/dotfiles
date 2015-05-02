@@ -1,72 +1,97 @@
-!!! COLORS !!!
-urxvt*depth:			32
-urxvt*colorBD:			#708185
-urxvt*borderColor:		#1f1f1f
+! special colors
+urxvt.background:		#1f1f1f
+urxvt.borderColor:		#1f1f1f
+urxvt.colorBD:			#708185
+urxvt.cursorColor:		#c0b18b
+urxvt.foreground:		#c0b18b
 
-! special
-*.foreground:			#c0b18b
-*.background:			#1f1f1f
-*.cursorColor:			#c0b18b
+! colors
+urxvt.color0:			#999999
+urxvt.color1:			#af602f
+urxvt.color2:			#908f32
+urxvt.color3:			#c8b55b
+urxvt.color4:			#708185
+urxvt.color5:			#847080
+urxvt.color6:			#70986a
+urxvt.color7:			#c0b18b
 
-! black
-*.color0:       #392925
-*.color8:       #544b2e
-
-! red
-*.color1:       #af602f
-*.color9:       #af602f
-
-! green
-*.color2:       #908f32
-*.color10:      #908f32
-
-! yellow
-*.color3:	#c8b55b
-*.color11:      #c8b55b
-
-! blue
-*.color4:       #708185
-*.color12:      #708185
-
-! magenta
-*.color5:	#847080
-*.color13:      #847080
-
-! cyan
-*.color6:       #70986a
-*.color14:      #70986a
-
-! white
-*.color7:       #c0b18b
-*.color15:      #c0b18b
-
+urxvt.color8:			#999999
+urxvt.color9:			#af602f
+urxvt.color10:			#908f32
+urxvt.color11:			#c8b55b
+urxvt.color12:			#708185
+urxvt.color13:			#847080
+urxvt.color14:			#70986a
+urxvt.color15:			#c0b18b
 
 !!! FONTS !!!
-Xft.dpi:			136
 Xft.antialias:			true
-Xft.rgba:			rgb
 Xft.autohint:			false
+Xft.dpi:			136
 Xft.hinting:			true
 Xft.hintstyle:			hintfull
-urxvt*font:                 	xft:Source Code Pro:regular:size=5.5
-urxvt*imFont:               	xft:Source Code Pro:regular:size=5.5
-urxvt*boldFont:             	xft:Source Code Pro:semibold:size=5.5
-urxvt*italicFont:           	xft:Source Code Pro:italic:size=5.5
-urxvt*boldItalicFont:       	xft:Source Code Pro:semibold:italic:size=5.5
-urxvt*letterSpace:		0
+Xft.rgba:			rgb
+urxvt.boldFont:			xft:Source Code Pro:semibold:size=5
+urxvt.boldItalicFont:		xft:Source Code Pro:semibold:italic:size=5
+urxvt.font:			xft:Source Code Pro:regular:size=5
+urxvt.imFont:			xft:Source Code Pro:regular:size=5
+urxvt.italicFont:		xft:Source Code Pro:italic:size=5
+urxvt.letterSpace:		0
 
 !!! OPTIONS !!!
-Xcursor.size:			6
-urxvt*scrollBar:		false
-urxvt*transparent:		false
-urxvt*url-select.launcher:	chromium
-urxvt*url-select.underline:	true
-urxvt*cursorBlink:		false
+urxvt.cursorBlink:		false
+urxvt.scrollBar:		false
+urxvt.transparent:		false
+urxvt.url-select.launcher:	firefox
+urxvt.url-select.underline:	true
 
 !!! ROFI !!!
-rofi.highlightbg: #c0b18b
-rofi.highlightfg: #1f1f1f
-rofi.bordercolor: #1f1f1f
-rofi.font: Source Code Pro 7
-rofi.padding: 3
-rofi.borderwidth: 0
+rofi.auto-select:		false
+rofi.bc:			#c0b18b
+rofi.bg-active:	
+rofi.bg-urgent:	
+rofi.bg:			#1f1f1f
+rofi.bgalt:			#1f1f1f
+rofi.bw:			1
+rofi.case-sensitive:		false
+rofi.color-active:		#fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
+rofi.color-normal:		#fdf6e3,#002b36,#eee8d5,#eee8d5,#eee8d5
+rofi.color-urgent:		#fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
+rofi.color-window:		#fdf6e3,#002b36
+rofi.columns:			1
+rofi.combi-modi:		window,run
+rofi.disable-history:		false
+rofi.eh:			1
+rofi.fg-active:	
+rofi.fg-urgent:	
+rofi.fg:			#c0b18b
+rofi.fixed-num-lines:		false
+rofi.font:			Source Code Pro 7
+rofi.hlbg-active:	
+rofi.hlbg-urgent:	
+rofi.hlbg:			#c0b18b
+rofi.hlfg-active:	
+rofi.hlfg-urgent:	
+rofi.hlfg:			#1f1f1f
+rofi.key-run:	
+rofi.key-ssh:	
+rofi.key-window:	
+rofi.lazy-filter-limit:		5000
+rofi.levenshtein-sort:		false
+rofi.lines:			15
+rofi.location:			0
+rofi.modi:			window,run,ssh
+rofi.opacity:			100
+rofi.padding:			0
+rofi.parse-hosts:		false
+rofi.pid:			/run/user/1000/rofi.pid
+rofi.run-command:		{cmd}
+rofi.run-list-command:	
+rofi.run-shell-command:		{terminal} -e {cmd}
+rofi.sidebar-mode:		true
+rofi.ssh-client:		ssh
+rofi.ssh-command:		{terminal} -e {ssh-client} {host}
+rofi.terminal:			urxvt
+rofi.width:			30
+rofi.xoffset:			0
+rofi.yoffset:			0
