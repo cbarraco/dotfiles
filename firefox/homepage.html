@@ -10,25 +10,25 @@
 }
 
 body {
-	background: #1a1a1a;
-	color: #857d59;
+	background: #1f1f1f;
+	color: #c0b18b;
 }
 
 a {
-	color: #857d59;
+	color: #c0b18b;
 	text-decoration: none;
 }
 
 h1 {
-	background: #1a1a1a;
-	color: #857d59;
+	background: #1f1f1f;
+	color: #c0b18b;
 	text-align: center;
 }
 
 input[type="text"] {
-	background: #222;
-	border: 1px solid #857d58;
-	color: #857d58;
+	background: #1f1f1f;
+	border: 1px solid #c0b18b;
+	color: #c0b18b;
 	display: block;
 	font-size: 12px;
 	margin-left: auto;
@@ -39,7 +39,7 @@ input[type="text"] {
 
 .site-div {
 	display:block;
-	border: solid 1px #857d59;
+	border: solid 1px #c0b18b;
 	float: left;
 	height: 30px;
 	margin: 5px;
@@ -50,9 +50,14 @@ input[type="text"] {
 }
 
 .site-div:hover {
-	background: #857d59;
-	color: #1a1a1a;
+	background: #c0b18b;
+	color: #1f1f1f;
 	cursor: pointer;
+}
+
+.site-div:focus{
+	background: #c0b18b;
+	color: #1f1f1f;
 }
 
 .site-div .name {
@@ -74,6 +79,7 @@ var qs = document.getElementById("quicksearch");
 
 sites = [
 	"docs.google.com",
+	"drive.google.com",
 	"reddit.com",
 	"youtube.com",
 	"google.com/calendar",
@@ -84,16 +90,16 @@ sites = [
 	"learn.uwaterloo.ca",
 	"box.com",
 	"nyaa.se",
-	"4chan.org",
+	"4chan.org/g",
 	"github.com",
 	"wiki.archlinux.org",
-	"localhost:8888/gui",
 	"gist.github.com",
 	"keep.google.com",
 	"walmart.ca",
 	"mail.google.com",
 	"myanimelist.net",
 	"terminal.sexy",
+	"twily.info",
 	"amazon.ca",
 	"outlook.com",
 ];

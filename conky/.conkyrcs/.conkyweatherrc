@@ -2,20 +2,20 @@ double_buffer		yes
 own_window		yes
 own_window_transparent	no
 own_window_type		override
-own_window_hints	sticky
+own_window_hints	undecorate,sticky
+own_window_class	conky
+own_window_colour	1f1f1f
 draw_borders		no
+draw_shades		no
 alignment		top_left
 update_interval		1
-default_color		857d59
-own_window_colour	1a1a1a
+default_color		c0b18b
 use_xft			yes
 xftfont			Source Code Pro:size=5
 override_utf8_locale	yes
-#minimum_size		1366 0
-#maximum_width		150
 use_spacer		none
-gap_x			91
-gap_y			58
+gap_x			65
+gap_y			23
 
 TEXT
-${execpi 600 getweather -f "%d %t"}°C
+${execpi 300 getweather -u "http://www.accuweather.com/en/ca/waterloo/n2l/current-weather/55073"}°C

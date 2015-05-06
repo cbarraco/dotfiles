@@ -3,17 +3,18 @@ own_window		yes
 own_window_transparent	no
 own_window_type		override
 own_window_hints	sticky
+own_window_colour	1f1f1f
 draw_borders		no
+draw_shades		no
 alignment		top_right
 update_interval		1
-default_color		857d59
-own_window_colour	1a1a1a
+default_color		c0b18b
 use_xft			yes
 xftfont			Source Code Pro:size=5
 override_utf8_locale	yes
 use_spacer		none
-gap_x			97
-gap_y			58
+gap_x			70
+gap_y			23
 
 TEXT
-${alignr}${battery_percent BAT}% ${battery_bar 5,16 BAT} 
+${alignr}${battery_percent BAT}% ${battery_bar 5,25 BAT}

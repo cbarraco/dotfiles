@@ -1,6 +1,0 @@
-#!/bin/bash
-TORRENT_ID=$1
-TORRENT_NAME=$2
-TORRENT_PATH=$3
-
-filebot -r -rename $TORRENT_PATH --format "{n} - {s00e00} - {t}" --db anidb -non-strict

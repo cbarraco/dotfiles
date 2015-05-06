@@ -3,10 +3,11 @@
 #############
 set $mod 			Mod4
 set $resize			5
-set $gsi			9
-set $gso			78
-set $fgcolor			#746c48
-set $bgcolor			#1a1a1a
+set $gsi			20
+set $gso			40
+set $fgcolor			#c0b18b
+set $bgcolor			#1f1f1f
+set $bordersize			1
 
 #################
 # CONFIGURATION #
@@ -28,8 +29,9 @@ font 				pango:Source Code Pro 7
 hide_edge_borders		none
 gaps inner			$gsi
 gaps outer			$gso
-new_float			pixel 1
-new_window			pixel 1
+new_float			pixel $bordersize
+new_window			pixel $bordersize
+smart_borders			no_gaps
 
 ###############
 # KEYBINDINGS #
@@ -37,8 +39,7 @@ new_window			pixel 1
 ### System Keybindings ###
 bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
 bindsym $mod+Return 		exec urxvt
-bindsym $mod+d 			exec rofi -bg "#1a1a1a" -fg "#867d59" -show run
-bindsym $mod+g 			exec rofi -bg "#1a1a1a" -fg "#867d59" -show window
+bindsym $mod+d 			exec rofi -show run
 bindsym $mod+Shift+c 		reload
 bindsym $mod+Shift+r 		restart
 bindsym $mod+Shift+e 		exec "i3-exit"
@@ -71,6 +72,7 @@ bindsym $mod+Right		focus right
 
 ### Workspace Keybindings ###
 # Show workspace
+bindsym $mod+Shift+Tab		workspace prev
 bindsym $mod+Tab		workspace next
 bindsym $mod+1 			workspace 1
 bindsym $mod+2 			workspace 2
@@ -83,7 +85,6 @@ bindsym $mod+8 			workspace 8
 bindsym $mod+9 			workspace 9
 bindsym $mod+0 			workspace 10
 # Move to workspace
-bindsym $mod+Shift+Tab		move container to workspace next
 bindsym $mod+Shift+1 		move container to workspace 1
 bindsym $mod+Shift+2 		move container to workspace 2
 bindsym $mod+Shift+3	 	move container to workspace 3
@@ -147,8 +148,7 @@ bindsym $mod+r 			mode "resize"
 ####################
 # STARTUP PROGRAMS #
 ####################
-exec btsync
-exec compton --config ~/.config/compton/compton.conf -b
+exec compton --config ~/.config/compton/compton2.conf -b
 exec nitrogen --restore
 exec xfce4-power-manager
 exec redshift
@@ -156,5 +156,7 @@ exec conky --config=/home/cjbarrac/.conkyrcs/.conkyweatherrc
 exec conky --config=/home/cjbarrac/.conkyrcs/.conkytimerc
 exec conky --config=/home/cjbarrac/.conkyrcs/.conkybatteryrc
 exec google-musicmanager
-exec stalonetray
 exec nm-applet
+exec rssdler -rd
+exec insync start
+exec megasync
