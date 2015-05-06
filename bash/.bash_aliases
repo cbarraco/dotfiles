@@ -6,10 +6,12 @@ alias fdu="du -ahd 1 | sort -hr"
 alias alsamixer="alsamixer -g"
 alias pacaur='pacaur --color always'
 alias saltybet='livestreamer http://www.twitch.tv/saltybet source --player mpv'
-alias marvin='sshfs -o IdentityFile=/home/cjbarrac/.ssh/id_rsa -p 4242 download@192.168.0.11:/home/ /home/cjbarrac/Marvin'
+alias marvin='sshfs -o IdentityFile=/home/cjbarrac/.ssh/id_rsa -p 4242 download@192.168.0.11:/home/ /home/cjbarrac/Web/Marvin'
 alias school='gcalcli --calendar="School" quick'
 alias xres='vim ~/.Xresources && xrdb -merge ~/.Xresources'
 alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
+alias beet='beet -d /home/cjbarrac/Audio/Music/'
+
 
 # My functions
 killorphans() {

@@ -148,7 +148,6 @@ bindsym $mod+r 			mode "resize"
 ####################
 # STARTUP PROGRAMS #
 ####################
-exec btsync
 exec compton --config ~/.config/compton/compton2.conf -b
 exec nitrogen --restore
 exec xfce4-power-manager
@@ -160,3 +159,4 @@ exec google-musicmanager
 exec nm-applet
 exec rssdler -rd
 exec insync start
+exec megasync
