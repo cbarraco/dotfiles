@@ -3,7 +3,7 @@ These are the dotfiles for my laptop
 
 Installation Instructions
 =========================
-The folders and files in this repo can be installed automatically using the program GNU stow. You can probably find it in your package manager, if not you can always manually copy the files to their corresponding directory. Regardless if you are using GNU stow or not, MAKE A BACKUP of your local dotfiles (rename them to %file%.bak). Run the install script in the repo, the directory you run the script in will be where the symlinks are sourced, so move it to the location you want to use for storing your dotfiles. If all goes to plan and you have the programs and wallpaper I use, you should have something that looks like the screenshots below.
+The folders and files in this repo can be installed automatically using the program GNU stow. You can probably find it in your package manager, if not you can always manually copy the files to their corresponding directory. Regardless if you are using GNU stow or not, **MAKE A BACKUP** of your local dotfiles (rename them to %file%.bak). Run the install script in the repo, the directory you run the script in will be where the symlinks are sourced, so move it to the location you want to use for storing your dotfiles. If all goes to plan and you have the programs and wallpaper I use, you should have something that looks like the screenshots below.
 
 Folder Info
 ===========
