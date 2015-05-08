@@ -7,6 +7,7 @@ set $gsi			20
 set $gso			40
 set $fgcolor			#c0b18b
 set $bgcolor			#1f1f1f
+set $iacolor			#555555
 set $bordersize			1
 
 #################
@@ -21,8 +22,8 @@ workspace_layout		default
 ##############
 # Set window appearence
 client.focused          	$fgcolor $fgcolor $bgcolor $fgcolor 
-client.focused_inactive 	$bgcolor $bgcolor $fgcolor $bgcolor
-client.unfocused        	$bgcolor $bgcolor $fgcolor $bgcolor
+client.focused_inactive 	$iacolor $iacolor $fgcolor $iacolor
+client.unfocused        	$iacolor $iacolor $fgcolor $iacolor
 # Set font
 font 				pango:Source Code Pro 7
 # Configure window borders
