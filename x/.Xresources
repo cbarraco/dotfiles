@@ -1,30 +1,5 @@
 #include </home/cjbarrac/.rofiXresources>
-
-! special colors
-*background:			#1f1f1f
-*borderColor:			#1f1f1f
-*colorBD:			#708185
-*cursorColor:			#c0b18b
-*foreground:			#c0b18b
-
-! colors
-*color0:			#999999
-*color1:			#af602f
-*color2:			#908f32
-*color3:			#c8b55b
-*color4:			#708185
-*color5:			#847080
-*color6:			#70986f
-*color7:			#c0b18b
-
-*color8:			#999999
-*color9:			#af602f
-*color10:			#908f32
-*color11:			#c8b55b
-*color12:			#708185
-*color13:			#847080
-*color14:			#70986f
-*color15:			#c0b18b
+#include </home/cjbarrac/.colorsXresources>
 
 !!! FONTS !!!
 Xft.antialias:			true
@@ -33,11 +8,11 @@ Xft.dpi:			136
 Xft.hinting:			true
 Xft.hintstyle:			hintfull
 Xft.rgba:			rgb
-urxvt.boldFont:			xft:Source Code Pro:semibold:size=5
-urxvt.boldItalicFont:		xft:Source Code Pro:semibold:italic:size=5
-urxvt.font:			xft:Source Code Pro:regular:size=5
-urxvt.imFont:			xft:Source Code Pro:regular:size=5
-urxvt.italicFont:		xft:Source Code Pro:italic:size=5
+urxvt.boldFont:			xft:Source Code Pro:semibold:size=6
+urxvt.boldItalicFont:		xft:Source Code Pro:semibold:italic:size=6
+urxvt.font:			xft:Source Code Pro:regular:size=6
+urxvt.imFont:			xft:Source Code Pro:regular:size=6
+urxvt.italicFont:		xft:Source Code Pro:italic:size=6
 urxvt.letterSpace:		0
 
 !!! OPTIONS !!!
