@@ -101,7 +101,7 @@
         font-size: var(--tab-font-size); text-shadow: none !important; text-align: left /* center | left */ !important;
     }
     
-    .tabbrowser-tab label { padding: 0 22px 0 22px !important; text-align: center !important; }
+    .tabbrowser-tab label { padding: 0 5px 0 5px !important; text-align: center !important; }
     
     #tabbrowser-tabs .tabbrowser-tab[pinned]            { width: 36px !important; }
     #tabbrowser-tabs .tabbrowser-tab[pinned] label      { display: none !important; }

@@ -1,0 +1,97 @@
+@-moz-document  domain('nyaa.se') {  
+  body {
+    background: #1f1f1f !important;
+    min-width: 0px !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: #999999 !important;
+    border-color: #c0b18b !important;
+  }
+  
+  td > b {
+    color: #af602f !important;
+  }
+  
+  #tabnav a {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  
+  #tabnav {
+    float: none !important;
+  }
+  
+  .refinesearch {
+    display: none !important;
+  }
+  
+  .page {
+    color: #c0b18b !important;
+    border: none !important;
+  }
+  
+  select {
+    display: none !important;
+  }
+  
+  #navbar {
+    width: 50% !important;
+  }
+  
+  .content {
+    border: none !important;
+    width: 90% !important;
+    margin: auto !important;
+    float: none !important;/**/
+  }
+  
+  #topbar {
+    background: #1f1f1f !important;
+    border-bottom: #c0b18b solid 1px !important;
+  }
+  
+  .inputsearchterm {
+    width: 70% !important;
+  }
+  
+  .inputsearchsubmit {
+    width: 20% !important;
+  }
+  
+  #searchcontainer {
+    width: 40% !important;
+  }
+  
+  a > img {
+    margin: auto !important;
+  }
+  
+  td.tlistdn, td.tlistmn, td.tlistsize, th {
+    color: #999999 !important;
+    text-align: center !important;
+  }
+  
+  td.tlistsn {
+    color: #908f32 !important;
+    text-align: center !important;
+  }
+  
+  .torrentcats {
+    display: none !important;
+  }
+  
+  td.tlistln {
+    color: #af602f !important;
+    text-align: center !important;
+  }
+  
+  th {
+    text-align: center !important;
+  }
+  
+  a {
+    color: #c0b18b !important;
+  }
+}
