@@ -27,5 +27,21 @@ Clean
 ![clean](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/clean.png)
 
 Music
------------
+-----
 ![music](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/music.png)
+
+Homepage
+--------
+![homepage](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/homepage.png)
+
+Coding
+------
+![coding](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/coding.png)
+
+Custom Website CSS
+------------------
+![custom-pages](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/custom-pages.png)
+
+GTK Theme
+---------
+![gtk](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/gtk.png)
