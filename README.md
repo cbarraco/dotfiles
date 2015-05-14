@@ -45,3 +45,7 @@ Custom Website CSS
 GTK Theme
 ---------
 ![gtk](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/gtk.png)
+
+Colors and Screenfetch
+----------------------
+![colors](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/colors.png)
