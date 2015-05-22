@@ -1,4 +1,4 @@
-alias l='ls --human-readable --group-directories-first --size --color'
+alias l='echo "`pwd`" && ls --human-readable --group-directories-first --size --color'
 alias ll='ls -l --human-readable --group-directories-first --size --color'
 alias nyaah='nyaa --sort=leech --output-path=/home/cjbarrac/Downloads/nyaa HorribleSubs 720'
 alias cpu_usage="top -d 0.5 -b -n 2 | grep Cpu | tail -n 1 | cut -c 1-24 | awk '{print \$3}'"
@@ -11,12 +11,15 @@ alias school='gcalcli --calendar="School" quick'
 alias xres='vim ~/.Xresources && xrdb -merge ~/.Xresources'
 alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
 alias beet='beet -d /home/cjbarrac/Audio/Music/'
-
+alias sshfsuw='sshfs cjbarrac@uw-linux-environment:/u2/cjbarraco/ ~/Web/sshfsuw'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias sf='screenfetch -a ~/Documents/mushroom'
+alias unclutter='unclutter -reset'
 
 # My functions
 killorphans() {
 	if [[ ! -n $(pacaur -Qdt) ]]; then
-		echo "No orphans to remove."
+		echo "No more orphans to kill"
 	else
 		pacaur -Rns $(pacaur -Qdtq)
 	fi
@@ -30,6 +33,6 @@ pdf2up() {
 dlwebsite() {
 	wget --random-wait -r -p -e robots=off -U mozilla $1
 }
-gacpm() {
+gpushall() {
 	git add . && git commit -m "$1" && git push origin master
 }
