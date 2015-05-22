@@ -4,7 +4,7 @@
 set $mod 			Mod4
 set $resize			5
 set $gsi			20
-set $gso			40
+set $gso			20
 set $fgcolor			#c0b18b
 set $bgcolor			#1f1f1f
 set $iacolor			#555555
@@ -39,6 +39,7 @@ smart_borders			no_gaps
 ###############
 ### System Keybindings ###
 bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
+bindsym $mod+t 			exec notify-send -u low "Time" "`date`";mode "default"
 bindsym $mod+Return 		exec urxvt
 bindsym $mod+d 			exec rofi -show run
 bindsym $mod+Shift+c 		reload
@@ -153,8 +154,8 @@ exec compton --config ~/.config/compton/compton2.conf -b
 exec nitrogen --restore
 exec xfce4-power-manager
 exec redshift
-exec conky --config=/home/cjbarrac/.conkyrcs/.conkyweatherrc
-exec conky --config=/home/cjbarrac/.conkyrcs/.conkytimerc
+#exec conky --config=/home/cjbarrac/.conkyrcs/.conkyweatherrc
+#exec conky --config=/home/cjbarrac/.conkyrcs/.conkytimerc
 exec conky --config=/home/cjbarrac/.conkyrcs/.conkybatteryrc
 exec google-musicmanager
 exec nm-applet
