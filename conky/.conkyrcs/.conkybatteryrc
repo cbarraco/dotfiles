@@ -1,20 +1,26 @@
 double_buffer		yes
 own_window		yes
-own_window_transparent	no
+own_window_transparent	yes
 own_window_type		override
 own_window_hints	sticky
 own_window_colour	1f1f1f
 draw_borders		no
 draw_shades		no
-alignment		top_right
+alignment		bottom_right
 update_interval		1
+#default_color		000000
 default_color		c0b18b
 use_xft			yes
-xftfont			Source Code Pro:size=5
+xftfont			Source Code Pro:size=6
 override_utf8_locale	yes
 use_spacer		none
-gap_x			70
-gap_y			23
 
+gap_x 3
+gap_y 0
+
+#gap_x			66
+#gap_y			23
+
+#${alignr}${battery_percent BAT}% ${battery_bar 5,25 BAT}
 TEXT
-${alignr}${battery_percent BAT}% ${battery_bar 5,25 BAT}
+${alignr}${battery_percent BAT}%
