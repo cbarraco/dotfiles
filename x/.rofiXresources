@@ -29,7 +29,7 @@ rofi.key-run:
 rofi.key-ssh:	
 rofi.key-window:	
 rofi.lazy-filter-limit:		5000
-rofi.levenshtein-sort:		false
+rofi.levenshtein-sort:		true
 rofi.lines:			15
 rofi.location:			0
 rofi.modi:			window,run,ssh
