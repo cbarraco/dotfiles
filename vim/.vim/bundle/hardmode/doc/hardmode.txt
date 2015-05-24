@@ -1,0 +1,48 @@
+*hardmode.txt*  Plugin for enforcing Vim motion best practices
+
+Authors:  Matt Parrott <parrott.matt@gmail.com>, Xeross <contact@xeross.me>
+License: GPLv2
+
+This plugin is only available if 'compatible' is not set.
+
+INTRODUCTION                                    *hardmode*
+
+Hard Mode is a plugin which disables the arrow keys, the hjkl keys,
+the page up/down keys, and a handful of other keys which allow one
+to rely on character-wise navigation. The philosophy behind Hard Mode
+is that you'll never master Vim's advanced motion and search functionality
+if you can fall back on the anti-pattern of fumbling around your code with
+the arrow keys.
+
+MAPPINGS                                        *hardmode-mappings*
+
+To enable it:
+:call HardMode()
+
+To disable it:
+:call EasyMode()
+
+To toggle it:
+:call ToggleHardMode()
+
+To enable it by default, add this to your |vimrc|:
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+You may also wish to add the following to line to your |vimrc|:
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
+With that line added, presuming your leader is still the \ key, you
+can toggle Hard Mode by pressing \h while in |Normal-mode|.
+
+OPTIONS                                        *hardmode-options*
+
+|'g:HardMode_echo'|         Enable/disable messages
+
+|'g:HardMode_hardmodeMsg'|  message to display when enabling hardmode
+
+|'g:HardMode_easymodeMsg'|  message to display when enabling easymode
+
+|'g:HardMode_level'|        If set to 'wannabe' arrow keys disabled, but not
+                            hjkl etc.
+
+ vim:tw=78:ts=8:ft=help:norl:
