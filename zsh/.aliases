@@ -1,22 +1,34 @@
-alias l='echo "`pwd`" && ls --human-readable --group-directories-first --size --color'
-alias ll='ls -l --human-readable --group-directories-first --size --color'
-alias nyaah='nyaa --sort=leech --output-path=/home/cjbarrac/Downloads/nyaa HorribleSubs 720'
+#!/usr/bin/zsh
+
+# Error fixing
+alias vi='vim'
+alias vmi='vim'
+alias sl='ls'
+
+# Overwrites
+alias beet='beet -d /home/cjbarrac/Audio/Music/'
+alias nyaa='nyaa --sort=leech --output-path=/home/cjbarrac/Downloads/nyaa HorribleSubs 720'
+alias pacaur='pacaur --color always --noedit'
+alias unclutter='unclutter -reset'
+alias alsamixer="alsamixer -g"
+
+# Alias functions
+alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
 alias cpu_usage="top -d 0.5 -b -n 2 | grep Cpu | tail -n 1 | cut -c 1-24 | awk '{print \$3}'"
 alias fdu="du -ahd 1 | sort -hr"
-alias alsamixer="alsamixer -g"
-alias pacaur='pacaur --color always'
-alias saltybet='livestreamer http://www.twitch.tv/saltybet source --player mpv'
+alias l='echo "`pwd`" && ls --human-readable --group-directories-first --size --color $@'
 alias marvin='sshfs -o IdentityFile=/home/cjbarrac/.ssh/id_rsa -p 4242 download@192.168.0.11:/home/ /home/cjbarrac/Web/Marvin'
+alias saltybet='livestreamer http://www.twitch.tv/saltybet source --player mpv'
 alias school='gcalcli --calendar="School" quick'
-alias xres='vim ~/.Xresources && xrdb -merge ~/.Xresources'
-alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
-alias beet='beet -d /home/cjbarrac/Audio/Music/'
+alias sim='sudo vim'
 alias sshfsuw='sshfs cjbarrac@uw-linux-environment:/u2/cjbarraco/ ~/Web/sshfsuw'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias sf='screenfetch -a ~/Documents/mushroom'
-alias unclutter='unclutter -reset'
+alias xres='vim ~/.Xresources && xrdb -merge ~/.Xresources'
 
 # My functions
+cs() {
+	cd "$1" && l;
+}
 killorphans() {
 	if [[ ! -n $(pacaur -Qdt) ]]; then
 		echo "No more orphans to kill"

@@ -3,8 +3,8 @@
 #############
 set $mod 			Mod4
 set $resize			5
-set $gsi			20
-set $gso			20
+set $gsi			18
+set $gso			0
 set $fgcolor			#c0b18b
 set $bgcolor			#1f1f1f
 set $iacolor			#555555
@@ -44,7 +44,7 @@ bindsym $mod+Return 		exec urxvt
 bindsym $mod+d 			exec rofi -show run
 bindsym $mod+Shift+c 		reload
 bindsym $mod+Shift+r 		restart
-bindsym $mod+Shift+e 		exec "i3-exit"
+bindsym $mod+Shift+e 		exec "/home/cjbarrac/.i3/power"
 bindsym $mod+Shift+q 		kill
 bindsym Print			exec scrot
 bindsym $mod+n 			gaps inner all set 0;gaps outer all set 0
@@ -62,10 +62,10 @@ bindsym XF86AudioNext 		exec "cmus-remote -n"
 ### Focus Keybindings ###
 bindsym $mod+a 			focus parent
 # Home row
-bindsym $mod+j 			focus left
-bindsym $mod+k 			focus down
-bindsym $mod+l 			focus up
-bindsym $mod+semicolon		focus right
+bindsym $mod+h 			focus left
+bindsym $mod+j 			focus down
+bindsym $mod+k 			focus up
+bindsym $mod+l			focus right
 # Arrows
 bindsym $mod+Left 		focus left
 bindsym $mod+Down 		focus down
@@ -100,10 +100,10 @@ bindsym $mod+Shift+0 		move container to workspace 10
 
 ### Movement Keybindings
 #Home row
-bindsym $mod+Shift+j 		move left
-bindsym $mod+Shift+k		move down
-bindsym $mod+Shift+l		move up
-bindsym $mod+Shift+semicolon	move right
+bindsym $mod+Shift+h		move left
+bindsym $mod+Shift+j		move down
+bindsym $mod+Shift+k		move up
+bindsym $mod+Shift+l		move right
 # Arrows
 bindsym $mod+Shift+Left 	move left
 bindsym $mod+Shift+Down 	move down
@@ -117,7 +117,7 @@ bindsym $mod+w 			layout tabbed
 bindsym $mod+e 			layout toggle split
 bindsym $mod+f 			fullscreen
 # Splitting mode
-bindsym $mod+h 			split h
+bindsym $mod+semicolon		split h
 bindsym $mod+v 			split v
 # Floating mode
 bindsym $mod+Shift+space 	floating toggle
@@ -150,15 +150,20 @@ bindsym $mod+r 			mode "resize"
 ####################
 # STARTUP PROGRAMS #
 ####################
+exec xrandr --output VGA2 --right-of LVDS1
+exec xrandr --output VGA1 --right-of LVDS1
 exec compton --config ~/.config/compton/compton2.conf -b
-exec nitrogen --restore
 exec xfce4-power-manager
 exec redshift
-#exec conky --config=/home/cjbarrac/.conkyrcs/.conkyweatherrc
-#exec conky --config=/home/cjbarrac/.conkyrcs/.conkytimerc
-exec conky --config=/home/cjbarrac/.conkyrcs/.conkybatteryrc
 exec google-musicmanager
 exec nm-applet
 exec rssdler -rd
-exec insync start
-exec megasync
+exec insync-headless start
+exec nitrogen --restore
+
+#bar {
+#	output LVDS1
+#	position top
+#	status_command i3status
+#	workspace_buttons no
+#}

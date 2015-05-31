@@ -1,6 +1,6 @@
 ! special colors
-*background:	#1f1f1f
-*borderColor:	#1f1f1f
+*background:	#222222
+*borderColor:	#222222
 *colorBD:	#708185
 *cursorColor:	#c0b18b
 *foreground:	#c0b18b

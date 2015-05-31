@@ -1,0 +1,12 @@
+urxvt.boldFont:			xft:Source Code Pro:semibold:size=5
+urxvt.boldItalicFont:	xft:Source Code Pro:semibold:italic:size=5
+urxvt.font:				xft:Source Code Pro:regular:size=5
+urxvt.imFont:			xft:Source Code Pro:regular:size=5
+urxvt.italicFont:		xft:Source Code Pro:italic:size=5
+urxvt.letterSpace:		0
+urxvt.cursorBlink:	    	false
+urxvt.scrollBar:	    	false
+urxvt.transparent:	    	false
+urxvt.url-select.launcher:	firefox
+urxvt.url-select.underline:	true
+urxvt.internalBorder:		10

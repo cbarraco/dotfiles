@@ -1,38 +1,69 @@
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+" disable word wrap
 set nowrap
+" always show the status line
 set laststatus=2
-set nu
+" Show matching brackets when text indicator is over them
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set mat=2
+" 1 tab = 4 spaces
+set shiftwidth=4
+set tabstop=4
+" Use spaces instead of tabs
+set expandtab
+" Be smart when using tabs ;)
+set smarttab
+" ignore case when searching
+set ignorecase
+" remember 999 previous commands
+set history=999
+" turn off annoying stuff
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+" incremental search
+set incsearch
+" enable syntax highlighting
+syntax enable
+" enable filetype plugins
+filetype indent on
+filetype plugin on
+" show line numbers
+set number
+" set default encoding
+set encoding=utf-8
+
+" PLUGINS "
+"""""""""""
+execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :CtrlP<CR>
 nnoremap <F5> :GundoToggle<CR>
-set encoding=utf-8
-scriptencoding utf-8
-highlight LineNr ctermfg=yellow
+highlight LineNr ctermfg=black
 let g:lightline = {
-			\ 'colorscheme': 'nature',
-			\ 'active': {
-			\   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-			\   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-			\ },
-			\ 'component_function': {
-			\   'fugitive': 'MyFugitive',
-			\   'filename': 'MyFilename',
-			\   'fileformat': 'MyFileformat',
-			\   'filetype': 'MyFiletype',
-			\   'fileencoding': 'MyFileencoding',
-			\   'mode': 'MyMode',
-			\   'ctrlpmark': 'CtrlPMark',
-			\ },
-			\ 'component_expand': {
-			\   'syntastic': 'SyntasticStatuslineFlag',
-			\ },
-			\ 'component_type': {
-			\   'syntastic': 'error',
-			\ },
-			\ 'subseparator': { 'left': '|', 'right': '|' },
-			\ }
+	\ 'colorscheme': 'wombat',
+	\ 'active': {
+	\   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+	\   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+	\ },
+	\ 'component_function': {
+	\   'fugitive': 'MyFugitive',
+	\   'filename': 'MyFilename',
+	\   'fileformat': 'MyFileformat',
+	\   'filetype': 'MyFiletype',
+	\   'fileencoding': 'MyFileencoding',
+	\   'mode': 'MyMode',
+	\   'ctrlpmark': 'CtrlPMark',
+	\ },
+	\ 'component_expand': {
+	\   'syntastic': 'SyntasticStatuslineFlag',
+	\ },
+	\ 'component_type': {
+	\   'syntastic': 'error',
+	\ },
+	\ 'subseparator': { 'left': '|', 'right': '|' },
+	\ }
 
 function! MyModified()
 	return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -138,3 +169,5 @@ endfunction
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
+
+command W w !sudo tee % > /dev/null

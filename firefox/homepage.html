@@ -1,5 +1,6 @@
-<h1>~</h1>
+<br />
 <p><input type="text" id="quicksearch" placeholder="Search" /></p>
+<br />
 <div id="maincontainer"></div>
 <style>
 * {
@@ -7,10 +8,11 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	font-family: "Source Code Pro";
+	font-size: 17px;
 }
 
 body {
-	background: #1f1f1f;
+	background: #222;
 	color: #c0b18b;
 }
 
@@ -20,58 +22,49 @@ a {
 }
 
 h1 {
-	background: #1f1f1f;
+	background: #222;
 	color: #c0b18b;
 	text-align: center;
 }
 
 input[type="text"] {
-	background: #1f1f1f;
+	background: #222;
 	border: 1px solid #c0b18b;
 	color: #c0b18b;
 	display: block;
-	font-size: 12px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	width: 250px;
+	width: 50%;
 }
 
 .site-div {
 	display:block;
-	border: solid 1px #c0b18b;
 	float: left;
-	height: 30px;
-	margin: 5px;
-	padding: 6px;
-	position: relative;
-	text-align: left;
+	margin: 4px;
+	padding: 0 10px;
 	width: auto;
 }
 
 .site-div:hover {
 	background: #c0b18b;
-	color: #1f1f1f;
+	color: #222;
 	cursor: pointer;
 }
 
 .site-div:focus{
 	background: #c0b18b;
-	color: #1f1f1f;
+	color: #222;
 }
 
 .site-div .name {
-	float:right;
-	font-size: 10px;
 	vertical-align: middle;
-	height: 10px;
-	margin: 2px 0 0 5px;
+	line-height: 0px;
 }
 
-.site-div .symbol {
+/*.site-div .symbol {
 	float: left;
-}
-
+}*/
 </style>
 <script>
 var mc = document.getElementById("maincontainer");
@@ -118,9 +111,9 @@ for (var i=0;i<sites.length;i++) {
 	var siteDiv = create("a", "site-div", "siteDiv"+i);
 	siteDiv.href = "http://"+sites[i];
 
-	var img = create("img","symbol","img"+i);
+	/*var img = create("img","symbol","img"+i);
 	img.src = "http://www.google.com/s2/favicons?domain_url=http://"+sites[i];
-	siteDiv.appendChild(img);
+	siteDiv.appendChild(img);*/
 
 	var p = create("p","name","p"+i);
 	p.innerHTML = sites[i];
@@ -151,7 +144,7 @@ qs.onkeyup = function(){
 
 qs.onkeydown = function(e){
 	if (e.which == 13) {
-		if (qs.value.indexOf(".") > -1) {
+		if (qs.value.indexOf(".") > -1 || qs.value.indexOf(":") > -1) {
 			window.location = "http://"+qs.value;
 		} else {
 			window.location = "http://google.ca/search?q="+qs.value;
