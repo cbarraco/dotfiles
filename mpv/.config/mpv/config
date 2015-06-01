@@ -3,22 +3,33 @@ use-filedir-conf=yes
 screenshot-template=~/Downloads/mpv-screenshot%n
 
 ### VIDEO ###
-cache=8192
-cache-default=16384
+cache=auto
+cache-default=204800
+cache-initial=1000
 display-fps=60
+framedrop=vo
 hwdec=auto
 vo=opengl-hq:glfinish:fancy-downscaling=no:icc-cache=~/.mpv/icc-cache:interpolation
+ytdl-format=bestvideo+bestaudio/best
 
 ### AUDIO ###
-alang=jp,jpn,en,eng,it,ita
-ao=alsa
+alang=jpn,jap,Japanese,en,eng,English,it,ita
+ao=alsa:resample=no
+audio-channels=2
 softvol=no
 
 ### SUBTITLES ###
 ass-force-style=Kerning=yes
-slang=eng,en,it
-sub-text-font="Source Sans Pro"
-sub-text-font-size=48
+slang=en,eng,English,jpn,jap,Japanese,it,ita,Italian
+sub-text-font="Source Sans Pro Semibold"
+sub-text-font-size=54
+sub-text-margin-y=36
+sub-text-color="#ffffffff"
+sub-text-border-color="#ff262626"
+sub-text-border-size=2.30
+sub-text-shadow-offset=1
+sub-text-shadow-color="#33000000"
+sub-text-spacing=0.4
 
 ### ON SCREEN DISPLAY ###
 osd-bar-align-y=0
@@ -27,3 +38,14 @@ osd-border-color='#99000000'
 osd-border-size=1
 osd-color='#AAFFFFFF'
 osd-font="Source Sans Pro"
+
+### COLORS ###
+msg-color=yes
+
+### EXTENSIONS ###
+[extension.webm]
+loop-file=inf
+[extension.mp3]
+no-video
+[extension.flac]
+no-video
