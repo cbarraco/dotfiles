@@ -1,2 +1,4 @@
-XTerm*faceName:			Source Code Pro
-XTerm*faceSize:			5
+xterm*faceName: Source Code Pro
+xterm*faceSize: 5
+xterm*internalBorder: 10
+

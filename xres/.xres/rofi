@@ -1,13 +1,15 @@
+#define myfgcolor #c0b18b
+#define mybgcolor #222222
 rofi.auto-select:                    false
-rofi.bc:                             #c0b18b
-rofi.bg-active:                      #1f1f1f
-rofi.bg-urgent:                      #1f1f1f
-rofi.bg:                             #1f1f1f
-rofi.bgalt:                          #1f1f1f
+rofi.bc:                             myfgcolor
+rofi.bg-active:                      mybgcolor
+rofi.bg-urgent:                      mybgcolor
+rofi.bg:                             mybgcolor
+rofi.bgalt:                          mybgcolor
 rofi.bw:                             1
 rofi.case-sensitive:                 false
 rofi.color-active:                   #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
-rofi.color-enabled:                  #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
+rofi.color-enabled:                  false
 rofi.color-normal:                   #fdf6e3,#002b36,#eee8d5,#eee8d5,#eee8d5
 rofi.color-urgent:                   #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
 rofi.color-window:                   #fdf6e3,#002b36
@@ -15,17 +17,17 @@ rofi.columns:                        1
 rofi.combi-modi:                     window,run
 rofi.disable-history:                false
 rofi.eh:                             1
-rofi.fg-active:                      #c0b18b
-rofi.fg-urgent:                      #c0b18b
-rofi.fg:                             #c0b18b
+rofi.fg-active:                      myfgcolor
+rofi.fg-urgent:                      myfgcolor
+rofi.fg:                             myfgcolor
 rofi.fixed-num-lines:                false
 rofi.font:                           Source Code Pro 8
-rofi.hlbg-active:                    #c0b18b
-rofi.hlbg-urgent:                    #c0b18b
-rofi.hlbg:                           #c0b18b
-rofi.hlfg-active:                    #1f1f1f
-rofi.hlfg-urgent:                    #1f1f1f
-rofi.hlfg:                           #1f1f1f
+rofi.hlbg-active:                    myfgcolor
+rofi.hlbg-urgent:                    myfgcolor
+rofi.hlbg:                           myfgcolor
+rofi.hlfg-active:                    mybgcolor
+rofi.hlfg-urgent:                    mybgcolor
+rofi.hlfg:                           mybgcolor
 rofi.kb-accept-custom:               Control+Return
 rofi.kb-accept-entry-continue:       Shift+Return
 rofi.kb-accept-entry:                Control+j,Control+m,Return,KP_Enter
@@ -60,7 +62,7 @@ rofi.key-ssh:
 rofi.key-window:                     
 rofi.lazy-filter-limit:              5000
 rofi.levenshtein-sort:               false
-rofi.lines:                          15
+rofi.lines:                          7
 rofi.location:                       0
 rofi.modi:                           window,run,ssh
 rofi.opacity:                        100
@@ -74,6 +76,6 @@ rofi.sidebar-mode:                   true
 rofi.ssh-client:                     ssh
 rofi.ssh-command:                    xterm -e {ssh-client} {host}
 rofi.terminal:                       urxvt
-rofi.width:                          30
+rofi.width:                          21
 rofi.xoffset:                        0
 rofi.yoffset:                        0
