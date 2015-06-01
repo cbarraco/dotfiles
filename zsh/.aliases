@@ -6,11 +6,15 @@ alias vmi='vim'
 alias sl='ls'
 
 # Overwrites
-alias beet='beet -d /home/cjbarrac/Audio/Music/'
-alias nyaa='nyaa --sort=leech --output-path=/home/cjbarrac/Downloads/nyaa HorribleSubs 720'
-alias pacaur='pacaur --color always --noedit'
-alias unclutter='unclutter -reset'
 alias alsamixer="alsamixer -g"
+alias cp='cp -rv'
+alias beet='beet -d /home/cjbarrac/Audio/Music/'
+alias grep='grep --color=auto'
+alias nyaa='nyaa --sort=leech --output-path=/home/cjbarrac/Downloads/nyaa HorribleSubs 720'
+alias pacaur='pacaur --color always --noedit --devel --needed'
+alias rename='rename -v'
+alias rm='rm -v'
+alias unclutter='unclutter -reset'
 
 # Alias functions
 alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
@@ -18,16 +22,27 @@ alias cpu_usage="top -d 0.5 -b -n 2 | grep Cpu | tail -n 1 | cut -c 1-24 | awk '
 alias fdu="du -ahd 1 | sort -hr"
 alias l='echo "`pwd`" && ls --human-readable --group-directories-first --size --color $@'
 alias marvin='sshfs -o IdentityFile=/home/cjbarrac/.ssh/id_rsa -p 4242 download@192.168.0.11:/home/ /home/cjbarrac/Web/Marvin'
-alias saltybet='livestreamer http://www.twitch.tv/saltybet source --player mpv'
+alias powersave='sudo powerdown;sudo powertop --auto-tune'
+alias saltybet='mpv http://www.twitch.tv/saltybet'
 alias school='gcalcli --calendar="School" quick'
 alias sim='sudo vim'
 alias sshfsuw='sshfs cjbarrac@uw-linux-environment:/u2/cjbarraco/ ~/Web/sshfsuw'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias xres='vim ~/.Xresources && xrdb -merge ~/.Xresources'
+alias xres='xrdb -merge ~/.Xresources'
+
+# systemctl functions
+alias sdisable=' sudo systemctl disable $@'
+alias senable='sudo systemctl enable $@'
+alias srestart='sudo systemctl restart $@'
+alias sstart='sudo systemctl start $@'
+alias sstatus='sudo systemctl status $@'
 
 # My functions
 cs() {
 	cd "$1" && l;
+}
+dlwebsite() {
+	wget --random-wait -r -p -e robots=off -U mozilla $1
 }
 killorphans() {
 	if [[ ! -n $(pacaur -Qdt) ]]; then
@@ -42,9 +57,3 @@ pdf4up() {
 pdf2up() {
 	pdfnup $1 --scale 0.9 --frame true --no-landscape --nup 1x2 --outfile '2up-$1'
 } 
-dlwebsite() {
-	wget --random-wait -r -p -e robots=off -U mozilla $1
-}
-gpushall() {
-	git add . && git commit -m "$1" && git push origin master
-}

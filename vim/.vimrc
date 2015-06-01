@@ -1,3 +1,4 @@
+set nocompatible
 " disable word wrap
 set nowrap
 " always show the status line
@@ -26,17 +27,29 @@ set tm=500
 set incsearch
 " enable syntax highlighting
 syntax enable
-" enable filetype plugins
-filetype indent on
-filetype plugin on
 " show line numbers
 set number
 " set default encoding
 set encoding=utf-8
+" turn this off for Vundle
+filetype off
+" set the runtime path to include Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+" init Vundle
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/Gundo'
+call vundle#end()
+" enable filetype plugins, put after Vundle
+filetype indent on
+filetype plugin on
 
-" PLUGINS "
-"""""""""""
-execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :CtrlP<CR>
 nnoremap <F5> :GundoToggle<CR>

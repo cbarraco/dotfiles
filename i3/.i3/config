@@ -13,7 +13,7 @@ set $bordersize			1
 #################
 # CONFIGURATION #
 #################
-focus_follows_mouse 		yes
+focus_follows_mouse 		no
 popup_during_fullscreen		smart
 workspace_layout		default
 
@@ -150,16 +150,17 @@ bindsym $mod+r 			mode "resize"
 ####################
 # STARTUP PROGRAMS #
 ####################
-exec xrandr --output VGA2 --right-of LVDS1
-exec xrandr --output VGA1 --right-of LVDS1
 exec compton --config ~/.config/compton/compton2.conf -b
-exec xfce4-power-manager
-exec redshift
 exec google-musicmanager
-exec nm-applet
-exec rssdler -rd
 exec insync-headless start
 exec nitrogen --restore
+exec nm-applet
+exec redshift
+exec rssdler -rd
+exec unclutter -reset
+exec xfce4-power-manager
+exec xrandr --output VGA1 --right-of LVDS1
+exec xrandr --output VGA2 --right-of LVDS1
 
 #bar {
 #	output LVDS1
