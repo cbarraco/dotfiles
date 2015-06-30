@@ -3,8 +3,8 @@
 #############
 set $mod 			Mod4
 set $resize			5
-set $gsi			18
-set $gso			0
+set $gsi			20
+set $gso			20
 set $fgcolor			#c0b18b
 set $bgcolor			#1f1f1f
 set $iacolor			#555555
@@ -42,12 +42,13 @@ bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s
 bindsym $mod+t 			exec notify-send -u low "Time" "`date`";mode "default"
 bindsym $mod+Return 		exec urxvt
 bindsym $mod+d 			exec rofi -show run
+bindsym $mod+g 			exec manrofi
 bindsym $mod+Shift+c 		reload
 bindsym $mod+Shift+r 		restart
 bindsym $mod+Shift+e 		exec "/home/cjbarrac/.i3/power"
 bindsym $mod+Shift+q 		kill
 bindsym Print			exec scrot
-bindsym $mod+n 			gaps inner all set 0;gaps outer all set 0
+bindsym $mod+n 			gaps inner all set 2;gaps outer all set 0
 bindsym $mod+m 			gaps inner all set $gsi;gaps outer all set $gso
 
 ### Audio Keybindings ###
@@ -150,21 +151,29 @@ bindsym $mod+r 			mode "resize"
 ####################
 # STARTUP PROGRAMS #
 ####################
+exec xrandr --output VGA1 --right-of LVDS1
+exec xrandr --output VGA2 --right-of LVDS1
 exec compton --config ~/.config/compton/compton2.conf -b
 exec google-musicmanager
 exec insync-headless start
-exec nitrogen --restore
 exec nm-applet
 exec redshift
 exec rssdler -rd
 exec unclutter -reset
 exec xfce4-power-manager
-exec xrandr --output VGA1 --right-of LVDS1
-exec xrandr --output VGA2 --right-of LVDS1
+exec nitrogen --restore
 
+#######
+# BAR #
+#######
 #bar {
 #	output LVDS1
 #	position top
 #	status_command i3status
 #	workspace_buttons no
 #}
+
+##################
+# CUSTOM WINDOWS #
+##################
+for_window [class="xpad"] move scratchpad;scratchpad show

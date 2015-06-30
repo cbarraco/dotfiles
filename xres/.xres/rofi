@@ -1,7 +1,7 @@
 #define myfgcolor #c0b18b
-#define mybgcolor #222222
+#define mybgcolor #333333
 rofi.auto-select:                    false
-rofi.bc:                             myfgcolor
+rofi.bc:                             mybgcolor
 rofi.bg-active:                      mybgcolor
 rofi.bg-urgent:                      mybgcolor
 rofi.bg:                             mybgcolor
@@ -16,12 +16,12 @@ rofi.color-window:                   #fdf6e3,#002b36
 rofi.columns:                        1
 rofi.combi-modi:                     window,run
 rofi.disable-history:                false
-rofi.eh:                             1
+rofi.eh:                             2
 rofi.fg-active:                      myfgcolor
 rofi.fg-urgent:                      myfgcolor
 rofi.fg:                             myfgcolor
 rofi.fixed-num-lines:                false
-rofi.font:                           Source Code Pro 8
+rofi.font:                           Inconsolata 9
 rofi.hlbg-active:                    myfgcolor
 rofi.hlbg-urgent:                    myfgcolor
 rofi.hlbg:                           myfgcolor
@@ -62,7 +62,7 @@ rofi.key-ssh:
 rofi.key-window:                     
 rofi.lazy-filter-limit:              5000
 rofi.levenshtein-sort:               false
-rofi.lines:                          7
+rofi.lines:                          5
 rofi.location:                       0
 rofi.modi:                           window,run,ssh
 rofi.opacity:                        100

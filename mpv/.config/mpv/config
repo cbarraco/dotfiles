@@ -3,13 +3,13 @@ use-filedir-conf=yes
 screenshot-template=~/Downloads/mpv-screenshot%n
 
 ### VIDEO ###
-cache=auto
-cache-default=204800
-cache-initial=1000
+cache=8192
+cache-default=8192
+cache-initial=0
 display-fps=60
 framedrop=vo
 hwdec=auto
-vo=opengl-hq:glfinish:fancy-downscaling=no:icc-cache=~/.mpv/icc-cache:interpolation
+vo=opengl-hq:glfinish:interpolation
 ytdl-format=bestvideo+bestaudio/best
 
 ### AUDIO ###
@@ -21,7 +21,7 @@ softvol=no
 ### SUBTITLES ###
 ass-force-style=Kerning=yes
 slang=en,eng,English,jpn,jap,Japanese,it,ita,Italian
-sub-text-font="Source Sans Pro Semibold"
+sub-text-font="Source Sans Pro"
 sub-text-font-size=54
 sub-text-margin-y=36
 sub-text-color="#ffffffff"

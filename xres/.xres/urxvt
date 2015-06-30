@@ -1,8 +1,10 @@
-urxvt.boldFont:			xft:Source Code Pro:semibold:size=6
-urxvt.boldItalicFont:	xft:Source Code Pro:semibold:italic:size=6
-urxvt.font:				xft:Source Code Pro:regular:size=6
-urxvt.imFont:			xft:Source Code Pro:regular:size=6
-urxvt.italicFont:		xft:Source Code Pro:italic:size=6
+#define myfontsize 7
+#define myfont Inconsolata
+urxvt.boldFont:			xft:myfont:bold:size=myfontsize
+urxvt.boldItalicFont:	xft:myfont:bold:italic:size=myfontsize
+urxvt.font:				xft:myfont:medium:size=myfontsize
+urxvt.imFont:			xft:myfont:medium:size=myfontsize
+urxvt.italicFont:		xft:myfont:italic:size=myfontsize
 urxvt.letterSpace:		0
 urxvt.cursorBlink:	    	false
 urxvt.scrollBar:	    	false

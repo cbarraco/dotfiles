@@ -1,156 +1,110 @@
-<br />
-<p><input type="text" id="quicksearch" placeholder="Search" /></p>
-<br />
 <div id="maincontainer"></div>
 <style>
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	font-family: "Source Code Pro";
-	font-size: 17px;
+h1 {
+    font-family: "Source Sans Pro";
+    font-size: 32px;
 }
 
 body {
-	background: #222;
-	color: #c0b18b;
+    background: #222;
+    color: #c0b18b;
 }
 
-a {
-	color: #c0b18b;
-	text-decoration: none;
-}
-
-h1 {
-	background: #222;
-	color: #c0b18b;
-	text-align: center;
-}
-
-input[type="text"] {
-	background: #222;
-	border: 1px solid #c0b18b;
-	color: #c0b18b;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	width: 50%;
+img {
+    background: #333;
+    width:16px;
+    height:16px;
 }
 
 .site-div {
-	display:block;
-	float: left;
-	margin: 4px;
-	padding: 0 10px;
-	width: auto;
+    background:#333;
+    display:block;
+    float: left;
+    margin: 8px;
+    padding: 16px;
 }
 
-.site-div:hover {
-	background: #c0b18b;
-	color: #222;
-	cursor: pointer;
+.site-div:hover, .site-div:hover > img {
+    background: #c0b18b;
+    cursor: pointer;
 }
 
-.site-div:focus{
-	background: #c0b18b;
-	color: #222;
+.site-div:focus, .site-div:focus > img {
+    background: #c0b18b;
 }
 
-.site-div .name {
-	vertical-align: middle;
-	line-height: 0px;
+.section {
+    margin:10px;
+    width:auto;
+    float:left;
 }
 
-/*.site-div .symbol {
-	float: left;
-}*/
 </style>
 <script>
 var mc = document.getElementById("maincontainer");
-var qs = document.getElementById("quicksearch");
 
-sites = [
-	"4chan.org/g",
-	"amazon.ca",
-	"box.com",
-	"docs.google.com",
-	"drive.google.com",
-	"facebook.com",
-	"gist.github.com",
-	"github.com",
-	"google.com/calendar",
-	"keep.google.com",
-	"kickass.to",
-	"learn.uwaterloo.ca",
-	"mail.google.com",
-	"myanimelist.net",
-	"nyaa.se",
-	"outlook.com",
-	"play.google.com",
-	"plus.google.com",
-	"reddit.com",
-	"stackoverflow.com",
-	"terminal.sexy",
-	"twily.info",
-	"unixporn.net",
-	"walmart.ca",
-	"wiki.archlinux.org",
-	"youtube.com",
-];
-sites.sort();
+var sites = {
+    "Google": [
+        "docs.google.com",
+        "drive.google.com/drive/my-drive",
+        "google.com/calendar",
+        "keep.google.com",
+        "mail.google.com",
+        "play.google.com",
+        "youtube.com",
+    ],
+    "Programming":[
+        "github.com",
+        "stackoverflow.com",
+        "trello.com",
+        "wiki.archlinux.org",
+    ],
+    "Ricing":[
+        "4chan.org/g",
+        "terminal.sexy",
+        "twily.info",
+        "unixporn.net",
+    ],
+    "School": [
+        "www.student.cs.uwaterloo.ca/~cs341/",
+        "www.student.cs.uwaterloo.ca/~elbarsal/s2015/cs446/",
+        "learn.uwaterloo.ca",
+        "piazza.com",
+    ],
+    "Shopping":[
+        "amazon.ca",
+        "walmart.ca",
+    ],
+    "Torrents":[
+        "kickass.to",
+        "nyaa.se",
+    ],
+};
 
 var create = function(tag,className,id) {
-	var element = document.createElement(tag);
-	element.id = id;
-	element.className = className;
-	return element;
+    var element = document.createElement(tag);
+    element.id = id;
+    element.className = className;
+    return element;
 }
 
-for (var i=0;i<sites.length;i++) {
-	var siteDiv = create("a", "site-div", "siteDiv"+i);
-	siteDiv.href = "http://"+sites[i];
+for (var property in sites) {
+    var section = create("div", "section", property);
+    var title = create("h2","title",property+"Title");
+    title.innerHTML = property;
+    title.align="center";
+    section.appendChild(title);
+    for (var i=0;i<sites[property].length;i++){
+        var siteDiv = create("a", "site-div", "siteDiv"+i);
+        siteDiv.href= "http://"+sites[property][i];
 
-	/*var img = create("img","symbol","img"+i);
-	img.src = "http://www.google.com/s2/favicons?domain_url=http://"+sites[i];
-	siteDiv.appendChild(img);*/
+        var img = create("img","symbol","img"+i);
+        img.src = "http://www.google.com/s2/favicons?domain_url=http://"+sites[property][i];
+        siteDiv.appendChild(img);
 
-	var p = create("p","name","p"+i);
-	p.innerHTML = sites[i];
-	siteDiv.appendChild(p);
-
-	mc.appendChild(siteDiv);
+        section.appendChild(siteDiv);
+    }
+    mc.appendChild(section);
 }
 
-qs.onkeyup = function(){
-	var siteDivs = document.getElementsByClassName("site-div");
-	for (var i=0;i<siteDivs.length;i++) {
-		var e = document.getElementById("siteDiv"+i);
-		if (qs.value.length == 0) {
-			e.style.display = "block";
-			continue;
-		}
-		var p = document.getElementById("p"+i).innerHTML;
-		if (p.indexOf(qs.value) < 0) {
-			e.style.display = "none";
-		} else {
-			e.style.display = "block";
-			if (p.indexOf(qs.value) == 0) {
-				mc.insertBefore(e, mc.childNodes[0]);
-			}
-		}
-	}
-}
-
-qs.onkeydown = function(e){
-	if (e.which == 13) {
-		if (qs.value.indexOf(".") > -1 || qs.value.indexOf(":") > -1) {
-			window.location = "http://"+qs.value;
-		} else {
-			window.location = "http://google.ca/search?q="+qs.value;
-		}
-	}
-}
-
-setTimeout(function(){qs.focus()}, 10);
 </script>

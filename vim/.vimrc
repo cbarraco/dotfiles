@@ -1,21 +1,25 @@
+" only use 16 colors
+set t_Co=16
+" make sure we aren't in vi mode
 set nocompatible
-" disable word wrap
+" disable soft word wrap
 set nowrap
+" enable textwidth formatting option
 " always show the status line
 set laststatus=2
-" Show matching brackets when text indicator is over them
-set showmatch
-" How many tenths of a second to blink when matching brackets
-set mat=2
 " 1 tab = 4 spaces
 set shiftwidth=4
 set tabstop=4
-" Use spaces instead of tabs
+" use spaces instead of tabs
 set expandtab
-" Be smart when using tabs ;)
+" be smart when using tabs
 set smarttab
 " ignore case when searching
 set ignorecase
+" tell it to use an undo file
+set undofile
+" set a directory to store the undo history
+set undodir=/home/cjbarrac/.vimundo/
 " remember 999 previous commands
 set history=999
 " turn off annoying stuff
@@ -53,7 +57,7 @@ filetype plugin on
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :CtrlP<CR>
 nnoremap <F5> :GundoToggle<CR>
-highlight LineNr ctermfg=black
+highlight LineNr ctermfg=darkgrey
 let g:lightline = {
 	\ 'colorscheme': 'wombat',
 	\ 'active': {

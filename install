@@ -2,5 +2,5 @@
 folders=("zsh" "conky" "firefox" "i3" "ranger" "vim" "xres" "mpv" "cmus")
 for f in "${folders[@]}"
 do
-	stow --verbose=2 -R -t /home/cjbarrac/ $f
+	stow --verbose=2 -R --override=".*" -t /home/cjbarrac/ $f
 done

@@ -6,7 +6,7 @@
 *foreground:	#c0b18b
 
 ! black
-*.color0:       #555555
+*.color0:       #222222
 *.color8:       #555555
 
 ! red

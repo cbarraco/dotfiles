@@ -21,13 +21,14 @@ alias unclutter='unclutter -reset'
 alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
 alias cpu_usage="top -d 0.5 -b -n 2 | grep Cpu | tail -n 1 | cut -c 1-24 | awk '{print \$3}'"
 alias fdu="du -ahd 1 | sort -hr"
-alias l='echo "`pwd`" && ls --human-readable --group-directories-first --size --color $@'
-alias marvin='sshfs -o IdentityFile=/home/cjbarrac/.ssh/id_rsa -p 4242 download@192.168.0.11:/home/ /home/cjbarrac/Web/Marvin'
+alias l='ls --human-readable --group-directories-first --size --color $@'
+alias marvin='sshfs -o IdentityFile=/home/cjbarrac/.ssh/id_rsa -p 4242 download@192.168.0.11:/home/ /home/cjbarrac/Web/sshfs/marvin'
 alias powersave='sudo powerdown;sudo powertop --auto-tune'
 alias saltybet='mpv http://www.twitch.tv/saltybet'
 alias school='gcalcli --calendar="School" quick'
-alias sim='sudo vim'
-alias sshfsuw='sshfs cjbarrac@uw-linux-environment:/u2/cjbarraco/ ~/Web/sshfsuw'
+alias silverfish='sshfs silverfish:/home/cjbarrac ~/Web/sshfs/silverfish'
+alias sim='sudo -E vim'
+alias sshfsuw='sshfs cjbarrac@uw:/u2/cjbarraco/ ~/Web/sshfs/uw'
 alias update='pacaur -Syyu --devel'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias xres='xrdb -merge ~/.Xresources'
@@ -40,9 +41,6 @@ alias sstart='sudo systemctl start $@'
 alias sstatus='sudo systemctl status $@'
 
 # My functions
-cs() {
-	cd "$1" && l;
-}
 dlwebsite() {
 	wget --random-wait -r -p -e robots=off -U mozilla $1
 }
@@ -53,9 +51,3 @@ killorphans() {
 		pacaur -Rns $(pacaur -Qdtq)
 	fi
 }
-pdf4up() {
-	pdfnup $1 --scale 0.9 --frame true --landscape --nup 2x2 --outfile '4up-$1'
-}
-pdf2up() {
-	pdfnup $1 --scale 0.9 --frame true --no-landscape --nup 1x2 --outfile '2up-$1'
-} 
