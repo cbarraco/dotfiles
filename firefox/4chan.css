@@ -1,0 +1,48 @@
+@-moz-document domain('4chan.org'){ 
+  body {
+    background: #1f1f1f !important;
+  }
+  
+  * {
+    background: #1f1f1f !important;
+    border-color: #c0b18b !important;
+    border-radius: 0 !important;
+    color: #999999 !important;
+    text-decoration: none !important;
+    font-family: "Source Sans Pro" !important;
+  }
+  
+  a.quotelink, a.quotelink:hover, a.replylink:not(:hover), a.replylink:hover {
+    color: #af602f !important;
+  }
+  
+  a.replylink:hover, a:hover {
+    text-decoration: underline !important;
+  }  
+  
+  a.hide-reply-button {
+    display: none !important;
+  }
+  
+  div.reply {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    min-width: none !important;
+    max-width: none !important;
+    border: 1px solid #c0b18b !important;
+  }
+  
+  p, code, strong, td, input {
+    color: #999999 !important;
+  }
+  
+  code {
+    font-family: "Source Code Pro" !important;
+    font-size: 6pt !important;
+  }
+  
+  a, a:hover {
+    color: #c0b18b !important;
+  }
+}
