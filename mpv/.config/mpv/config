@@ -8,8 +8,8 @@ cache-default=8192
 cache-initial=0
 display-fps=60
 framedrop=vo
-hwdec=auto
-vo=opengl-hq:glfinish:interpolation
+hwdec=vaapi
+vo=opengl-hq
 ytdl-format=bestvideo+bestaudio/best
 
 ### AUDIO ###
@@ -38,9 +38,6 @@ osd-border-color='#99000000'
 osd-border-size=1
 osd-color='#AAFFFFFF'
 osd-font="Source Sans Pro"
-
-### COLORS ###
-msg-color=yes
 
 ### EXTENSIONS ###
 [extension.webm]
