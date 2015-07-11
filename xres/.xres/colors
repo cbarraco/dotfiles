@@ -1,21 +1,22 @@
-! special colors
-*background:	#222222
-*borderColor:	#222222
-*colorBD:	#708185
-*cursorColor:	#c0b18b
-*foreground:	#c0b18b
+*borderColor:	#372b21
+*colorBD:   	#7b8748
+
+! special
+*foreground:   #c0b18b
+*background:   #372b21
+*cursorColor:  #c0b18b
 
 ! black
 *.color0:       #222222
 *.color8:       #555555
 
 ! red
-*.color1:       #af602f
-*.color9:       #af602f
+*.color1:       #d17b49
+*.color9:       #d17b49
 
 ! green
-*.color2:       #908f32
-*.color10:      #908f32
+*.color2:       #7b8748
+*.color10:      #7b8748
 
 ! yellow
 *.color3:       #c8b55b
@@ -35,4 +36,4 @@
 
 ! white
 *.color7:       #c0b18b
-*.color15:      #c0b18b
+*.color15:      #978965

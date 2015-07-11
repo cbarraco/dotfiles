@@ -1,5 +1,5 @@
 #define myfgcolor #c0b18b
-#define mybgcolor #333333
+#define mybgcolor #3c3228
 rofi.auto-select:                    false
 rofi.bc:                             mybgcolor
 rofi.bg-active:                      mybgcolor
