@@ -9,16 +9,14 @@ Folder Info
 ===========
 |Folder|Description|
 |------|-----------|
-|**cmus**| contains my colorscheme for cmus, my music player of choice|
-|**conky**| contains 3 conky scripts for displaying the weather in the top left, time in the top center, and battery info in the top right|
-|**firefox**| contains my homepage I use and any userstyles I have found/modified/created|
-|**i3**| contains my power menu and my i3 config, this config is for use with [Airblader's gaps-next branch](https://github.com/Airblader/i3)|
-|**mpv**| contains my mpv config, configured for watching mostly anime with hardware decoding at 60 fps|
-|**ranger**| contains my ranger configs for previewing and opening files, as well as my own shortcuts|
+|**firefox**| contains my homepage and any userstyles I have found/modified/created|
+|**i3**| contains my i3 config, this config is for use with [Airblader's gaps-next branch](https://github.com/Airblader/i3)|
+|**mpv**| contains my mpv config, configured for watching mostly anime with hardware decoding|
+|**ranger**| contains my ranger configs|
 |**scrots**| contains the screenshots below|
 |**vim**| contains my .vimrc with my lightline setup, and my vim plugins|
-|**xres**| contains my .Xresources files which configure colours and settings for urxvt, xterm, xft, and rofi|
-|**zsh**| contains my zsh config, aliases, and plugin manager|
+|**xres**| contains my .Xresources files which configure colours and settings for urxvt, xft, and rofi|
+|**zsh**| contains my zsh config and aliases|
 
 Screenshots
 ===========
