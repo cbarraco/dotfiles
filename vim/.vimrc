@@ -1,5 +1,7 @@
 " only use 16 colors
 set t_Co=16
+let vimpager_disable_ansiesc = 0
+colorscheme default
 " make sure we aren't in vi mode
 set nocompatible
 " disable soft word wrap
@@ -49,6 +51,8 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/Gundo'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'junegunn/vim-easy-align'
 call vundle#end()
 " enable filetype plugins, put after Vundle
 filetype indent on
@@ -57,9 +61,9 @@ filetype plugin on
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :CtrlP<CR>
 nnoremap <F5> :GundoToggle<CR>
-highlight LineNr ctermfg=darkgrey
+highlight LineNr ctermfg=white
 let g:lightline = {
-	\ 'colorscheme': 'wombat',
+	\ 'colorscheme': 'cbarox',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
 	\   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -188,3 +192,9 @@ let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
 
 command W w !sudo tee % > /dev/null
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
