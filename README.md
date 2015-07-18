@@ -30,22 +30,14 @@ Music
 -----
 ![music](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/music.png)
 
-Homepage
+Firefox
 --------
-![homepage](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/homepage.png)
+![firefox](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/homepage.png)
 
 Coding
 ------
 ![coding](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/coding.png)
 
-Custom Website CSS
-------------------
-![custom-pages](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/custom-pages.png)
-
-GTK Theme
----------
-![gtk](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/gtk.png)
-
-Colors and Screenfetch
+Colors
 ----------------------
 ![colors](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/colors.png)
