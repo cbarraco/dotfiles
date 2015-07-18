@@ -1,0 +1,49 @@
+@-moz-document domain("stackoverflow.com"){
+    * {
+        background-color: #372b21 !important;
+        color: #c0b18b !important;
+        border-color: transparent !important;
+    }
+    .answered-accepted, .answered-accepted > div, .answered-accepted > div > span {
+        background-color: #7b8748 !important;
+    }
+
+    code, .prettyprint, code > span, .post-tag, blockquote, blockquote * {
+        background-color: #483c32 !important;
+        font-family: "Inconsolata" !important;
+    }
+
+    span.com {
+        color: #708185 !important;
+    }
+
+    span.lit, span.str {
+        color: #d17b49 !important;
+    }
+
+    span.typ {
+        color: #7b8748 !important;
+    }
+
+    span.kwd {
+        color: #c8b55b !important;
+    }
+
+    #hlogo > a {
+        background-image: url("http://www.siliconchristmas.com/_assets/images/stackoverflow-logo.png");
+        background-size: 200px 50px !important;
+        background-repeat: no-repeat !important;
+    }
+
+    input[type="text"] {
+        background-color: #483c32 !important;
+    }
+
+    .owner, .owner * {
+        background-color: #708185 !important;
+    }
+
+    #newsletter-ad, #hot-network-questions, .community-bulletin {
+        display: none !important;
+    }
+}
