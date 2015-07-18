@@ -1,186 +1,21 @@
-@-moz-document domain('youtube.com'){
-  #watch7-sidebar, .notifications-container, #watch8-secondary-actions, #upload-btn, .autoplay-bar, .yt-ui-ellipsis::before, .menu-container, .branded-page-v2-secondary-col, #search-btn, #masthead-appbar-container, .feed-header, #watch-discussion, #footer-container, .content-region, #logo-container, #yt-comments-sb-container, #yt-comments-order-button, .all-comments, .yt-uix-subscription-preferences-button, #watch7-subscription-container, #watch-action-panels, #yt-comments-paginator, .comment-footer, .user-photo, .yt-uix-button-arrow {
-    display: none !important;
-  }
-  
-  #body-container {
-    padding-bottom: 0 !important;
-  }
-  
-  input {
-    color: black !important;
-    background-color: white !important;
-  }
-  
-  td, td > span {
-    font-weight: bold !important;
-    color: black !important;
-  }
-  
-  button  {
-    background: transparent !important;
+@-moz-document domain("youtube.com"){
+* {
+    background-color: #372b21 !important;
     color: #c0b18b !important;
-  }
-  
-  .yt-ui-ellipsis {
-    background: transparent !important;
-  }
-  
-  #watch7-content {
-    width: 100% !important;
-  }
-  
-  #placeholder-player {
-    display: none !important;
-  }
-  
-  #player, #player > div, #player > div > div {
-    width: 100% !important;
-    color: #1f1f1f !important;
-  }
-  
-  #watch-header, #action-panel-details {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 90% !important;
-    min-width: none !important;
-    max-width: none !important; 
-  }
-  
-  #player-api {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    min-width: none !important;
-    max-width: none !important; 
-  }
-  
-  .watch-main-col {
-    float:none !important;
-  }
-
-  #yt-masthead .yt-masthead-logo-container {
-    width: auto !important;
-  }
-  
-  #masthead-positioner-height-offset {
-    height: 50px !important;
-  }
-  
-  #browse-items-primary .item-section > li > .yt-lockup-tile, .branded-page-v2-primary-col .branded-page-box, .section-list li .item-section .branded-page-box {
-    margin-top: 25px !important;
-    border: none !important;
-  }
-  
-  #eow-title {
-    font-size: 14pt !important;
-  }
-  
-  iframe {
-    display: none !important;
-  }
-  
-  #watch-header .yt-user-info a{
-    height: auto !important;
-  }
-  
-  .yt-uix-button-content {
-    color: #c0b18b !important;
-  }
-  
-  body, #yt-masthead-container, #footer-container, #appbar-guide-menu, #watch7-container, #player > div > div {
-    background: #1f1f1f !important;
-  }
-  
-  .guide-item-selected, .guide-item.guide-item-selected, .guide-item.guide-item-selected:hover, .guide-item.guide-item-selected .yt-deemphasized-text, .guide-item.guide-item-selected:hover .yt-deemphasized-text, .guide-collection-item .guide-item.guide-item-selected {
-    background: #c0b18b !important;
-    color: #1f1f1f !important;
-  }
-  
-  .guide-item.guide-item-selected .display-name > span, .guide-item.guide-item-selected .guide-count > span {
-    color: #1f1f1f !important;
-  }
-  
-  .yt-uix-button-icon-appbar-guide {
-    background: url("https://raw.githubusercontent.com/google/material-design-icons/master/navigation/drawable-mdpi/ic_menu_grey600_24dp.png") no-repeat center center !important;
-  }
-  
-  #watch-like::before {
-    background: url("https://raw.githubusercontent.com/google/material-design-icons/master/action/drawable-mdpi/ic_thumb_up_grey600_18dp.png") no-repeat center center !important;
-  }
-  
-  #watch-dislike::before {
-    background: url("https://raw.githubusercontent.com/google/material-design-icons/master/action/drawable-mdpi/ic_thumb_down_grey600_18dp.png") no-repeat center center !important;
-  }
-  
-  div#yt-masthead-container {
-    border-bottom-color: #c0b18b !important;
-    width: 100% !important;
-  }
-  
-  #yt-masthead {
-    width: auto !important;
-  }
-  
-   #masthead-search {
-    max-width: 100% !important;
-    margin: 5px 3% !important;
-  }
-  
-  #yt-masthead-user, .yt-masthead-logo-container {
-    margin: 5px !important;
-  }
-  
-  #appbar-guide-button {
-    padding: 0 5px !important;
-  }
-  
-  .yt-base-gutter {
-    padding: 0 !important;
-  }
-  
-  .yt-uix-button, #watch8-action-buttons, .yt-card .yt-uix-button-expander, #watch7-sidebar .watch-sidebar-separation-line, #footer-container, #footer-main {
-    border: none !important;
-  }
-  
-  .watch #content.content-alignment, .watch.watch-non-stage-mode #player.content-alignment {
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  * {
-    color: #999999 !important;
-    font-family: "Source Sans Pro" !important;
-    text-shadow: none !important;
-    border-color: #c0b18b !important;
-  }
-  
-  a, .title {
-    color: #c0b18b !important;
-  }
-  .yt-card, #content{
-    background: #292929 !important;
-    width: 100% !important;
-    padding: auto auto !important;
-  }
-  
-  .ytp-play-progress {
-    background: #af602f !important;
-  }
-  
-  .html5-progress-bar:focus .html5-scrubber-button, .html5-scrubber-button:active, .html5-scrubber-button:hover {
-    background: #af602f !important;
-  }
-  
-  .video-extras-sparkbar-likes {
-    background: #908f32 !important;
-  }
-  
-  .video-extras-sparkbar-dislikes {
-    background: #af602f !important;
-  }
-  
-  #vtVideo {
-    top: -20px !important;
-  } 
+    border-color: transparent !important;
+}
+    #logo-container {
+        display: none !important;
+    }
+    #masthead-search{
+        max-width: 100% !important;
+    }
+    
+    #masthead-search-term{
+        background: #483c32 !important;
+    }
+    
+    .yt-masthead-logo-container {
+        width: auto !important;
+    }
 }

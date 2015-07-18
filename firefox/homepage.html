@@ -1,23 +1,28 @@
+<h1>Welcome Home</h1>
 <div id="maincontainer"></div>
 <style>
-h2 {
-    font-family: "Source Code Pro";
-    font-size: 16px;
+* {
+    font-family: "github-octicons";
+    font-size: 32px;
+}
+h1 {
+    font-family: "Verdana";
+    text-align: center;
 }
 
 body {
-    background: #3c3228;
+    background: #372b21;
     color: #c0b18b;
 }
 
 img {
-    background: #4d4339;
+    background: #483c32;
     width:16px;
     height:16px;
 }
 
 .site-div {
-    background:#4d4339;
+    background:#483c32;
     display:block;
     float: left;
     margin: 8px;
@@ -34,9 +39,16 @@ img {
 }
 
 .section {
-    margin:10px;
-    width:auto;
-    float:left;
+    float: left;
+    font: 18px "github-octicons";
+    margin:16px 16px;
+    width:64px;
+}
+
+#maincontainer {
+    margin: auto;
+    min-width: 500px;
+    width: 500px;
 }
 
 </style>
@@ -44,24 +56,34 @@ img {
 var mc = document.getElementById("maincontainer");
 
 var sites = {
-    "Google": [
-        "docs.google.com",
+    "&#xf048": [
         "drive.google.com/drive/my-drive",
         "google.com/calendar",
         "mail.google.com",
         "play.google.com",
         "youtube.com",
     ],
-    "Programming":[
+    "&#xf0c8":[
         "github.com",
         "stackoverflow.com",
         "trello.com",
         "wiki.archlinux.org",
     ],
-    "Shopping":[
+    "&#xf0d7": [
+        "www.student.cs.uwaterloo.ca/~cs341/",
+        "www.student.cs.uwaterloo.ca/~elbarsal/s2015/cs446/",
+        "learn.uwaterloo.ca",
+        "piazza.com",
+    ],
+    "&#xf076":[
         "amazon.ca",
         "monoprice.com",
         "walmart.ca",
+    ],
+    "&#xf08c":[
+        "kickass.to",
+        "www.nyaa.se/?page=search&term=HorribleSubs&sort=2",
+        "torrentz.eu",
     ],
 };
 
@@ -74,7 +96,7 @@ var create = function(tag,className,id) {
 
 for (var property in sites) {
     var section = create("div", "section", property);
-    var title = create("h2","title",property+"Title");
+    var title = create("div","title",property+"Title");
     title.innerHTML = property;
     title.align="center";
     section.appendChild(title);
