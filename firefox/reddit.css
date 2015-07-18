@@ -1,110 +1,25 @@
-@-moz-document domain('reddit.com'){
-  .side, .listing-chooser, #header-img-a, .trending-subreddits, .redditname {
-   display: none !important;
-  }
-  .commentarea, .content, .sitetable, .link{
-    margin-right: 0 !important;
-  }
-  
-  * {
-    background-color: #1f1f1f !important;
-    border-color: #c0b18b !important;
-    border-radius: 0 !important;
-    outline: none !important;
-    font-family: "Source Sans Pro" !important;
-    color: #999999 !important;
-  }
-  
-  #header-img.default-header {
-    background: none !important;
-  }
-  
-  #header-bottom-right {
-    line-height: 10px !important;
-  }
-  
-  .tabmenu li a{
-    padding-left: 2px !important;
-    padding-right: 2px !important;
-    font-size: 7pt !important;
-  }
-  
-  li.selected > a.choice {
-    background-color: #c0b18b !important;
-    color: #1f1f1f !important;
-  }
-  
-  .flair, .linkflairlabel, a.submitter {
-    color: #af602f !important;
-  }
-  
-  .stickied-tagline {
-    color: #908f32 !important;
-  }
-  
-  .dropdown-title {
-    color: #999999 !important;
-  }
-  
-  .dropdown, .title {
-    background: none !important;
-    color: #c0b18b !important;
-  }
-  
-  .dropdown.srdrop .selected {
-    padding-right: 0 !important;
-  }
-  
-  .thumbnail.self {
-    background: url("https://raw.githubusercontent.com/google/material-design-icons/master/action/drawable-xxhdpi/ic_announcement_grey600_18dp.png") no-repeat center center !important;
-  }
-  
-  .thumbnail.may-blank {
-    background: url("https://raw.githubusercontent.com/google/material-design-icons/master/file/drawable-xxhdpi/ic_cloud_grey600_18dp.png") no-repeat center center !important;
-  }
-  
-  .footer-parent {
-    margin-left: 0 !important;
-  }
-  
-  .expando-button.selftext {
-    background: url("https://raw.githubusercontent.com/google/material-design-icons/master/av/drawable-mdpi/ic_my_library_books_grey600_24dp.png") no-repeat center center !important;
-    cursor: pointer;
-  }
-  
-  .expando-button.video {
-    background: url("https://raw.githubusercontent.com/google/material-design-icons/master/av/drawable-mdpi/ic_video_collection_grey600_24dp.png") no-repeat center center !important;
-    cursor: pointer;
-  }
-  
-  .comment {
-    background: none !important;
-    border: 1px solid #c0b18b !important;
-  }
-  
-  .child {
-    border: none !important;
-  }
-  
-  .content {
-    margin: 0 !important;
-  }
-  
-  p, code, strong, td {
-    color: #999999 !important;
-  }
-  
-  code {
-    font-family: "Source Code Pro" !important;
-    font-size: 6pt !important;
-  }
-  
-  a {
-    color: #c0b18b !important;
-  }
-  
-  a:focus {
-    color: #ffffff !important;
-  }
-  
+@-moz-document domain("reddit.com"){
+    * {
+        background-color: #372b21 !important;
+        color: #c0b18b !important;
+        border: none !important;
+    }
+
+    div.side, .listing-chooser {
+        display: none !important;
+    }
+    .tabmenu *, #header-bottom-right {
+        margin : 0 !important;
+        padding : 0 2px !important;
+        font: x-small verdana,arial,helvetica,sans-serif !important
+    }
+    #header-img, #sr-header-area, .redditname {
+        display: none !important;
+    }
+    .thing {
+        margin-top: 15px !important;
+    }
+    .flair, .linkflairlabel {
+        background-color: #483c32 !important;
+    }
 }
