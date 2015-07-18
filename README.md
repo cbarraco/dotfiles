@@ -30,7 +30,7 @@ Music
 
 Firefox
 --------
-![firefox](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/homepage.png)
+![firefox](https://raw.githubusercontent.com/CarloBarraco/Dotfiles/master/scrots/firefox.png)
 
 Coding
 ------
