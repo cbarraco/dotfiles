@@ -1,179 +1,174 @@
 #############
 # VARIABLES #
 #############
-set $mod 			Mod4
-set $resize			5
-set $gsi			20
-set $gso			20
-set $fgcolor			#c0b18b
-set $bgcolor			#1f1f1f
-set $iacolor			#555555
-set $bordersize			1
+set                     $mod Mod4
+set                     $myres 10
+set                     $gsi 20
+set                     $gso 20
+set                     $fgcolor #c0b18b
+set                     $bgcolor #372b21
+set                     $iacolor #483c32
+set                     $bordersize 5
 
 #################
 # CONFIGURATION #
 #################
-focus_follows_mouse 		no
-popup_during_fullscreen		smart
-workspace_layout		default
+focus_follows_mouse     no
+popup_during_fullscreen smart
+workspace_layout        default
 
 ##############
 # APPEARANCE #
 ##############
 # Set window appearence
-client.focused          	$fgcolor $fgcolor $bgcolor $fgcolor 
-client.focused_inactive 	$iacolor $iacolor $fgcolor $iacolor
-client.unfocused        	$iacolor $iacolor $fgcolor $iacolor
+client.focused          $fgcolor $fgcolor $bgcolor $fgcolor
+client.focused_inactive $iacolor $iacolor $fgcolor $iacolor
+client.unfocused        $iacolor $iacolor $fgcolor $iacolor
 # Set font
-font 				pango:Source Code Pro 7
+font                    pango:Source Code Pro 7
 # Configure window borders
-hide_edge_borders		none
-gaps inner			$gsi
-gaps outer			$gso
-new_float			pixel $bordersize
-new_window			pixel $bordersize
-smart_borders			no_gaps
+hide_edge_borders       none
+gaps                    inner $gsi
+gaps                    outer $gso
+new_float               pixel $bordersize
+new_window              pixel $bordersize
 
 ###############
 # KEYBINDINGS #
 ###############
 ### System Keybindings ###
-bindsym $mod+i 			exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
-bindsym $mod+t 			exec notify-send -u low "Time" "`date`";mode "default"
-bindsym $mod+Return 		exec urxvt
-bindsym $mod+d 			exec rofi -show run
-bindsym $mod+g 			exec manrofi
-bindsym $mod+Shift+c 		reload
-bindsym $mod+Shift+r 		restart
-bindsym $mod+Shift+e 		exec "/home/cjbarrac/.i3/power"
-bindsym $mod+Shift+q 		kill
-bindsym Print			exec scrot
-bindsym $mod+n 			gaps inner all set 2;gaps outer all set 0
-bindsym $mod+m 			gaps inner all set $gsi;gaps outer all set $gso
+bindsym                 $mod+i exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
+bindsym                 $mod+t exec notify-send -u low "Time" "`date`";mode "default"
+bindsym                 $mod+Return exec urxvt
+bindsym                 $mod+d exec rofi -show run
+bindsym                 $mod+g exec manrofi
+bindsym                 $mod+Shift+c reload
+bindsym                 $mod+Shift+r restart
+bindsym                 $mod+Shift+e exec "/home/cjbarrac/.i3/power"
+bindsym                 $mod+Shift+q kill
+bindsym                 Print exec scrot
+bindsym                 $mod+n gaps inner all set 1;gaps outer all set 0
+bindsym                 $mod+m gaps inner all set $gsi;gaps outer all set $gso
 
 ### Audio Keybindings ###
-bindsym XF86AudioRaiseVolume 	exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume 	exec "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioMute 		exec "amixer -q sset Master,0 toggle"
-bindsym XF86AudioPlay 		exec "cmus-remote -u"
-bindsym XF86AudioStop 		exec "cmus-remote -s"
-bindsym XF86AudioPrev 		exec "cmus-remote -r"
-bindsym XF86AudioNext 		exec "cmus-remote -n"
+bindsym                 XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+bindsym                 XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym                 XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym                 XF86AudioPlay exec "cmus-remote -u"
+bindsym                 XF86AudioStop exec "cmus-remote -s"
+bindsym                 XF86AudioPrev exec "cmus-remote -r"
+bindsym                 XF86AudioNext exec "cmus-remote -n"
 
 ### Focus Keybindings ###
-bindsym $mod+a 			focus parent
+bindsym                 $mod+a focus parent
 # Home row
-bindsym $mod+h 			focus left
-bindsym $mod+j 			focus down
-bindsym $mod+k 			focus up
-bindsym $mod+l			focus right
+bindsym                 $mod+h focus left
+bindsym                 $mod+j focus down
+bindsym                 $mod+k focus up
+bindsym                 $mod+l focus right
 # Arrows
-bindsym $mod+Left 		focus left
-bindsym $mod+Down 		focus down
-bindsym $mod+Up 		focus up
-bindsym $mod+Right		focus right
+bindsym                 $mod+Left focus left
+bindsym                 $mod+Down focus down
+bindsym                 $mod+Up focus up
+bindsym                 $mod+Right focus right
 
 ### Workspace Keybindings ###
 # Show workspace
-bindsym $mod+Shift+Tab		workspace prev
-bindsym $mod+Tab		workspace next
-bindsym $mod+1 			workspace 1
-bindsym $mod+2 			workspace 2
-bindsym $mod+3 			workspace 3
-bindsym $mod+4 			workspace 4
-bindsym $mod+5 			workspace 5
-bindsym $mod+6 			workspace 6
-bindsym $mod+7 			workspace 7
-bindsym $mod+8 			workspace 8
-bindsym $mod+9 			workspace 9
-bindsym $mod+0 			workspace 10
+bindsym                 $mod+Shift+Tab workspace prev
+bindsym                 $mod+Tab workspace next
+bindsym                 $mod+1 workspace 1
+bindsym                 $mod+2 workspace 2
+bindsym                 $mod+3 workspace 3
+bindsym                 $mod+4 workspace 4
+bindsym                 $mod+5 workspace 5
+bindsym                 $mod+6 workspace 6
+bindsym                 $mod+7 workspace 7
+bindsym                 $mod+8 workspace 8
+bindsym                 $mod+9 workspace 9
+bindsym                 $mod+0 workspace 10
 # Move to workspace
-bindsym $mod+Shift+1 		move container to workspace 1
-bindsym $mod+Shift+2 		move container to workspace 2
-bindsym $mod+Shift+3	 	move container to workspace 3
-bindsym $mod+Shift+4 		move container to workspace 4
-bindsym $mod+Shift+5 		move container to workspace 5
-bindsym $mod+Shift+6 		move container to workspace 6
-bindsym $mod+Shift+7 		move container to workspace 7
-bindsym $mod+Shift+8 		move container to workspace 8
-bindsym $mod+Shift+9 		move container to workspace 9
-bindsym $mod+Shift+0 		move container to workspace 10
+bindsym                 $mod+Shift+1 move container to workspace 1
+bindsym                 $mod+Shift+2 move container to workspace 2
+bindsym                 $mod+Shift+3 move container to workspace 3
+bindsym                 $mod+Shift+4 move container to workspace 4
+bindsym                 $mod+Shift+5 move container to workspace 5
+bindsym                 $mod+Shift+6 move container to workspace 6
+bindsym                 $mod+Shift+7 move container to workspace 7
+bindsym                 $mod+Shift+8 move container to workspace 8
+bindsym                 $mod+Shift+9 move container to workspace 9
+bindsym                 $mod+Shift+0 move container to workspace 10
 
 ### Movement Keybindings
 #Home row
-bindsym $mod+Shift+h		move left
-bindsym $mod+Shift+j		move down
-bindsym $mod+Shift+k		move up
-bindsym $mod+Shift+l		move right
+bindsym                 $mod+Shift+h move left
+bindsym                 $mod+Shift+j move down
+bindsym                 $mod+Shift+k move up
+bindsym                 $mod+Shift+l move right
 # Arrows
-bindsym $mod+Shift+Left 	move left
-bindsym $mod+Shift+Down 	move down
-bindsym $mod+Shift+Up 		move up
-bindsym $mod+Shift+Right 	move right
+bindsym                 $mod+Shift+Left move left
+bindsym                 $mod+Shift+Down move down
+bindsym                 $mod+Shift+Up move up
+bindsym                 $mod+Shift+Right move right
 
 ### Layout Keybindings ###
 # Layout mode
-bindsym $mod+s 			layout stacking
-bindsym $mod+w 			layout tabbed
-bindsym $mod+e 			layout toggle split
-bindsym $mod+f 			fullscreen
+bindsym                 $mod+s layout stacking
+bindsym                 $mod+w layout tabbed
+bindsym                 $mod+e layout toggle split
+bindsym                 $mod+f fullscreen
 # Splitting mode
-bindsym $mod+semicolon		split h
-bindsym $mod+v 			split v
+bindsym                 $mod+semicolon split h
+bindsym                 $mod+v split v
 # Floating mode
-bindsym $mod+Shift+space 	floating toggle
-bindsym $mod+space 		focus mode_toggle
-floating_modifier 		$mod
+bindsym                 $mod+Shift+space floating toggle
+bindsym                 $mod+space focus mode_toggle
+floating_modifier       $mod
 
 ### Scratchpad Keybindings ###
-bindsym $mod+Shift+minus 	move scratchpad
-bindsym $mod+minus 		scratchpad show
+bindsym                 $mod+Shift+minus move scratchpad
+bindsym                 $mod+minus scratchpad show
 
 #########
 # MODES #
 #########
-mode "resize" {
-	# Homerow
-        bindsym j 		resize shrink width $resize px or $resize ppt
-        bindsym k 		resize grow height $resize px or $resize ppt
-        bindsym l 		resize shrink height $resize px or $resize ppt
-        bindsym semicolon 	resize grow width $resize px or $resize ppt
-	# Arrows
-        bindsym Left 		resize shrink width $resize px or $resize ppt
-        bindsym Down 		resize grow height $resize px or $resize ppt
-        bindsym Up 		resize shrink height $resize px or $resize ppt
-        bindsym Right 		resize grow width $resize px or $resize ppt
-	# Exit
-        bindsym Escape 		mode "default"
+mode                    "resize" {
+    # Homerow
+    bindsym             j resize shrink width $myres px or $myres ppt
+    bindsym             k resize grow height $myres px or $myres ppt
+    bindsym             l resize shrink height $myres px or $myres ppt
+    bindsym             semicolon resize grow width $myres px or $myres ppt
+    # Arrows
+    bindsym             Left resize shrink width $myres px or $myres ppt
+    bindsym             Right resize grow width $myres px or $myres ppt
+    bindsym             Down resize grow height $myres px or $myres ppt
+    bindsym             Up resize shrink height $myres px or $myres ppt
+    # Exit
+    bindsym             Escape mode "default"
 }
-bindsym $mod+r 			mode "resize"
+bindsym                 $mod+r mode "resize"
 
 ####################
 # STARTUP PROGRAMS #
 ####################
-exec xrandr --output VGA1 --right-of LVDS1
-exec xrandr --output VGA2 --right-of LVDS1
-exec compton --config ~/.config/compton/compton2.conf -b
-exec google-musicmanager
-exec insync-headless start
-exec nm-applet
-exec redshift
-exec rssdler -rd
-exec unclutter -reset
-exec xfce4-power-manager
-exec nitrogen --restore
+exec                    /home/cjbarrac/.monitor_setup
+exec                    google-musicmanager
+exec                    insync-headless start
+exec                    nm-applet
+exec                    redshift
+exec                    rssdler -rd
+exec                    unclutter -reset
+exec                    xfce4-power-manager
+exec                    nitrogen --restore
+exec                    xset r rate 200 35
 
 #######
 # BAR #
 #######
 #bar {
-#	output LVDS1
-#	position top
-#	status_command i3status
-#	workspace_buttons no
+# position top
 #}
 
 ##################
 # CUSTOM WINDOWS #
 ##################
-for_window [class="xpad"] move scratchpad;scratchpad show
+for_window              [class="xpad"] move scratchpad
