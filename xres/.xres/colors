@@ -1,14 +1,13 @@
-*borderColor:	#372b21
-*colorBD:   	#7b8748
+! vi:syntax=xdefaults
 
 ! special
-*foreground:   #c0b18b
-*background:   #372b21
-*cursorColor:  #c0b18b
+*.foreground:   #c0b18b
+*.background:   #372b21
+*.cursorColor:  #c0b18b
 
 ! black
-*.color0:       #222222
-*.color8:       #555555
+*.color0:       #372b21
+*.color8:       #483c21
 
 ! red
 *.color1:       #d17b49
@@ -36,4 +35,4 @@
 
 ! white
 *.color7:       #c0b18b
-*.color15:      #978965
+*.color15:      #c0b18b

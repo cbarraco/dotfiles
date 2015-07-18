@@ -1,3 +1,5 @@
+! vi:syntax=xdefaults
+
 Xft.antialias:			true
 Xft.autohint:			false
 Xft.dpi:			    136

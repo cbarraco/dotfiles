@@ -1,7 +1,8 @@
+! vi:syntax=xdefaults
+
 #include </home/cjbarrac/.xres/rofi>
 #include </home/cjbarrac/.xres/colors>
 #include </home/cjbarrac/.xres/urxvt>
-#include </home/cjbarrac/.xres/xterm>
 #include </home/cjbarrac/.xres/xft>
 
 Xcursor.size: 16
