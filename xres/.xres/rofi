@@ -6,7 +6,7 @@ rofi.bg-active: cjb_bg
 rofi.bg-urgent: cjb_bg
 rofi.bg: cjb_bg
 rofi.bgalt: cjb_bg
-rofi.bw: 1
+rofi.bw: 5
 rofi.case-sensitive: false
 rofi.color-active: #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
 rofi.color-enabled: false
