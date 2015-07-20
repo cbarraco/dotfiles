@@ -1,14 +1,11 @@
 ! vi:syntax=xdefaults
 
-#define myfgcolor #c0b18b
-#define mybgcolor #3c3228
-
 rofi.auto-select: false
-rofi.bc: mybgcolor
-rofi.bg-active: mybgcolor
-rofi.bg-urgent: mybgcolor
-rofi.bg: mybgcolor
-rofi.bgalt: mybgcolor
+rofi.bc: cjb_fg
+rofi.bg-active: cjb_bg
+rofi.bg-urgent: cjb_bg
+rofi.bg: cjb_bg
+rofi.bgalt: cjb_bg
 rofi.bw: 1
 rofi.case-sensitive: false
 rofi.color-active: #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
@@ -20,17 +17,17 @@ rofi.columns: 1
 rofi.combi-modi: window,run
 rofi.disable-history: false
 rofi.eh: 2
-rofi.fg-active: myfgcolor
-rofi.fg-urgent: myfgcolor
-rofi.fg: myfgcolor
+rofi.fg-active: cjb_fg
+rofi.fg-urgent: cjb_fg
+rofi.fg: cjb_fg
 rofi.fixed-num-lines: false
 rofi.font: Inconsolata 9
-rofi.hlbg-active: myfgcolor
-rofi.hlbg-urgent: myfgcolor
-rofi.hlbg: myfgcolor
-rofi.hlfg-active: mybgcolor
-rofi.hlfg-urgent: mybgcolor
-rofi.hlfg: mybgcolor
+rofi.hlbg-active: cjb_fg
+rofi.hlbg-urgent: cjb_fg
+rofi.hlbg: cjb_fg
+rofi.hlfg-active: cjb_bg
+rofi.hlfg-urgent: cjb_bg
+rofi.hlfg: cjb_bg
 rofi.kb-accept-custom: Control+Return
 rofi.kb-accept-entry-continue: Shift+Return
 rofi.kb-accept-entry: Control+j,Control+m,Return,KP_Enter

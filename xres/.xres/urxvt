@@ -1,8 +1,5 @@
 ! vi:syntax=xdefaults
 
-#define myfont Inconsolata
-#define mysize 7
-
 ! Compile xft: Attempt to find a visual with the given bit depth;
 URxvt*depth: 32
 
@@ -13,40 +10,55 @@ URxvt*buffered: true
 ! URxvt*geometry: geom
 
 ! Use the specified colour as the windows background colour
-! URxvt*background: colour
+URxvt*background: cjb_bg
 
 ! Use the specified colour as the windows foreground colour
-! URxvt*foreground: colour
+URxvt*foreground: cjb_fg
 
-! Use the specified colour for the colour value n, where 0-7
-! URxvt*colorn: colour
+! Use these colours
+URxvt*color0: cjb_black
+URxvt*color1: cjb_red
+URxvt*color2: cjb_green
+URxvt*color3: cjb_yellow
+URxvt*color4: cjb_blue
+URxvt*color5: cjb_magenta
+URxvt*color6: cjb_cyan
+URxvt*color7: cjb_white
+URxvt*color8: cjb_grey
+URxvt*color9: cjb_red
+URxvt*color10: cjb_green
+URxvt*color11: cjb_yellow
+URxvt*color12: cjb_blue
+URxvt*color13: cjb_magenta
+URxvt*color14: cjb_cyan
+URxvt*color15: cjb_white
 
 ! Use the specified colour for bold characters when the text is the default foreground colour
-URxvt*colorBD: #7b8748
+URxvt*colorBD: cjb_green
 
 ! Use the specified colour for italic characters when the text is the default foreground colour
-URxvt*colorIT: #7b8748
+URxvt*colorIT: cjb_green
 
 ! Use the specified colour for underlined characters when the
-URxvt*colorUL: #7b8748
+URxvt*colorUL: cjb_green
 
 ! If set, use the specified colour as the colour for the underline
 ! URxvt*underlineColor: colour
 
 ! If set, use the specified colour as the background for highlighted
-URxvt*highlightColor: #c0b18b
+URxvt*highlightColor: cjb_fg
 
 ! If set and highlightColor is set, use the specified colour as the
-URxvt*highlightTextColor: #322b21
+URxvt*highlightTextColor: cjb_bg
 
 ! Use the specified colour for the cursor. The default is to use the
-! URxvt*cursorColor: colour
+URxvt*cursorColor: cjb_fg
 
 ! Use the specified colour for the colour of the cursor text. For this
-! URxvt*cursorColor2: colour
+URxvt*cursorColor2: cjb_bg
 
 ! True: simulate reverse video by foreground and background colours;
-! URxvt*reverseVideo: boolean
+URxvt*reverseVideo: false
 
 ! True: specify that jump scrolling should be used. When receiving
 ! URxvt*jumpScroll: boolean
@@ -70,13 +82,13 @@ URxvt*highlightTextColor: #322b21
 ! URxvt*troughColor: colour
 
 ! The colour of the border around the text area and between the
-URxvt*borderColor: #372b21
+URxvt*borderColor: cjb_bg
 
 ! Select the fonts to be used. This is a comma separated list of font
-URxvt*font: xft:myfont:medium:size=mysize
-URxvt*boldFont: xft:myfont:bold:size=mysize
-URxvt*italicFont: xft:myfont:italic:size=mysize
-URxvt*boldItalicFont: xft:myfont:bold:italic:size=mysize
+URxvt*font: xft:cjb_font:medium:size=cjb_fontsize
+URxvt*boldFont: xft:cjb_font:bold:size=cjb_fontsize
+URxvt*italicFont: xft:cjb_font:italic:size=cjb_fontsize
+URxvt*boldItalicFont: xft:cjb_font:bold:italic:size=cjb_fontsize
 
 ! When font styles are not enabled, or this option is enabled (True,
 ! URxvt*intensityStyles: boolean
@@ -118,10 +130,10 @@ URxvt*boldItalicFont: xft:myfont:bold:italic:size=mysize
 URxvt*scrollBar: false
 
 ! True: place the scrollbar on the right of the window; option -sr.
-! URxvt*scrollBar_right: boolean
+URxvt*scrollBar_right: true
 
 ! True: show an rxvt scrollbar without a trough; option -st.
-! URxvt*scrollBar_floating: boolean
+URxvt*scrollBar_floating: true
 
 ! Align the top, bottom or centre [default] of the scrollbar thumb
 ! URxvt*scrollBar_align: mode
@@ -142,7 +154,7 @@ URxvt*saveLines: 65535
 URxvt*internalBorder: 20
 
 ! External border of number pixels. This resource is limited to 100;
-! URxvt*externalBorder: number
+URxvt*externalBorder: 10
 
 ! Set MWM hints to request a borderless window, i.e. if honoured by
 ! URxvt*borderLess: boolean
@@ -151,7 +163,7 @@ URxvt*internalBorder: 20
 ! URxvt*skipBuiltinGlyphs: boolean
 
 ! Specifies the terminal type name to be set in the TERM environment
-! URxvt*termName: termname
+URxvt*termName: xterm
 
 ! Specifies number of lines (pixel height) to insert between each row
 ! URxvt*lineSpace: number
@@ -169,7 +181,7 @@ URxvt*internalBorder: 20
 URxvt*cursorBlink: false
 
 ! True: Make the cursor underlined. False: Make the cursor a box
-! URxvt*cursorUnderline: boolean
+URxvt*cursorUnderline: false
 
 ! True: blank the pointer when a key is pressed or after a set number
 ! URxvt*pointerBlank: boolean
