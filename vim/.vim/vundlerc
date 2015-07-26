@@ -1,3 +1,5 @@
+" vi:syntax=vim
+
 " turn this off for Vundle
 filetype off
 " set the runtime path to include Vundle
@@ -6,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nanotech/jellybeans.vim'

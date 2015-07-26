@@ -1,25 +1,28 @@
 /*adapted from crayonlite*/
+
+
+
 @-moz-document domain("nyaa.se") {
     * {
         border-collapse:                          none !important;
         border-radius:                            0 !important;
-        color:                                    #c0b18b;
+        color:                                    #cccccc;
     }
     .viewdescription {
-        background-color:                         #372b21 !important;
+        background-color:                         #222222 !important;
     }
     .content .trusted {
         border:                                   none !important;
     }
     body {
         font-family:                              "Source Sans Pro" !important;
-        background:                               #372b21 !important;
+        background:                               #222222 !important;
         min-width:                                0 !important;
         width:                                    90% !important;
         margin:                                   auto !important;
     }
     a, a:hover {
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
         text-decoration:                          none !important
     }
     .tlistthtwo {
@@ -58,7 +61,7 @@
         text-align:                               center !important;
     }
     .tlistsn {
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     .inputsearchterm {
         text-align:                               center !important;
@@ -67,7 +70,7 @@
         margin:                                   0 !important;
         position:                                 relative !important;
         top:                                      -27px !important;
-        background:                               #372b21;
+        background:                               #222222;
     }
     #navbar {
         width:                                    100% !important;
@@ -79,18 +82,18 @@
     }
     #tabnav {
         width:                                    90% !important;
-        background-color:                         #372b21;
+        background-color:                         #222222;
         float:                                    none !important;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
         height:                                   27px !important;
         margin:                                   0 !important;
         border-radius:                            0;
     }
     #tabnav a {
-        background:                               #483c32 !important;
+        background:                               #333333 !important;
         margin:                                   3px !important;
         float:                                    none !important;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
         padding:                                  3px 6px 4px 9px !important;
         font-size:                                0.8em !important;
         position:                                 relative !important;
@@ -99,20 +102,20 @@
     }
     #tabnav a:hover {
         text-align:                               center;
-        background:                               #d17b49 !important;
+        background:                               #7b8748 !important;
         text-decoration:                          none;
     }
     #navbar li:last-child a {
         display:                                  none !important;
     }
     #topbar {
-        background:                               #372b21 !important;
+        background:                               #222222 !important;
         z-index:                                  100;
         height:                                   0 !important;
         position:                                 STATICTOPBAR-absolute !important;
     }
     .content {
-        background:                               #372b21 !important;
+        background:                               #222222 !important;
         z-index:                                  -2;
         position:                                 relative;
         margin-top:                               70px !important;
@@ -147,9 +150,9 @@
         border:                                   none !important;
     }
     .tlistsortorder {
-        background:                               #483c32 !important;
+        background:                               #333333 !important;
         border-radius:                            0;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
         position:                                 relative !important;
         top:                                      -58px !important;
         font-weight:                              bold !important;
@@ -162,7 +165,7 @@
         text-align:                               right !important;
     }
     .tlistsortorder a {
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
         font-weight:                              normal !important;
     }
     th {
@@ -176,8 +179,8 @@
         display:                                  none !important;
     } /* Chat */
     .leftpages, .pages, .rightpages {
-        color:                                    #c0b18b !important;
-        background:                               #483c32 !important;
+        color:                                    #cccccc !important;
+        background:                               #333333 !important;
         font-weight:                              bold !important;
         margin-bottom:                            10px !important;
         top:                                      -62px !important;
@@ -193,21 +196,21 @@
         padding:                                  10px 0 12px !important;
     }
     .leftpages a, .pages a, .rightpages a {
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     .tlist + .leftpages, .tlist + .leftpages + .pages,
     .tlist + .leftpages + .pages + .rightpages {
         position:                                 relative !important;
         top:                                      -37px !important;
         opacity:                                  1 !important;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
         margin-bottom:                            -37px !important;
-        background:                               #372b21 !important;
+        background:                               #222222 !important;
     }
     .tlist + .leftpages a, .tlist + .leftpages + .pages a,
     .tlist + .leftpages + .pages + .rightpages a
     {
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     .tlist + .leftpages a:hover, .tlist + .leftpages + .pages a:hover,
     .tlist + .leftpages + .pages + .rightpages a:hover,
@@ -402,7 +405,7 @@
         font-size:                                0.8em !important;
     }
     tr.tlistrow {
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     tr[class="trusted tlistrow"] .tlistname, tr[class="trusted tlistrow"] .tlistdownload,
     tr[class="trusted tlistrow"] .tlistsize, tr[class="trusted tlistrow"] .tlistsn,
@@ -411,7 +414,7 @@
     tr[class="trusted tlistrow"] .tlistfailed
     {
         background:                               #7b8748 !important;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     tr[class="remake tlistrow"] .tlistname, tr[class="remake tlistrow"] .tlistdownload,
     tr[class="remake tlistrow"] .tlistsize, tr[class="remake tlistrow"] .tlistsn,
@@ -420,7 +423,7 @@
     tr[class="remake tlistrow"] .tlistfailed
     {
         background:                               #d17b49 !important;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     tr[class="hidden tlistrow"] .tlistname, tr[class="hidden tlistrow"] .tlistdownload,
     tr[class="hidden tlistrow"] .tlistsize, tr[class="hidden tlistrow"] .tlistsn,
@@ -429,7 +432,7 @@
     tr[class="hidden tlistrow"] .tlistfailed
     {
         background:                               #c0c0c0 !important;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     tr[class="aplus tlistrow"] .tlistname, tr[class="aplus tlistrow"] .tlistdownload,
     tr[class="aplus tlistrow"] .tlistsize, tr[class="aplus tlistrow"] .tlistsn,
@@ -438,7 +441,7 @@
     tr[class="aplus tlistrow"] .tlistfailed
     {
         background:                               #90b0f0 !important;
-        color:                                    #c0b18b !important;
+        color:                                    #cccccc !important;
     }
     .remake {
         background:                               transparent !important;

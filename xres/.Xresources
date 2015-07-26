@@ -1,7 +1,7 @@
 ! vi:syntax=xdefaults
 
-#define cjb_bg       #372b21
-#define cjb_fg       #c0b18b
+#define cjb_bg       #222222
+#define cjb_fg       #cccccc
 #define cjb_black    cjb_bg
 #define cjb_grey     #483c32
 #define cjb_red      #d17b49
@@ -12,7 +12,7 @@
 #define cjb_cyan     #70986f
 #define cjb_white    cjb_fg
 #define cjb_font     Inconsolata
-#define cjb_fontsize 7
+#define cjb_fontsize 6.5
 
 #include </home/cjbarrac/.xres/rofi>
 #include </home/cjbarrac/.xres/urxvt>

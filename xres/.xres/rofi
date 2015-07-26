@@ -1,12 +1,12 @@
 ! vi:syntax=xdefaults
 
 rofi.auto-select: false
-rofi.bc: cjb_fg
+rofi.bc: cjb_green
 rofi.bg-active: cjb_bg
 rofi.bg-urgent: cjb_bg
 rofi.bg: cjb_bg
 rofi.bgalt: cjb_bg
-rofi.bw: 5
+rofi.bw: 2
 rofi.case-sensitive: false
 rofi.color-active: #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
 rofi.color-enabled: false
@@ -24,10 +24,10 @@ rofi.fixed-num-lines: false
 rofi.font: Inconsolata 9
 rofi.hlbg-active: cjb_fg
 rofi.hlbg-urgent: cjb_fg
-rofi.hlbg: cjb_fg
+rofi.hlbg: cjb_green
 rofi.hlfg-active: cjb_bg
 rofi.hlfg-urgent: cjb_bg
-rofi.hlfg: cjb_bg
+rofi.hlfg: cjb_fg
 rofi.kb-accept-custom: Control+Return
 rofi.kb-accept-entry-continue: Shift+Return
 rofi.kb-accept-entry: Control+j,Control+m,Return,KP_Enter
@@ -62,11 +62,11 @@ rofi.key-ssh:
 rofi.key-window: 
 rofi.lazy-filter-limit: 5000
 rofi.levenshtein-sort: false
-rofi.lines: 5
+rofi.lines: 7
 rofi.location: 0
 rofi.modi: window,run,ssh
 rofi.opacity: 100
-rofi.padding: 10
+rofi.padding: 20
 rofi.parse-hosts: false
 rofi.pid: /run/user/1000/rofi.pid
 rofi.run-command: {cmd}
@@ -76,6 +76,6 @@ rofi.sidebar-mode: true
 rofi.ssh-client: ssh
 rofi.ssh-command: urxvt -e {ssh-client} {host}
 rofi.terminal: urxvt
-rofi.width: 21
+rofi.width: 19
 rofi.xoffset: 0
 rofi.yoffset: 0

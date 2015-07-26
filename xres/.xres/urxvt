@@ -163,7 +163,7 @@ URxvt*externalBorder: 10
 ! URxvt*skipBuiltinGlyphs: boolean
 
 ! Specifies the terminal type name to be set in the TERM environment
-URxvt*termName: xterm
+URxvt*termName: rxvt-unicode-256color
 
 ! Specifies number of lines (pixel height) to insert between each row
 ! URxvt*lineSpace: number

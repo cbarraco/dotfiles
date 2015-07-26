@@ -73,6 +73,8 @@ case "$mimetype" in
     # Syntax highlight for text files:
     text/* | */xml)
         try highlight --out-format=ansi "$path" && { dump | trim; exit 5; } || exit 2;;
+    image/*)
+        img2txt --gamma=0.6 --width="$width" "$path" && exit 4 || exit 1;;
     # Display information about media files:
     video/* | audio/*)
         exiftool "$path" && exit 5

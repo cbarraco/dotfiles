@@ -19,27 +19,38 @@
 #main-window[sizemode="normal"]:not([inFullscreen])  #TabsToolbar .tabbrowser-tabs {
 	min-height: 26px !important;
 	margin-top: 1px !important;
-	background: transparent !important;
+}
+
+#TabsToolbar, #tabbrowser-tabs {
+    -moz-appearance: none !important;
+    background: #222222 !important;
+}
+
+.tabs-newtab-button {
+    display: none !important;
+}
+
+.tabbrowser-tab *, .tabs-newtab-button * {
+    background: none !important; list-style-image: none !important;
+    -moz-appearance: none !important;
 }
 
 /*===============================================
   INACTIVE TABS  
   ===============================================*/
 #TabsToolbar .tabbrowser-tab {
-	text-align: left!important;
+	text-align: center !important;
+    -moz-appearance: none !important;
 	-moz-border-top-colors: none !important;
 	-moz-border-left-colors: none !important;
 	-moz-border-right-colors: none !important;
 	-moz-border-bottom-colors: none !important;
-	background: #4d4339 !important;
-	border-top: 1px solid transparent!important;
-	border-bottom: 1px solid transparent!important;
-	border-left: 1px solid transparent!important;
-	border-right: 1px solid transparent!important;
-	border-radius: 0px 0px 0px 0px !important;
-	color: #c0b18b !important;
+	background: #222222 !important;
+	border: none !important;
+	border-radius: 0 !important;
+	color: #CCCCCC !important;
 	margin: 0px 3px 0px 2px !important;
-	font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+	font-family: Inconsolata;
 	font-size: 11px;
 }
 
@@ -48,13 +59,9 @@
   ===============================================*/
 #TabsToolbar .tabbrowser-tab[selected] {
 	font-weight: normal !important;
-	border-top: 1px solid #3c3228!important;
-	border-bottom: 1px solid #3c3228!important;
-	border-left: 1px solid #3c3228!important;
-	border-right: 1px solid #3c3228!important;
-	border-radius: 0px 0px 0px 0px !important;
-	background: #3c3228 !important;
-	color: #c0b18b !important;
+	border: none !important;
+	background: #7b8748 !important;
+	color: #CCCCCC !important;
 }
 
 /*===============================================
@@ -116,7 +123,7 @@ tab .tab-icon, .tab-icon-image {
 /*===============================================
   HIDES ANNOYING ELEMENTS ON ADDRESS BAR  
   ===============================================*/
-#notification-popup-box,#addonbar-closebutton ,#feed-button,#go-button,#star-button,#identity-box,.autocomplete-history-dropmarker,.scrollbutton-up,.scrollbutton-down {
+#addonbar-closebutton ,#feed-button,#go-button,#star-button,#identity-box,.autocomplete-history-dropmarker,.scrollbutton-up,.scrollbutton-down {
 	display: none!important;
 }
 
@@ -124,19 +131,19 @@ tab .tab-icon, .tab-icon-image {
   NAVIGATION BAR/ADDRESS BAR/SEARCH BAR SETTING  
   ===============================================*/
 #nav-bar {
-	background: #3c3228 !important;
+	background: #222222 !important;
 	margin-top: -1px !important;
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 	margin-bottom: 0px !important;
 	padding: 0px !important;
 	border-radius: 0px 0px 0px 0px !important;
-	border-top: 1px #3c3228!important;
+	border-top: 1px #222222!important;
 	box-shadow: none !important;
 }
 
 #urlbar {
-	background: #3c3228 !important;
+	background: #333333 !important;
 	padding: 4.5px !important;
 	text-align: left!important;
 	padding-left: 8px !important;
@@ -144,55 +151,17 @@ tab .tab-icon, .tab-icon-image {
 	margin-bottom: 0px !important;
 	margin-left: 12px !important;
 	margin-right: 4px !important;
-	border-top: 1px solid #3c3228!important;
-	border-bottom: 1px solid #3c3228!important;
-	border-left: 1px solid #3c3228!important;
-	border-right: 1px solid #3c3228!important;
-	color: #c0b18b !important;
-	font-family: "Segoe UI Semibold",Helvetica,Arial,sans-serif;
+	border: none !important;
+	border-radius: 0 !important;
+	color: #CCCCCC !important;
+	font-family: Inconsolata !important;
 	font-size: 11px;
 	box-shadow: none !important;
 }
 
-#searchbar .search-go-button {
-	visibility: hidden !important;
+#identity-box, #notification-popup-box, #new-tab-button, #private-browsing-indicator {
+    display: none !important;
 }
-
-#searchbar .searchbar-dropmarker-image {
-	display: none !important;
-}
-
-#searchbar .searchbar-engine-image {
-	width: 0 !important;
-	padding-left: 18px !important;
-	margin-left: -20px !important;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
-	margin-right: 2px !important;
-}
-
-#searchbar .searchbar-textbox {
-	background: #3c3228 !important;
-	text-align: left!important;
-	margin-top: 7px !important;
-	margin-bottom: 7px !important;
-	margin-left: 1px !important;
-	margin-right: 10px !important;
-	border-top: 1px solid #3c3228!important;
-	border-bottom: 1px solid #3c3228!important;
-	border-left: 1px solid #3c3228!important;
-	border-right: 1px solid #3c3228!important;
-	padding-left: 5px !important;
-	color: #c0b18b !important;
-	font-family: "Segoe UI Semibold",Helvetica,Arial,sans-serif;
-	font-size: 11px;
-	box-shadow: none !important;
-}
-
-#urlbar, .searchbar-textbox {
-	border-radius: 11px !important;
-}
-
 
 /*===============================================
   REMOVES VS SEPARATOR
@@ -326,4 +295,8 @@ tab .tab-close-button:hover,   .tabs-closebutton:hover,   #find-closebutton:hove
 	background: none !important;
 	border: none !important;
 	box-shadow: none !important;
+}
+
+a {
+    color: #7b8748 !important;
 }

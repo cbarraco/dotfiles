@@ -1,0 +1,70 @@
+" vi:syntax=vim
+
+set laststatus=2
+
+" buffer number
+set statusline =%4*
+set statusline+=%4.4n
+set statusline+=%*
+
+" File name
+set statusline+=%1*
+
+set statusline+=\ %<%.99F\ 
+set statusline+=%*
+
+" help file flag
+set statusline+=%6*
+set statusline+=%h
+set statusline+=%*
+
+" modified flag
+set statusline+=%2*
+set statusline+=%m
+set statusline+=%*
+
+" read only flag
+set statusline+=%3*
+set statusline+=%{&ro?'[≠]':''} " '≠':'±'
+set statusline+=%*
+
+" display fugitive
+set statusline+=%4*
+set statusline+=%{fugitive#statusline()}
+set statusline+=%*
+
+" display a warning if fileformat isnt unix
+set statusline+=%5*
+set statusline+=%{&ff!='unix'?'[ff:\ '.&ff.']':''}
+set statusline+=%*
+
+" display a warning if file encoding isnt utf-8
+set statusline+=%5*
+set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'[ft:\ '.&fenc.']':''}
+set statusline+=%*
+
+" separate left/right side
+set statusline+=%1*
+set statusline+=%=
+set statusline+=%*
+
+" syntax checking
+set statusline+=%5*
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Cursor info
+set statusline+=%1*
+set statusline+=\ %c:%l
+set statusline+=\ %P\ 
+set statusline+=%*
+
+"return the syntax highlight group under the cursor ''
+function! StatuslineCurrentHighlight()
+    let name = synIDattr(synID(line('.'),col('.'),1),'name')
+    if name == ''
+        return ''
+    else
+        return '[' . name . ']'
+    endif
+endfunction

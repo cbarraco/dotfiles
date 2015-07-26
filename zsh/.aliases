@@ -15,7 +15,6 @@ alias pacaur='pacaur --color always --noedit'
 alias rename='rename -v'
 alias rm='rm -v'
 alias stow='stow --verbose=2'
-alias unclutter='unclutter -reset'
 
 # Alias functions
 alias bigfiles='find . -size +250M -exec ls --size -h {} \+ | sort -rh'
@@ -29,8 +28,8 @@ alias school='gcalcli --calendar="School" quick'
 alias silverfish='sshfs silverfish:/home/cjbarrac ~/Web/sshfs/silverfish'
 alias sim='sudo -E vim'
 alias sshfsuw='sshfs cjbarrac@uw:/u2/cjbarraco/ ~/Web/sshfs/uw'
-alias update='pacaur -Syyu --devel'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias vless='vim -u /usr/share/vim/vim74/macros/less.vim'
 alias xres='xrdb -merge ~/.Xresources'
 
 # systemctl functions
@@ -41,6 +40,9 @@ alias sstart='sudo systemctl start $@'
 alias sstatus='sudo systemctl status $@'
 
 # My functions
+branch446() {
+    git clone git@github.com:CarloBarraco/cs446project.git -b $1 $1
+}
 dlwebsite() {
 	wget --random-wait -r -p -e robots=off -U mozilla $1
 }
@@ -50,4 +52,10 @@ killorphans() {
 	else
 		pacaur -Rns $(pacaur -Qdtq)
 	fi
+}
+updatehosts() {
+    cd /tmp
+    wget http://winhelp2002.mvps.org/hosts.txt
+    sudo rm /etc/hosts
+    sudo mv hosts.txt /etc/hosts
 }

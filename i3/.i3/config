@@ -3,14 +3,15 @@
 #############
 set $mod                         Mod4
 # Sizes
-set $bordersize                  5
+set $bordersize                  3
 set $myres                       10
 set $gsi                         20
 set $gso                         20
 # Colors
-set $fgcolor                     #c0b18b
-set $bgcolor                     #372b21
-set $iacolor                     #483c32
+set $fgcolor                     #cccccc
+set $hfgcolor                    #7b8748
+set $bgcolor                     #222222
+set $iacolor                     #333333
 
 #################
 # CONFIGURATION #
@@ -23,10 +24,11 @@ workspace_layout                 default
 ##############
 # APPEARANCE #
 ##############
-# Set window appearence           border     bg       fg    indicate
-client.focused                   $fgcolor $fgcolor $bgcolor $fgcolor
-client.focused_inactive          $iacolor $iacolor $fgcolor $iacolor
-client.unfocused                 $iacolor $iacolor $fgcolor $iacolor
+# Set window appearence          border    bg        fg       urgent
+client.focused                   $hfgcolor $hfgcolor $fgcolor $hfgcolor
+client.focused_inactive          $iacolor  $iacolor  $fgcolor $iacolor
+client.unfocused                 $hfgcolor $iacolor  $fgcolor $iacolor
+
 # Set font
 font                             pango:Source Code Pro 7
 # Configure window borders
@@ -41,7 +43,6 @@ new_window                       pixel $bordersize
 ###############
 ### System Keybindings ###
 bindsym $mod+i                   exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
-bindsym $mod+t                   exec notify-send -u low "Time" "`date`";mode "default"
 bindsym $mod+Return              exec urxvt
 bindsym $mod+d                   exec rofi -show run
 bindsym $mod+g                   exec manrofi
@@ -50,8 +51,8 @@ bindsym $mod+Shift+r             restart
 bindsym $mod+Shift+e             exec "/home/cjbarrac/.i3/power"
 bindsym $mod+Shift+q             kill
 bindsym Print                    exec scrot
-bindsym $mod+n                   gaps inner all set 1;gaps outer all set 0
-bindsym $mod+m                   gaps inner all set $gsi;gaps outer all set $gso
+bindsym $mod+n                   gaps inner all set 1;gaps outer all set 0;border none
+bindsym $mod+m                   gaps inner all set $gsi;gaps outer all set $gso;border pixel 3
 
 ### Audio Keybindings ###
 bindsym XF86AudioRaiseVolume     exec "amixer -q sset Master,0 1+ unmute"
@@ -64,6 +65,7 @@ bindsym XF86AudioNext            exec "cmus-remote -n"
 
 ### Focus Keybindings ###
 bindsym $mod+a                   focus parent
+bindsym $mod+s                   focus child
 # Home row
 bindsym $mod+h                   focus left
 bindsym $mod+j                   focus down
@@ -130,7 +132,7 @@ bindsym $mod+Shift+minus         move scratchpad
 bindsym $mod+minus               scratchpad show
 
 ### Mode Keybindings ###
-mode "resize"                    {
+mode "resize" {
     # Homerow
     bindsym j                    resize shrink width $myres px or $myres ppt
     bindsym k                    resize grow height $myres px or $myres ppt
@@ -155,28 +157,23 @@ exec insync-headless start
 exec nm-applet
 exec redshift
 exec rssdler -rd
-exec unclutter -reset
+exec unclutter
 exec xfce4-power-manager
 exec nitrogen --restore
-exec xset r rate 200 35
+exec xset r rate 200 40
 
 #######
 # BAR #
 #######
-#bar {
-#    status_command               i3status
-#    position                     top
-#    font                         pango:Source Code Pro 10
-#    colors {
-#        background               $bgcolor
-#        statusline               $fgcolor
-#        focused_workspace        $fgcolor $fgcolor $bgcolor
-#        inactive_workspace       $bgcolor $bgcolor $fgcolor
-#        focused_workspace        $fgcolor $fgcolor $bgcolor
-#    }
-#}
-
-##################
-# CUSTOM WINDOWS #
-##################
-for_window [class="xpad"]        move scratchpad
+bar {
+    status_command               i3status
+    position                     top
+    font                         xft:Inconsolata 8
+    colors {
+        background               $bgcolor
+        statusline               $fgcolor
+        # Workspace Colors       #border   #bg       #text
+        inactive_workspace       $bgcolor  $bgcolor  $fgcolor
+        focused_workspace        $hfgcolor $hfgcolor $fgcolor
+    }
+}

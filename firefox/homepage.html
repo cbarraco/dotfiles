@@ -1,60 +1,99 @@
 <h1>Welcome Home</h1>
+<div id="weather"></div>
+<div id="time"></div>
 <div id="maincontainer"></div>
 <style>
-* {
-    font-family: "github-octicons";
-    font-size: 32px;
-}
 h1 {
-    font-family: "Verdana";
-    text-align: center;
+    text-align:  center;
+    color:       #7b8748;
 }
 
 body {
-    background: #372b21;
-    color: #c0b18b;
+    font-family: Inconsolata;
+    font-size:   18px;
+    background:  #222222;
+    color:       #cccccc;
 }
 
 img {
-    background: #483c32;
-    width:16px;
-    height:16px;
+    background:  #333333;
+    width:       16px;
+    height:      16px;
 }
 
 .site-div {
-    background:#483c32;
-    display:block;
-    float: left;
-    margin: 8px;
-    padding: 16px;
+    background:  #333333;
+    display:     block;
+    float:       left;
+    margin:      8px;
+    padding:     16px;
 }
 
 .site-div:hover, .site-div:hover > img {
-    background: #c0b18b;
-    cursor: pointer;
+    background:  #cccccc;
+    cursor:      pointer;
 }
 
 .site-div:focus, .site-div:focus > img {
-    background: #c0b18b;
+    background:  #cccccc;
 }
 
 .section {
-    float: left;
-    font: 18px "github-octicons";
-    margin:16px 16px;
-    width:64px;
+    float:       left;
+    font:        32px "github-octicons";
+    margin:      16px 16px;
+    width:       64px;
+    color:       #7b8748;
+}
+
+#weather {
+    text-align:  center;
+}
+
+#time {
+    text-align:  center;
 }
 
 #maincontainer {
-    margin: auto;
-    min-width: 500px;
-    width: 500px;
+    margin:      auto;
+    min-width:   500px;
+    width:       500px;
 }
 
 </style>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
 <script>
 var mc = document.getElementById("maincontainer");
 
+$(document).ready(function() {
+    $.simpleWeather({
+        location: 'Waterloo, ON',
+        woeid: '',
+        unit: 'c',
+        success: function(w) {
+            html = w.currently+" "+w.temp+'&deg;'+w.units.temp;
+            $("#weather").html(html);
+        },
+        error: function(error) {
+            $("#weather").html('<p>'+error+'</p>');
+        }
+    });
+});
+
+var time = document.getElementById("time");
+var updateTime = function() {
+    var today = new Date();
+    var h = today.getHours();
+    if (h > 12) {h -= 12;}
+    var m = today.getMinutes();
+    if (m < 10) {m = "0" + m;};
+    var s = today.getSeconds();
+    if (s < 10) {s = "0" + s;};
+    time.innerHTML = h + ":" + m + ":" + s;
+}
+updateTime();
+setInterval(function(){updateTime();}, 500);
 var sites = {
     "&#xf048": [
         "drive.google.com/drive/my-drive",
@@ -74,15 +113,19 @@ var sites = {
         "www.student.cs.uwaterloo.ca/~elbarsal/s2015/cs446/",
         "learn.uwaterloo.ca",
         "piazza.com",
+        "uwaterloo.ca/quest",
     ],
     "&#xf076":[
         "amazon.ca",
+        "kijiji.ca",
         "monoprice.com",
         "walmart.ca",
     ],
     "&#xf08c":[
+        "4chan.org/g",
         "kickass.to",
-        "www.nyaa.se/?page=search&term=HorribleSubs&sort=2",
+        "nyaa.se/?page=search&term=HorribleSubs&sort=2",
+        "r-a-d.io",
         "torrentz.eu",
     ],
 };

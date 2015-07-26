@@ -1,9 +1,12 @@
-source ~/.lightlinerc
-source ~/.vundlerc
+" vi:syntax=vim
+
+source ~/.vim/statuslinerc
+source ~/.vim/vundlerc
 
 """ Editing
-colorscheme default
-highlight LineNr ctermfg=blue
+set background=dark
+colorscheme ron
+" highlight LineNr ctermfg=blue
 syntax enable " enable syntax highlighting
 set encoding=utf-8 " set default encoding
 set expandtab " use spaces instead of tabs
