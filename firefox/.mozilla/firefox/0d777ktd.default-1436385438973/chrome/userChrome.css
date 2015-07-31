@@ -35,6 +35,12 @@
     -moz-appearance: none !important;
 }
 
+.tabbrowser-tab[fadein]:not([pinned]) {
+    min-width: 100px !important;
+    max-width: 300px !important;
+    margin: 0 !important;
+}
+
 /*===============================================
   INACTIVE TABS  
   ===============================================*/
@@ -300,3 +306,9 @@ tab .tab-close-button:hover,   .tabs-closebutton:hover,   #find-closebutton:hove
 a {
     color: #7b8748 !important;
 }
+
+window[sizemode="fullscreen"] #liberator-statusline { display: none !important; }
+    window[sizemode="fullscreen"] #liberator-bottombar  {
+        margin-top: -24px !important;
+        transition: 1s ease !important; transition-delay: .3s !important;
+    }

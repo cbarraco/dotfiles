@@ -1,0 +1,20 @@
+* {
+    background-color: #222222 !important;
+    color: #cccccc !important;
+    border: none !important;
+}
+a {
+    color: #7b8748 !important;
+}
+#appbar, #ucs {
+    display: none !important;
+}
+#hdtbSum {
+    border: none !important;
+}
+#hdtb-msb {
+    background: #222222 !important;
+}
+input[type="text"] {
+    background-color: #333333 !important;
+}

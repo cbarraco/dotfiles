@@ -1,559 +1,555 @@
 /*adapted from crayonlite*/
 
-
-
-@-moz-document domain("nyaa.se") {
-    * {
-        border-collapse:                          none !important;
-        border-radius:                            0 !important;
-        color:                                    #cccccc;
-    }
-    .viewdescription {
-        background-color:                         #222222 !important;
-    }
-    .content .trusted {
-        border:                                   none !important;
-    }
-    body {
-        font-family:                              "Source Sans Pro" !important;
-        background:                               #222222 !important;
-        min-width:                                0 !important;
-        width:                                    90% !important;
-        margin:                                   auto !important;
-    }
-    a, a:hover {
-        color:                                    #cccccc !important;
-        text-decoration:                          none !important
-    }
-    .tlistthtwo {
-        width:                                    90% !important;
-    }
-    .tlistdownload, .tlistln, .tlisttheight, .tlistthsix,.tlistthseven, .tlistmn {
-        display:                                  none !important;
-    }
-    .tlistthfive {
-        width:                                    35px !important;
-    }
-    .tlistththree {
-        width:                                    60px !important;
-    }
-    .tlistthone {
-        width:                                    80px !important;
-    }
-    .tlistsizehead {
-        width:                                    35px !important;
-    }
-    input, select, textarea {
-        font-family:                              "Source Sans Pro" !important;
-        font-size:                                0.9em !important;
-    }
-    #main {
-        padding-top:                              70px !important;
-        min-width:                                100% !important;
-        width:                                    100% !important;
-        max-width:                                100% !important;
-    }
-    #searchcontainer {
-        height:                                   22px !important;
-        float:                                    none !important;
-        width:                                    90% !important;
-        font-size:                                0.8em !important;
-        text-align:                               center !important;
-    }
-    .tlistsn {
-        color:                                    #cccccc !important;
-    }
-    .inputsearchterm {
-        text-align:                               center !important;
-    }
-    #navbar + form {
-        margin:                                   0 !important;
-        position:                                 relative !important;
-        top:                                      -27px !important;
-        background:                               #222222;
-    }
-    #navbar {
-        width:                                    100% !important;
-        margin:                                   0 auto !important;
-        float:                                    none !important;
-        top:                                      36px !important;
-        position:                                 relative !important;
-        text-align:                               center !important;
-    }
-    #tabnav {
-        width:                                    90% !important;
-        background-color:                         #222222;
-        float:                                    none !important;
-        color:                                    #cccccc !important;
-        height:                                   27px !important;
-        margin:                                   0 !important;
-        border-radius:                            0;
-    }
-    #tabnav a {
-        background:                               #333333 !important;
-        margin:                                   3px !important;
-        float:                                    none !important;
-        color:                                    #cccccc !important;
-        padding:                                  3px 6px 4px 9px !important;
-        font-size:                                0.8em !important;
-        position:                                 relative !important;
-        letter-spacing:                           3px;
-        top:                                      4px !important;
-    }
-    #tabnav a:hover {
-        text-align:                               center;
-        background:                               #7b8748 !important;
-        text-decoration:                          none;
-    }
-    #navbar li:last-child a {
-        display:                                  none !important;
-    }
-    #topbar {
-        background:                               #222222 !important;
-        z-index:                                  100;
-        height:                                   0 !important;
-        position:                                 STATICTOPBAR-absolute !important;
-    }
-    .content {
-        background:                               #222222 !important;
-        z-index:                                  -2;
-        position:                                 relative;
-        margin-top:                               70px !important;
-        margin-bottom:                            0 !important;
-        padding-bottom:                           0 !important;
-        border:                                   none !important;
-        border-radius:                            0 !important;
-        width:                                    100% !important;
-    }
-    .notice {
-        display:                                  none !important;
-    }
-    .tlist {
-        width:                                    96% !important;
-        top:                                      -60px !important;
-        position:                                 relative;
-    } 
-    .tlisticon {
-        padding:                                  5px !important;
-    }
-    .tlistthone {
-        padding-left:                             12px !important;
-    }
-    .tlisthead {
-        font-size:                                0 !important;
-        visibility:                               hidden;
-    }
-    .tlistrow {
-        border:                                   none !important;
-    }
-    .tlistsize {
-        border:                                   none !important;
-    }
-    .tlistsortorder {
-        background:                               #333333 !important;
-        border-radius:                            0;
-        color:                                    #cccccc !important;
-        position:                                 relative !important;
-        top:                                      -58px !important;
-        font-weight:                              bold !important;
-        width:                                    100% !important;
-    }
-    .tlistsortorder td:nth-child(2) {
-        color:                                    transparent !important;
-    }
-    .tlistsortorder td:nth-child(3) {
-        text-align:                               right !important;
-    }
-    .tlistsortorder a {
-        color:                                    #cccccc !important;
-        font-weight:                              normal !important;
-    }
-    th {
-        font-weight:                              400 !important;
-        padding-top:                              7px !important;
-    }
-    #main div[style*="float:"] {
-        display:                                  none !important;
-    } /* Ads */
-    div[class*="chatbox"] {
-        display:                                  none !important;
-    } /* Chat */
-    .leftpages, .pages, .rightpages {
-        color:                                    #cccccc !important;
-        background:                               #333333 !important;
-        font-weight:                              bold !important;
-        margin-bottom:                            10px !important;
-        top:                                      -62px !important;
-        position:                                 relative !important;
-        padding:                                  8px 0 9px !important;
-        border:                                   none !important;
-    }
-    .pages {
-        height:                                   17px !important;
-    }
-    .leftpages, .rightpages {
-        font-size:                                0.8em;
-        padding:                                  10px 0 12px !important;
-    }
-    .leftpages a, .pages a, .rightpages a {
-        color:                                    #cccccc !important;
-    }
-    .tlist + .leftpages, .tlist + .leftpages + .pages,
-    .tlist + .leftpages + .pages + .rightpages {
-        position:                                 relative !important;
-        top:                                      -37px !important;
-        opacity:                                  1 !important;
-        color:                                    #cccccc !important;
-        margin-bottom:                            -37px !important;
-        background:                               #222222 !important;
-    }
-    .tlist + .leftpages a, .tlist + .leftpages + .pages a,
-    .tlist + .leftpages + .pages + .rightpages a
-    {
-        color:                                    #cccccc !important;
-    }
-    .tlist + .leftpages a:hover, .tlist + .leftpages + .pages a:hover,
-    .tlist + .leftpages + .pages + .rightpages a:hover,
-    .tlist + .leftpages + .pages > b
-    {
-        background:                               #7b8748 !important;
-    }
-    .page, .pages b {
-        border:                                   none !important;
-        padding:                                  4px 5px 5px !important;
-    }
-    .pagelink:hover, .pages b {
-        background:                               #7b8748 !important;
-        border-radius:                            0;
-    }
-    .pagelink:hover {
-        padding:                                  4px 5px 5px !important;
-    }
-    .leftpages, .rightpages {
-        width:                                    10% !important;
-    }
-    .pages {
-        width:                                    80% !important;
-        border:                                   none !important;
-        overflow:                                 hidden !important;
-    }
-    .tlist {
-        margin:                                   0 !important;
-        width:                                    100% !important;
-    }
-    /* Input boxes */
-    .commentform, .inputflagreason, .inputptext, .inputultext,
-    .inputultextarea, input[name="torrent"] {
-        width:                                    98.8% !important;
-        background:                               white !important;
-        border-radius:                            0 !important;
-        padding:                                  3px 5px 5px !important;
-        box-shadow:                               inset 0 1px 2px rgba(65,65,65,0.1);
-        font-family:                              "Source Sans Pro" !important;
-        font-size:                                13px !important;
-    }
-    .commentformdiv {
-        text-align:                               left !important;
-    }
-    .commentform + br + input[type="submit"] {
-        margin-top:                               5px !important;
-    }
-    .commentform:focus, .inputflagreason:focus, .inputptext:focus,
-    .inputultext:focus, .inputultextarea:focus, input[name="torrent"]:focus {
-        border-color:                             rgba(107,191,227,0.7) !important;
-        box-shadow:                               0 0 4px rgba(107,191,227,0.5) !important;
-    }
-    .inputflagreason {
-        width:                                    100.4% !important;
-    }
-    .inputptext {
-        width:                                    500px !important;
-    }
-    input[name="torrent"] {
-        width:                                    98.8% !important;
-    }
-    /* Upload page */
-    .inputulrules {
-        background:                               #6bc8ae;
-        color:                                    white;
-        width:                                    476px;
-        display:                                  block;
-        padding:                                  2px 4px 4px;
-        border-radius:                            0;
-        text-align:                               center;
-        margin:                                   8px 0 6px 5px;
-        font-size:                                15px !important;
-    }
-    .ulformtable tr:nth-child(1) .inputulname + td + td,
-    .ulformtable tr:nth-child(6) .inputulname + td + td,
-    .ulformtable tr:nth-child(10) .inputulname + td + td {
-        background:                               #f6f6f6 !important;
-        border:                                   1px solid #d3d3d3 !important;
-        border-radius:                            0;
-        display:                                  block;
-        margin-left:                              20px;
-        padding:                                  10px;
-        width:                                    90%;
-    }
-    .ulformtable .inputulname {
-        display:                                  block !important;
-        margin:                                   7px 0 !important;
-        vertical-align:                           baseline !important;
-    }
-    .ulformtable tr:nth-child(10) .inputulname {
-        vertical-align:                           top !important;
-    }
-    .inputulselect {
-        width:                                    487px !important;
-    }
-    /* Torrent page */
-    .content .viewdescription, .content .quote, .content .comment,
-    .content .viewfiletable, .content .spoiler {
-        border:                                   none !important;
-        background:                               white !important;
-        border-radius:                            0 !important;
-    }
-    .content .quote, .content .spoiler {
-        background:                               none !important;
-        border:                                   none !important;
-        padding:                                  10px !important;
-        margin:                                   5px 10px !important;
-        border-radius:                            0 !important;
-        border-bottom:                            2px solid #6bbfe3 !important;
-        border-left:                              2px solid #6bbfe3 !important;
-    }
-    div[class="content"] .viewdescription, div[class="content"] .quote,
-    div[class="content"] .comment, div[class="content"] .viewfiletable
-    {
-        background:                               #f6f6f6 !important;
-        border:                                   1px solid #d3d3d3 !important;
-    }
-    .content .viewdescription {
-        padding:                                  14px !important;
-    }
-    .content .comment {
-        padding:                                  6px !important;
-        margin-bottom:                            12px !important;
-    }
-    .content .viewfiletable {
-        padding:                                  6px !important;
-    }
-    /* Comment number */
-    .cnumber {
-        background:                               #eaeaea;
-        box-shadow:                               0px 2px 4px #a5a5a5;
-        border-radius:                            0;
-        font-size:                                0.8em !important;
-        text-align:                               center !important;
-        left:                                     12px;
-        padding:                                  4px 0 5px 2px;
-        position:                                 relative;
-        top:                                      -12px;
-    }
-    /* Stardom */
-    div[class="content trusted"] .viewtable tr:nth-child(6) .thead:first-child,
-    div[class="content remake"] .viewtable tr:nth-child(6) .thead:first-child,
-    div[class="content hidden"] .viewtable tr:nth-child(6) .thead:first-child,
-    div[class="content aplus"] .viewtable tr:nth-child(6) .thead:first-child,
-    div[class="content"] .viewtable tr:nth-child(6) .thead:first-child {
-        background:                               white;
-        left:                                     -32px;
-        padding:                                  5px 5px 6px 34px !important;
-        position:                                 relative;
-        top:                                      5px;
-    }
-    div[class="content"] .viewtable tr:nth-child(6) .thead:first-child {
-        color:                                    white !important;
-        background:                               #6bc8ae !important;
-    }
-    div[class="content trusted"] .viewtable tr:nth-child(6) td:nth-child(2),
-    div[class="content remake"] .viewtable tr:nth-child(6) td:nth-child(2),
-    div[class="content hidden"] .viewtable tr:nth-child(6) td:nth-child(2),
-    div[class="content aplus"] .viewtable tr:nth-child(6) td:nth-child(2),
-    div[class="content"] .viewtable tr:nth-child(6) td:nth-child(2) {
-        background:                               white;
-        border-radius:                            0;
-        display:                                  block !important;
-        left:                                     -32px;
-        padding:                                  5px 5px 6px 33px !important;
-        position:                                 relative;
-        top:                                      5px;
-        width:                                    33%;
-    }
-    div[class="content"] .viewtable tr:nth-child(6) td:nth-child(2) {
-        color:                                    white !important;
-        background:                               #6bc8ae !important;
-    }
-    a[href*="?page=idolmaster"] {
-        font-size:                                0.8em !important;
-        padding:                                  3px 4px !important;
-        position:                                 relative !important;
-        top:                                      -1px !important;
-    }
-    div[class="content"] a[href*="?page=idolmaster"] {
-        color:                                    white !important;
-    }
-    /* 'Show Files' file name length */
-    .fileentryname {
-        width:                                    99.3% !important;
-        padding-left:                             5px !important;
-    }
-    /* 'Status Unknown' */
-    .tlistfailed {
-        text-decoration:                          underline;
-        text-align:                               left !important;
-        font-size:                                0.8em !important;
-    }
-    tr.tlistrow {
-        color:                                    #cccccc !important;
-    }
-    tr[class="trusted tlistrow"] .tlistname, tr[class="trusted tlistrow"] .tlistdownload,
-    tr[class="trusted tlistrow"] .tlistsize, tr[class="trusted tlistrow"] .tlistsn,
-    tr[class="trusted tlistrow"] .tlistln, tr[class="trusted tlistrow"] .tlistdn,
-    tr[class="trusted tlistrow"] .tlisticon, tr[class="trusted tlistrow"] .tlistmn,
-    tr[class="trusted tlistrow"] .tlistfailed
-    {
-        background:                               #7b8748 !important;
-        color:                                    #cccccc !important;
-    }
-    tr[class="remake tlistrow"] .tlistname, tr[class="remake tlistrow"] .tlistdownload,
-    tr[class="remake tlistrow"] .tlistsize, tr[class="remake tlistrow"] .tlistsn,
-    tr[class="remake tlistrow"] .tlistln, tr[class="remake tlistrow"] .tlistdn,
-    tr[class="remake tlistrow"] .tlisticon, tr[class="remake tlistrow"] .tlistmn,
-    tr[class="remake tlistrow"] .tlistfailed
-    {
-        background:                               #d17b49 !important;
-        color:                                    #cccccc !important;
-    }
-    tr[class="hidden tlistrow"] .tlistname, tr[class="hidden tlistrow"] .tlistdownload,
-    tr[class="hidden tlistrow"] .tlistsize, tr[class="hidden tlistrow"] .tlistsn,
-    tr[class="hidden tlistrow"] .tlistln, tr[class="hidden tlistrow"] .tlistdn,
-    tr[class="hidden tlistrow"] .tlisticon, tr[class="hidden tlistrow"] .tlistmn,
-    tr[class="hidden tlistrow"] .tlistfailed
-    {
-        background:                               #c0c0c0 !important;
-        color:                                    #cccccc !important;
-    }
-    tr[class="aplus tlistrow"] .tlistname, tr[class="aplus tlistrow"] .tlistdownload,
-    tr[class="aplus tlistrow"] .tlistsize, tr[class="aplus tlistrow"] .tlistsn,
-    tr[class="aplus tlistrow"] .tlistln, tr[class="aplus tlistrow"] .tlistdn,
-    tr[class="aplus tlistrow"] .tlisticon, tr[class="aplus tlistrow"] .tlistmn,
-    tr[class="aplus tlistrow"] .tlistfailed
-    {
-        background:                               #90b0f0 !important;
-        color:                                    #cccccc !important;
-    }
-    .remake {
-        background:                               transparent !important;
-    }
-    .trusted {
-        background:                               transparent !important;
-    }
-    .hidden {
-        background:                               transparent !important;
-    }
-    .aplus {
-        background:                               transparent !important;
-    }
-    div[class="content remake"], div[class="content trusted"],
-    div[class="content hidden"], div[class="content aplus"]
-    {
-        border:                                   2px solid white !important;
-        border-radius:                            8px 8px 18px 18px !important;
-    }
-    .refinesearch {
-        background:                               white !important;
-        display:                                  none !important;
-        border-radius:                            0;
-        margin-left:                              -69px !important;
-        margin-top:                               73px !important;
-        opacity:                                  0;
-        transition:                               0.4s;
-        padding:                                  0px 9px 7px 9px !important;
-        position:                                 absolute !important;
-        font-size:                                1em !important;
-        text-align:                               center !important;
-        width:                                    7.1% !important;
-        z-index:                                  1;
-    }
-    .refinesearch:hover {
-        opacity:                                  1;
-        transition:                               0.2s;
-    }
-    .refinesearch b, .refinesearch input[value="Search"] {
-        display:                                  none !important;
-    }
-    .refinesearch input[value="Search"] {
-        display:                                  inline-block !important;
-    }
-    .refinesearch input {
-        width:                                47px !important;
-        text-align:                           center !important;
-        background:                           white !important;
-        border:                               1px solid #e0e0e0 !important;
-        border-radius:                        0 !important;
-        padding:                              3px 5px 5px !important;
-        box-shadow:                           inset 0 1px 2px rgba(65,65,65,0.1);
-        font-family:                          "Source Sans Pro" !important;
-    }
-    .refinesearch input:focus {
-        border-color:                         rgba(107,191,227,0.7) !important;
-        box-shadow:                           0 0 4px rgba(107,191,227,0.5) !important;
-    }
-    .torrentcats {
-        display:                              none !important;
-    }
-    .viewtable + div[style="float:left;
-    padding-left:20px;
-    "] {
-        padding:                              15px 0 0 0 !important;
-    }
-    .viewdownloadbutton {
-        width:                                4% !important;
-        padding-top:                          0 !important;
-    }
-    .viewdownloadtxtbutton {
-        width:                                26% !important;
-        padding-top:                          0 !important;
-    }
-    img[alt="Download"], img[alt="Download .txt"] {
-        background:                           transparent !important;
-        border:                               3px inset green !important;
-        border-radius:                        0;
-        display:                              block;
-        width:                                0 !important;
-        margin:                               4px !important;
-        padding:                              8px !important;
-    }
-    img[alt="Download .txt"] {
-        border:                               3px outset green !important;
-    }
-    img[alt="Download"]:hover {
-        border:                               3px outset green !important;
-    }
-    img[alt="Download .txt"]:hover {
-        border:                               3px inset green !important;
-    }
-    form[name="flagform"] {
-        margin:                               40px 0 0 -20px !important;
-        top:                                  40px !important;
-        position:                             relative;
-    }
-    input[value="Flag this torrent"] {
-        margin-left:                          20px !important;
-        top:                                  -45px !important;
-        position:                             relative;
-    }
-    .flagcontent ul {
-        background:                           #e09090 !important;
-        border-radius:                        0;
-        width:                                95.8%;
-        color:                                white !important;
-        box-shadow:                           0 0 3px rgba(65,65,65,0.5);
-        padding:                              10px 10px 10px 25px !important;
-    }
-    .flagcontent ul a, .inputulrules a {
-        color:                                white !important;
-        font-weight:                          bold !important;
-    }
+* {
+    border-collapse:                          none !important;
+    border-radius:                            0 !important;
+    color:                                    #cccccc;
+}
+.viewdescription {
+    background-color:                         #222222 !important;
+}
+.content .trusted {
+    border:                                   none !important;
+}
+body {
+    font-family:                              "Source Sans Pro" !important;
+    background:                               #222222 !important;
+    min-width:                                0 !important;
+    width:                                    90% !important;
+    margin:                                   auto !important;
+}
+a, a:hover {
+    color:                                    #cccccc !important;
+    text-decoration:                          none !important
+}
+.tlistthtwo {
+    width:                                    90% !important;
+}
+.tlistdownload, .tlistln, .tlisttheight, .tlistthsix,.tlistthseven, .tlistmn {
+    display:                                  none !important;
+}
+.tlistthfive {
+    width:                                    35px !important;
+}
+.tlistththree {
+    width:                                    60px !important;
+}
+.tlistthone {
+    width:                                    80px !important;
+}
+.tlistsizehead {
+    width:                                    35px !important;
+}
+input, select, textarea {
+    font-family:                              "Source Sans Pro" !important;
+    font-size:                                0.9em !important;
+}
+#main {
+    padding-top:                              70px !important;
+    min-width:                                100% !important;
+    width:                                    100% !important;
+    max-width:                                100% !important;
+}
+#searchcontainer {
+    height:                                   22px !important;
+    float:                                    none !important;
+    width:                                    90% !important;
+    font-size:                                0.8em !important;
+    text-align:                               center !important;
+}
+.tlistsn {
+    color:                                    #cccccc !important;
+}
+.inputsearchterm {
+    text-align:                               center !important;
+}
+#navbar + form {
+    margin:                                   0 !important;
+    position:                                 relative !important;
+    top:                                      -27px !important;
+    background:                               #222222;
+}
+#navbar {
+    width:                                    100% !important;
+    margin:                                   0 auto !important;
+    float:                                    none !important;
+    top:                                      36px !important;
+    position:                                 relative !important;
+    text-align:                               center !important;
+}
+#tabnav {
+    width:                                    90% !important;
+    background-color:                         #222222;
+    float:                                    none !important;
+    color:                                    #cccccc !important;
+    height:                                   27px !important;
+    margin:                                   0 !important;
+    border-radius:                            0;
+}
+#tabnav a {
+    background:                               #333333 !important;
+    margin:                                   3px !important;
+    float:                                    none !important;
+    color:                                    #cccccc !important;
+    padding:                                  3px 6px 4px 9px !important;
+    font-size:                                0.8em !important;
+    position:                                 relative !important;
+    letter-spacing:                           3px;
+    top:                                      4px !important;
+}
+#tabnav a:hover {
+    text-align:                               center;
+    background:                               #7b8748 !important;
+    text-decoration:                          none;
+}
+#navbar li:last-child a {
+    display:                                  none !important;
+}
+#topbar {
+    background:                               #222222 !important;
+    z-index:                                  100;
+    height:                                   0 !important;
+    position:                                 STATICTOPBAR-absolute !important;
+}
+.content {
+    background:                               #222222 !important;
+    z-index:                                  -2;
+    position:                                 relative;
+    margin-top:                               70px !important;
+    margin-bottom:                            0 !important;
+    padding-bottom:                           0 !important;
+    border:                                   none !important;
+    border-radius:                            0 !important;
+    width:                                    100% !important;
+}
+.notice {
+    display:                                  none !important;
+}
+.tlist {
+    width:                                    96% !important;
+    top:                                      -60px !important;
+    position:                                 relative;
+} 
+.tlisticon {
+    padding:                                  5px !important;
+}
+.tlistthone {
+    padding-left:                             12px !important;
+}
+.tlisthead {
+    font-size:                                0 !important;
+    visibility:                               hidden;
+}
+.tlistrow {
+    border:                                   none !important;
+}
+.tlistsize {
+    border:                                   none !important;
+}
+.tlistsortorder {
+    background:                               #333333 !important;
+    border-radius:                            0;
+    color:                                    #cccccc !important;
+    position:                                 relative !important;
+    top:                                      -58px !important;
+    font-weight:                              bold !important;
+    width:                                    100% !important;
+}
+.tlistsortorder td:nth-child(2) {
+    color:                                    transparent !important;
+}
+.tlistsortorder td:nth-child(3) {
+    text-align:                               right !important;
+}
+.tlistsortorder a {
+    color:                                    #cccccc !important;
+    font-weight:                              normal !important;
+}
+th {
+    font-weight:                              400 !important;
+    padding-top:                              7px !important;
+}
+#main div[style*="float:"] {
+    display:                                  none !important;
+} /* Ads */
+div[class*="chatbox"] {
+    display:                                  none !important;
+} /* Chat */
+.leftpages, .pages, .rightpages {
+    color:                                    #cccccc !important;
+    background:                               #333333 !important;
+    font-weight:                              bold !important;
+    margin-bottom:                            10px !important;
+    top:                                      -62px !important;
+    position:                                 relative !important;
+    padding:                                  8px 0 9px !important;
+    border:                                   none !important;
+}
+.pages {
+    height:                                   17px !important;
+}
+.leftpages, .rightpages {
+    font-size:                                0.8em;
+    padding:                                  10px 0 12px !important;
+}
+.leftpages a, .pages a, .rightpages a {
+    color:                                    #cccccc !important;
+}
+.tlist + .leftpages, .tlist + .leftpages + .pages,
+.tlist + .leftpages + .pages + .rightpages {
+    position:                                 relative !important;
+    top:                                      -37px !important;
+    opacity:                                  1 !important;
+    color:                                    #cccccc !important;
+    margin-bottom:                            -37px !important;
+    background:                               #222222 !important;
+}
+.tlist + .leftpages a, .tlist + .leftpages + .pages a,
+.tlist + .leftpages + .pages + .rightpages a
+{
+    color:                                    #cccccc !important;
+}
+.tlist + .leftpages a:hover, .tlist + .leftpages + .pages a:hover,
+.tlist + .leftpages + .pages + .rightpages a:hover,
+.tlist + .leftpages + .pages > b
+{
+    background:                               #7b8748 !important;
+}
+.page, .pages b {
+    border:                                   none !important;
+    padding:                                  4px 5px 5px !important;
+}
+.pagelink:hover, .pages b {
+    background:                               #7b8748 !important;
+    border-radius:                            0;
+}
+.pagelink:hover {
+    padding:                                  4px 5px 5px !important;
+}
+.leftpages, .rightpages {
+    width:                                    10% !important;
+}
+.pages {
+    width:                                    80% !important;
+    border:                                   none !important;
+    overflow:                                 hidden !important;
+}
+.tlist {
+    margin:                                   0 !important;
+    width:                                    100% !important;
+}
+/* Input boxes */
+.commentform, .inputflagreason, .inputptext, .inputultext,
+.inputultextarea, input[name="torrent"] {
+    width:                                    98.8% !important;
+    background:                               white !important;
+    border-radius:                            0 !important;
+    padding:                                  3px 5px 5px !important;
+    box-shadow:                               inset 0 1px 2px rgba(65,65,65,0.1);
+    font-family:                              "Source Sans Pro" !important;
+    font-size:                                13px !important;
+}
+.commentformdiv {
+    text-align:                               left !important;
+}
+.commentform + br + input[type="submit"] {
+    margin-top:                               5px !important;
+}
+.commentform:focus, .inputflagreason:focus, .inputptext:focus,
+.inputultext:focus, .inputultextarea:focus, input[name="torrent"]:focus {
+    border-color:                             rgba(107,191,227,0.7) !important;
+    box-shadow:                               0 0 4px rgba(107,191,227,0.5) !important;
+}
+.inputflagreason {
+    width:                                    100.4% !important;
+}
+.inputptext {
+    width:                                    500px !important;
+}
+input[name="torrent"] {
+    width:                                    98.8% !important;
+}
+/* Upload page */
+.inputulrules {
+    background:                               #6bc8ae;
+    color:                                    white;
+    width:                                    476px;
+    display:                                  block;
+    padding:                                  2px 4px 4px;
+    border-radius:                            0;
+    text-align:                               center;
+    margin:                                   8px 0 6px 5px;
+    font-size:                                15px !important;
+}
+.ulformtable tr:nth-child(1) .inputulname + td + td,
+.ulformtable tr:nth-child(6) .inputulname + td + td,
+.ulformtable tr:nth-child(10) .inputulname + td + td {
+    background:                               #f6f6f6 !important;
+    border:                                   1px solid #d3d3d3 !important;
+    border-radius:                            0;
+    display:                                  block;
+    margin-left:                              20px;
+    padding:                                  10px;
+    width:                                    90%;
+}
+.ulformtable .inputulname {
+    display:                                  block !important;
+    margin:                                   7px 0 !important;
+    vertical-align:                           baseline !important;
+}
+.ulformtable tr:nth-child(10) .inputulname {
+    vertical-align:                           top !important;
+}
+.inputulselect {
+    width:                                    487px !important;
+}
+/* Torrent page */
+.content .viewdescription, .content .quote, .content .comment,
+.content .viewfiletable, .content .spoiler {
+    border:                                   none !important;
+    background:                               white !important;
+    border-radius:                            0 !important;
+}
+.content .quote, .content .spoiler {
+    background:                               none !important;
+    border:                                   none !important;
+    padding:                                  10px !important;
+    margin:                                   5px 10px !important;
+    border-radius:                            0 !important;
+    border-bottom:                            2px solid #6bbfe3 !important;
+    border-left:                              2px solid #6bbfe3 !important;
+}
+div[class="content"] .viewdescription, div[class="content"] .quote,
+div[class="content"] .comment, div[class="content"] .viewfiletable
+{
+    background:                               #f6f6f6 !important;
+    border:                                   1px solid #d3d3d3 !important;
+}
+.content .viewdescription {
+    padding:                                  14px !important;
+}
+.content .comment {
+    padding:                                  6px !important;
+    margin-bottom:                            12px !important;
+}
+.content .viewfiletable {
+    padding:                                  6px !important;
+}
+/* Comment number */
+.cnumber {
+    background:                               #eaeaea;
+    box-shadow:                               0px 2px 4px #a5a5a5;
+    border-radius:                            0;
+    font-size:                                0.8em !important;
+    text-align:                               center !important;
+    left:                                     12px;
+    padding:                                  4px 0 5px 2px;
+    position:                                 relative;
+    top:                                      -12px;
+}
+/* Stardom */
+div[class="content trusted"] .viewtable tr:nth-child(6) .thead:first-child,
+div[class="content remake"] .viewtable tr:nth-child(6) .thead:first-child,
+div[class="content hidden"] .viewtable tr:nth-child(6) .thead:first-child,
+div[class="content aplus"] .viewtable tr:nth-child(6) .thead:first-child,
+div[class="content"] .viewtable tr:nth-child(6) .thead:first-child {
+    background:                               white;
+    left:                                     -32px;
+    padding:                                  5px 5px 6px 34px !important;
+    position:                                 relative;
+    top:                                      5px;
+}
+div[class="content"] .viewtable tr:nth-child(6) .thead:first-child {
+    color:                                    white !important;
+    background:                               #6bc8ae !important;
+}
+div[class="content trusted"] .viewtable tr:nth-child(6) td:nth-child(2),
+div[class="content remake"] .viewtable tr:nth-child(6) td:nth-child(2),
+div[class="content hidden"] .viewtable tr:nth-child(6) td:nth-child(2),
+div[class="content aplus"] .viewtable tr:nth-child(6) td:nth-child(2),
+div[class="content"] .viewtable tr:nth-child(6) td:nth-child(2) {
+    background:                               white;
+    border-radius:                            0;
+    display:                                  block !important;
+    left:                                     -32px;
+    padding:                                  5px 5px 6px 33px !important;
+    position:                                 relative;
+    top:                                      5px;
+    width:                                    33%;
+}
+div[class="content"] .viewtable tr:nth-child(6) td:nth-child(2) {
+    color:                                    white !important;
+    background:                               #6bc8ae !important;
+}
+a[href*="?page=idolmaster"] {
+    font-size:                                0.8em !important;
+    padding:                                  3px 4px !important;
+    position:                                 relative !important;
+    top:                                      -1px !important;
+}
+div[class="content"] a[href*="?page=idolmaster"] {
+    color:                                    white !important;
+}
+/* 'Show Files' file name length */
+.fileentryname {
+    width:                                    99.3% !important;
+    padding-left:                             5px !important;
+}
+/* 'Status Unknown' */
+.tlistfailed {
+    text-decoration:                          underline;
+    text-align:                               left !important;
+    font-size:                                0.8em !important;
+}
+tr.tlistrow {
+    color:                                    #cccccc !important;
+}
+tr[class="trusted tlistrow"] .tlistname, tr[class="trusted tlistrow"] .tlistdownload,
+tr[class="trusted tlistrow"] .tlistsize, tr[class="trusted tlistrow"] .tlistsn,
+tr[class="trusted tlistrow"] .tlistln, tr[class="trusted tlistrow"] .tlistdn,
+tr[class="trusted tlistrow"] .tlisticon, tr[class="trusted tlistrow"] .tlistmn,
+tr[class="trusted tlistrow"] .tlistfailed
+{
+    background:                               #7b8748 !important;
+    color:                                    #cccccc !important;
+}
+tr[class="remake tlistrow"] .tlistname, tr[class="remake tlistrow"] .tlistdownload,
+tr[class="remake tlistrow"] .tlistsize, tr[class="remake tlistrow"] .tlistsn,
+tr[class="remake tlistrow"] .tlistln, tr[class="remake tlistrow"] .tlistdn,
+tr[class="remake tlistrow"] .tlisticon, tr[class="remake tlistrow"] .tlistmn,
+tr[class="remake tlistrow"] .tlistfailed
+{
+    background:                               #d17b49 !important;
+    color:                                    #cccccc !important;
+}
+tr[class="hidden tlistrow"] .tlistname, tr[class="hidden tlistrow"] .tlistdownload,
+tr[class="hidden tlistrow"] .tlistsize, tr[class="hidden tlistrow"] .tlistsn,
+tr[class="hidden tlistrow"] .tlistln, tr[class="hidden tlistrow"] .tlistdn,
+tr[class="hidden tlistrow"] .tlisticon, tr[class="hidden tlistrow"] .tlistmn,
+tr[class="hidden tlistrow"] .tlistfailed
+{
+    background:                               #c0c0c0 !important;
+    color:                                    #cccccc !important;
+}
+tr[class="aplus tlistrow"] .tlistname, tr[class="aplus tlistrow"] .tlistdownload,
+tr[class="aplus tlistrow"] .tlistsize, tr[class="aplus tlistrow"] .tlistsn,
+tr[class="aplus tlistrow"] .tlistln, tr[class="aplus tlistrow"] .tlistdn,
+tr[class="aplus tlistrow"] .tlisticon, tr[class="aplus tlistrow"] .tlistmn,
+tr[class="aplus tlistrow"] .tlistfailed
+{
+    background:                               #90b0f0 !important;
+    color:                                    #cccccc !important;
+}
+.remake {
+    background:                               transparent !important;
+}
+.trusted {
+    background:                               transparent !important;
+}
+.hidden {
+    background:                               transparent !important;
+}
+.aplus {
+    background:                               transparent !important;
+}
+div[class="content remake"], div[class="content trusted"],
+div[class="content hidden"], div[class="content aplus"]
+{
+    border:                                   2px solid white !important;
+    border-radius:                            8px 8px 18px 18px !important;
+}
+.refinesearch {
+    background:                               white !important;
+    display:                                  none !important;
+    border-radius:                            0;
+    margin-left:                              -69px !important;
+    margin-top:                               73px !important;
+    opacity:                                  0;
+    transition:                               0.4s;
+    padding:                                  0px 9px 7px 9px !important;
+    position:                                 absolute !important;
+    font-size:                                1em !important;
+    text-align:                               center !important;
+    width:                                    7.1% !important;
+    z-index:                                  1;
+}
+.refinesearch:hover {
+    opacity:                                  1;
+    transition:                               0.2s;
+}
+.refinesearch b, .refinesearch input[value="Search"] {
+    display:                                  none !important;
+}
+.refinesearch input[value="Search"] {
+    display:                                  inline-block !important;
+}
+.refinesearch input {
+    width:                                47px !important;
+    text-align:                           center !important;
+    background:                           white !important;
+    border:                               1px solid #e0e0e0 !important;
+    border-radius:                        0 !important;
+    padding:                              3px 5px 5px !important;
+    box-shadow:                           inset 0 1px 2px rgba(65,65,65,0.1);
+    font-family:                          "Source Sans Pro" !important;
+}
+.refinesearch input:focus {
+    border-color:                         rgba(107,191,227,0.7) !important;
+    box-shadow:                           0 0 4px rgba(107,191,227,0.5) !important;
+}
+.torrentcats {
+    display:                              none !important;
+}
+.viewtable + div[style="float:left;
+padding-left:20px;
+"] {
+    padding:                              15px 0 0 0 !important;
+}
+.viewdownloadbutton {
+    width:                                4% !important;
+    padding-top:                          0 !important;
+}
+.viewdownloadtxtbutton {
+    width:                                26% !important;
+    padding-top:                          0 !important;
+}
+img[alt="Download"], img[alt="Download .txt"] {
+    background:                           transparent !important;
+    border:                               3px inset green !important;
+    border-radius:                        0;
+    display:                              block;
+    width:                                0 !important;
+    margin:                               4px !important;
+    padding:                              8px !important;
+}
+img[alt="Download .txt"] {
+    border:                               3px outset green !important;
+}
+img[alt="Download"]:hover {
+    border:                               3px outset green !important;
+}
+img[alt="Download .txt"]:hover {
+    border:                               3px inset green !important;
+}
+form[name="flagform"] {
+    margin:                               40px 0 0 -20px !important;
+    top:                                  40px !important;
+    position:                             relative;
+}
+input[value="Flag this torrent"] {
+    margin-left:                          20px !important;
+    top:                                  -45px !important;
+    position:                             relative;
+}
+.flagcontent ul {
+    background:                           #e09090 !important;
+    border-radius:                        0;
+    width:                                95.8%;
+    color:                                white !important;
+    box-shadow:                           0 0 3px rgba(65,65,65,0.5);
+    padding:                              10px 10px 10px 25px !important;
+}
+.flagcontent ul a, .inputulrules a {
+    color:                                white !important;
+    font-weight:                          bold !important;
 }

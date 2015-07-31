@@ -1,16 +1,13 @@
-@-moz-document domain("kat.cr") {
-  div.tagcloud, .showmore {
+div.tagcloud, .showmore {
     display: none !important;
-  }
-  div.mainpart, tr.odd {
+}
+div.mainpart, tr.odd {
     background-color: #222 !important;
-  }
-  a {
+}
+a {
     color: #c0b18b !important;
-  }
-  * {
+}
+* {
     color: #999 !important;
     border-color: #c0b18b !important;
-  }
-  
 }

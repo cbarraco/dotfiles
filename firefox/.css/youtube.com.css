@@ -3,10 +3,16 @@
     color: #cccccc !important;
     border-color: transparent !important;
 }
-.ytp-gradient-bottom {
+.ytp-gradient-bottom, .ytp-gradient-top, .notifications-container {
     display: none !important;
 }
 
+.yt-uix-button, .yt-uix-button *, #search-btn, #search-btn > span:nth-child(1) {
+    background-color: #7b8748 !important;
+}
+.yt-uix-button-opacity {
+    opacity: 0;
+}
 #logo-container {
     display: none !important;
 }
@@ -16,7 +22,7 @@
 a {
     color: #7b8748 !important;
 }
-#masthead-search-term{
+#masthead-search-terms {
     background: #333333 !important;
 }
 
