@@ -1,7 +1,7 @@
 ! vi:syntax=xdefaults
 
 ! Compile xft: Attempt to find a visual with the given bit depth;
-URxvt*depth: 32
+!URxvt*depth: 32
 
 ! Compile xft: Turn on/off double-buffering for xft (default enabled).
 URxvt*buffered: true
@@ -16,31 +16,31 @@ URxvt*background: cjb_bg
 URxvt*foreground: cjb_fg
 
 ! Use these colours
-URxvt*color0: cjb_black
-URxvt*color1: cjb_red
-URxvt*color2: cjb_green
-URxvt*color3: cjb_yellow
-URxvt*color4: cjb_blue
-URxvt*color5: cjb_magenta
-URxvt*color6: cjb_cyan
-URxvt*color7: cjb_white
-URxvt*color8: cjb_grey
-URxvt*color9: cjb_red
-URxvt*color10: cjb_green
-URxvt*color11: cjb_yellow
-URxvt*color12: cjb_blue
-URxvt*color13: cjb_magenta
-URxvt*color14: cjb_cyan
-URxvt*color15: cjb_white
+*color0: cjb_black
+*color1: cjb_red
+*color2: cjb_green
+*color3: cjb_yellow
+*color4: cjb_blue
+*color5: cjb_magenta
+*color6: cjb_cyan
+*color7: cjb_white
+*color8: cjb_grey
+*color9: cjb_red
+*color10: cjb_green
+*color11: cjb_yellow
+*color12: cjb_blue
+*color13: cjb_magenta
+*color14: cjb_cyan
+*color15: cjb_white
 
 ! Use the specified colour for bold characters when the text is the default foreground colour
-URxvt*colorBD: cjb_green
+URxvt*colorBD: cjb_blue
 
 ! Use the specified colour for italic characters when the text is the default foreground colour
-URxvt*colorIT: cjb_green
+URxvt*colorIT: cjb_blue
 
 ! Use the specified colour for underlined characters when the
-URxvt*colorUL: cjb_green
+URxvt*colorUL: cjb_blue
 
 ! If set, use the specified colour as the colour for the underline
 ! URxvt*underlineColor: colour
@@ -86,7 +86,7 @@ URxvt*borderColor: cjb_bg
 
 ! Select the fonts to be used. This is a comma separated list of font
 URxvt*font: xft:cjb_font:medium:size=cjb_fontsize
-URxvt*boldFont: xft:cjb_font:bold:size=cjb_fontsize
+URxvt*boldFont: xft:cjb_font:size=cjb_fontsize
 URxvt*italicFont: xft:cjb_font:italic:size=cjb_fontsize
 URxvt*boldItalicFont: xft:cjb_font:bold:italic:size=cjb_fontsize
 

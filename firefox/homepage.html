@@ -1,8 +1,12 @@
 <h1>Welcome Home</h1>
+<title>Home</title>
 <div id="weather"></div>
 <div id="time"></div>
 <div id="maincontainer"></div>
 <style>
+* {
+}
+
 h1 {
     text-align:  center;
     color:       #7b8748;
@@ -11,18 +15,18 @@ h1 {
 body {
     font-family: Inconsolata;
     font-size:   18px;
-    background:  #222222;
-    color:       #cccccc;
+    background:  #2f343b;
+    color:       #c0b18b;
 }
 
 img {
-    background:  #333333;
+    background:  #363330;
     width:       16px;
     height:      16px;
 }
 
 .site-div {
-    background:  #333333;
+    background:  #363330;
     display:     block;
     float:       left;
     margin:      8px;
@@ -30,17 +34,17 @@ img {
 }
 
 .site-div:hover, .site-div:hover > img {
-    background:  #cccccc;
+    background:  #c0b18b;
     cursor:      pointer;
 }
 
 .site-div:focus, .site-div:focus > img {
-    background:  #cccccc;
+    background:  #c0b18b;
 }
 
 .section {
     float:       left;
-    font:        32px "github-octicons";
+    font:        32px "github-octicons" !important;
     margin:      16px 16px;
     width:       64px;
     color:       #7b8748;
@@ -56,8 +60,8 @@ img {
 
 #maincontainer {
     margin:      auto;
-    min-width:   500px;
-    width:       500px;
+    min-width:   400px;
+    width:       400px;
 }
 
 </style>
@@ -106,13 +110,6 @@ var sites = {
         "stackoverflow.com",
         "trello.com",
         "wiki.archlinux.org",
-    ],
-    "&#xf0d7": [
-        "www.student.cs.uwaterloo.ca/~cs341/",
-        "www.student.cs.uwaterloo.ca/~elbarsal/s2015/cs446/",
-        "learn.uwaterloo.ca",
-        "piazza.com",
-        "uwaterloo.ca/quest",
     ],
     "&#xf076":[
         "amazon.ca",

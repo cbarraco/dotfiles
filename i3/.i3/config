@@ -3,34 +3,34 @@
 #############
 set $mod                         Mod4
 # Sizes
-set $bordersize                  3
+set $bordersize                  2
 set $myres                       10
-set $gsi                         20
-set $gso                         20
+set $gsi                         40
+set $gso                         0
 # Colors
 set $fgcolor                     #cccccc
-set $hfgcolor                    #7b8748
-set $bgcolor                     #222222
-set $iacolor                     #333333
+set $hfgcolor                    #c0b18b
+set $bgcolor                     #363330
+set $iacolor                     #363330
 
 #################
 # CONFIGURATION #
 #################
-floating_modifier $mod
-focus_follows_mouse              no
+floating_modifier                $mod
+focus_follows_mouse              yes
 popup_during_fullscreen          smart
 workspace_layout                 default
 
 ##############
 # APPEARANCE #
 ##############
-# Set window appearence          border    bg        fg       urgent
+# Set window appearence          border    bg        fg       expand
 client.focused                   $hfgcolor $hfgcolor $fgcolor $hfgcolor
 client.focused_inactive          $iacolor  $iacolor  $fgcolor $iacolor
 client.unfocused                 $hfgcolor $iacolor  $fgcolor $iacolor
 
 # Set font
-font                             pango:Source Code Pro 7
+font                             xft:Inconsolata 8
 # Configure window borders
 hide_edge_borders                none
 gaps inner                       $gsi
@@ -42,7 +42,9 @@ new_window                       pixel $bordersize
 # KEYBINDINGS #
 ###############
 ### System Keybindings ###
-bindsym $mod+i                   exec notify-send -u low "Internet" "Connected to `iw dev wlp3s0 link | grep SSID | cut -c 8-`";mode "default"
+bindsym $mod+i                   exec notify-send -u low "Internet" "`iw dev wlp3s0 link | grep SSID | cut -c 8-`";
+bindsym $mod+t                   exec notify-send -u low "Time" "`date`"
+bindsym $mod+y                   exec notify-send -u low "Battery" "`bat`"
 bindsym $mod+Return              exec urxvt
 bindsym $mod+d                   exec rofi -show run
 bindsym $mod+g                   exec manrofi
@@ -50,15 +52,16 @@ bindsym $mod+Shift+c             reload
 bindsym $mod+Shift+r             restart
 bindsym $mod+Shift+e             exec "/home/cjbarrac/.i3/power"
 bindsym $mod+Shift+q             kill
-bindsym Print                    exec scrot
-bindsym $mod+n                   gaps inner all set 1;gaps outer all set 0;border none
-bindsym $mod+m                   gaps inner all set $gsi;gaps outer all set $gso;border pixel 3
+bindsym Print                    exec scrot;exec notify-send -u low "scrot" "scrot captured";
+bindsym $mod+n                   gaps inner all set 0;gaps outer all set 0;
+bindsym $mod+m                   gaps inner all set $gsi;gaps outer all set $gso;
 
 ### Audio Keybindings ###
-bindsym XF86AudioRaiseVolume     exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume     exec "amixer -q sset Master,0 1- unmute"
+bindsym $mod+b                   exec "amixer -q sset Speaker,0 toggle;amixer -q sset Headphone,0 toggle"
+bindsym XF86AudioRaiseVolume     exec "dvol -i 1"
+bindsym XF86AudioLowerVolume     exec "dvol -d 1"
 bindsym XF86AudioMute            exec "amixer -q sset Master,0 toggle"
-bindsym XF86AudioPlay            exec "cmus-remote -u"
+bindsym XF86AudioPlay            exec "cmus-remote -u";exec notify-send -u low "Play" "Music paused"
 bindsym XF86AudioStop            exec "cmus-remote -s"
 bindsym XF86AudioPrev            exec "cmus-remote -r"
 bindsym XF86AudioNext            exec "cmus-remote -n"
@@ -160,20 +163,21 @@ exec rssdler -rd
 exec unclutter
 exec xfce4-power-manager
 exec nitrogen --restore
-exec xset r rate 200 40
+exec xset r rate 200 35
+exec compton -b
 
 #######
 # BAR #
 #######
-bar {
-    status_command               i3status
-    position                     top
-    font                         xft:Inconsolata 8
-    colors {
-        background               $bgcolor
-        statusline               $fgcolor
-        # Workspace Colors       #border   #bg       #text
-        inactive_workspace       $bgcolor  $bgcolor  $fgcolor
-        focused_workspace        $hfgcolor $hfgcolor $fgcolor
-    }
-}
+#bar {
+#    colors {
+#        background               $bgcolor
+#        statusline               $hfgcolor
+#        #Workspace Colors        #border   #bg       #text
+#        inactive_workspace       $bgcolor  $bgcolor  $hfgcolor
+#        focused_workspace        $hfgcolor $hfgcolor $bgcolor
+#    }
+#    font                         xft:Inconsolata 9
+#    position                     bottom
+#    status_command               i3status
+#}

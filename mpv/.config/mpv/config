@@ -9,7 +9,7 @@ cache-initial=0
 display-fps=60
 framedrop=vo
 hwdec=vaapi
-vo=opengl-hq
+vo=opengl-hq:icc-profile=~/.icc/AdobeRGB1998.icc
 ytdl-format=bestvideo+bestaudio/best
 
 ### AUDIO ###

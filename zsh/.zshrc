@@ -24,8 +24,6 @@ if ! zgen saved; then
 	zgen save
 fi
 
-PATH=$(cope_path):$PATH
-
 export TERM=xterm
 
 source ~/.aliases
