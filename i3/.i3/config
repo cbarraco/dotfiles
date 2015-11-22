@@ -3,10 +3,10 @@
 #############
 set $mod                         Mod4
 # Sizes
-set $bordersize                  2
+set $bordersize                  3
 set $myres                       10
-set $gsi                         40
-set $gso                         0
+set $gsi                         10
+set $gso                         20
 # Colors
 set $fgcolor                     #cccccc
 set $hfgcolor                    #c0b18b
@@ -52,7 +52,7 @@ bindsym $mod+Shift+c             reload
 bindsym $mod+Shift+r             restart
 bindsym $mod+Shift+e             exec "/home/cjbarrac/.i3/power"
 bindsym $mod+Shift+q             kill
-bindsym Print                    exec scrot;exec notify-send -u low "scrot" "scrot captured";
+bindsym Print                    exec scrot /home/cbarraco/scrot.png;exec notify-send -u low "scrot" "scrot captured";
 bindsym $mod+n                   gaps inner all set 0;gaps outer all set 0;
 bindsym $mod+m                   gaps inner all set $gsi;gaps outer all set $gso;
 
@@ -169,15 +169,15 @@ exec compton -b
 #######
 # BAR #
 #######
-#bar {
-#    colors {
-#        background               $bgcolor
-#        statusline               $hfgcolor
-#        #Workspace Colors        #border   #bg       #text
-#        inactive_workspace       $bgcolor  $bgcolor  $hfgcolor
-#        focused_workspace        $hfgcolor $hfgcolor $bgcolor
-#    }
-#    font                         xft:Inconsolata 9
-#    position                     bottom
-#    status_command               i3status
-#}
+bar {
+    colors {
+        background               $bgcolor
+        statusline               $hfgcolor
+        #Workspace Colors        #border   #bg       #text
+        inactive_workspace       $bgcolor  $bgcolor  $hfgcolor
+        focused_workspace        $hfgcolor $hfgcolor $bgcolor
+    }
+    font                         xft:gohufont 10
+    position                     bottom
+    status_command               i3status
+}

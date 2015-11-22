@@ -2,6 +2,9 @@
 
 res=$(rofi -p "> " -dmenu < ~/.i3/powermenu)
 
+if [ $res = "lock" ]; then
+	~/.i3/lock/lock
+fi
 if [ $res = "logout" ]; then
 	i3-msg exit
 fi
