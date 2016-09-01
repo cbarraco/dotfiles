@@ -1,5 +1,5 @@
 # ZSH Theme - Preview: http://gyazo.com/8becc8a7ed5ab54a0262a470555c3eed.png
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+local return_code="%(?..%{$fg[red]%}%? %{$reset_color%})"
 
 local user_host='%{$fg[blue]%}%n@%m%{$reset_color%}'
 local current_dir='%{$fg[blue]%} %~%{$reset_color%}'
