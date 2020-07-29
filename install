@@ -1,6 +1,5 @@
 #!/bin/bash
-folders=("zsh" "conky" "firefox" "i3" "ranger" "vim" "xres" "mpv" "cmus")
-for f in "${folders[@]}"
+for f in "configs/*/"
 do
-	stow --verbose=2 -R --override=".*" -t /home/cjbarrac/ $f
+	stow --verbose=2 -R --override=".*" -t $HOME $f
 done

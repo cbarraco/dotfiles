@@ -1,0 +1,48 @@
+# vim: syntax=config
+use-filedir-conf=yes
+screenshot-template=~/Downloads/mpv-screenshot%n
+
+### VIDEO ###
+cache=8192
+cache-default=8192
+cache-initial=0
+display-fps=60
+framedrop=vo
+hwdec=vaapi
+vo=opengl-hq:icc-profile=~/.icc/AdobeRGB1998.icc
+ytdl-format=bestvideo+bestaudio/best
+
+### AUDIO ###
+alang=jpn,jap,Japanese,en,eng,English,it,ita
+ao=alsa:resample=no
+audio-channels=2
+softvol=no
+
+### SUBTITLES ###
+ass-force-style=Kerning=yes
+slang=en,eng,English,jpn,jap,Japanese,it,ita,Italian
+sub-text-font="Noto Sans"
+sub-text-font-size=54
+sub-text-margin-y=36
+sub-text-color="#ffffffff"
+sub-text-border-color="#ff262626"
+sub-text-border-size=2.30
+sub-text-shadow-offset=1
+sub-text-shadow-color="#33000000"
+sub-text-spacing=0.4
+
+### ON SCREEN DISPLAY ###
+osd-bar-align-y=0
+osd-bar-h=7
+osd-border-color='#99000000'
+osd-border-size=1
+osd-color='#AAFFFFFF'
+osd-font="Source Sans Pro"
+
+### EXTENSIONS ###
+[extension.webm]
+loop-file=inf
+[extension.mp3]
+no-video
+[extension.flac]
+no-video
