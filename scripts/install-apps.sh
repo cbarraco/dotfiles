@@ -3,7 +3,7 @@ add-apt-repository ppa:bashtop-monitor/bashtop
 apt-get update
 
 # install dev tools
-apt-get install -y build-essential git neovim autoconf cmake golang python3-pip nodejs icecream
+apt-get install -y build-essential git autoconf cmake golang python3-pip nodejs icecream
 
 # install network tools
 apt-get install -y wget nmap curl

@@ -1,1 +1,1 @@
-map <delete> cmd-delete
+map x cmd-delete
